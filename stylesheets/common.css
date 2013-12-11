@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/**
+ * errors
+ */
+.error {
+  display: none;
+  color: red;
+}
+
+.is-empty .error.is-empty,
+.incorrect .error.incorrect {
+  display: block;
+}
+
+/**
+ * clearfix
+ */
+.clearfix:after{
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+  font-size: 0.1em;
+  line-height:0;
+}
+
+.clearfix{
+  display:inline-block;
+  min-height:1%;  /* for IE 7*/
+}
+
+/* Hides from IE-mac */
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+/**
+ * base-poperties
+ */
+html {
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6, strong, em {
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1em;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+//TODO: 上記はアタリ。希望のwidthに設定
+}
+
+.panel {
+  display: inline-block;
+//TODO: 横並びのものは、floatを使用せずinline-blockで。
+}
+
