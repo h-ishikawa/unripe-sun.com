@@ -1,8 +1,10 @@
 <?php
 
-//require_once (dirname(__FILE__).'/../../lib/Model.php');
-//require_once (dirname(__FILE__).'/../../lib/Model/Snap.php');
+require_once (dirname(__FILE__).'/../../lib/Model_Snap.php');
+require_once (dirname(__FILE__).'/../../lib/Model/Snap.php');
 
+$Snap = new Snap();
+$Snap->get(array());
 ?>
 
 <!DOCTYPE html>
@@ -94,11 +96,11 @@
       <? foreach ($Snap->result as $result): ?>
       <tr>
         <td><?= $result->id ?></td>
-        <td><?= $result->name ?></td>
-        <td><?= $result->sex ?></td>
-        <td><?= $result->file_path ?></td>
-        <td><?= $result->category ?></td>
-        <td><?= $result->memo ?></td>
+        <td><?= @$result->name ?></td>
+        <td><?= @$result->sex ?></td>
+        <td><img src="/images/uploads/thumbnails/<?= @$result->file_path ?>"></td>
+        <td><?= @$result->category ?></td>
+        <td><?= @$result->memo ?></td>
         <td><?= $result->created_at ?></td>
         <td>
           <form action="/lib/Model/Snap.php" class="update" method="post" onsubmit="return confirm('<?= @$result->name ?>さんを削除して宜しいですか？')">

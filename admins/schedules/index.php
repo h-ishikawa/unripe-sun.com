@@ -1,8 +1,10 @@
 <?php
 
-require_once (dirname(__FILE__).'/../../lib/Model.php');
+require_once (dirname(__FILE__).'/../../lib/Model_Schedule.php');
 require_once (dirname(__FILE__).'/../../lib/Model/Schedule.php');
 
+$Schedule = new Schedule();
+$Schedule->get(array());
 ?>
 
 <!DOCTYPE html>
@@ -32,12 +34,12 @@ require_once (dirname(__FILE__).'/../../lib/Model/Schedule.php');
               <option value="2015">2015</option>
             </select>年
             <select name="month">
-              <? for($i = 1; i < 13; i = i + 1): ?>
+              <? for($i = 1; $i < 13; $i = $i + 1): ?>
               <option value="<?= $i ?>"><?= $i ?></option>
               <? endfor; ?>
             </select>月
             <select name="day">
-              <? for($i = 1; i < 31; i = i + 1): ?>
+              <? for($i = 1; $i < 31; $i = $i + 1): ?>
               <option value="<?= $i ?>"><?= $i ?></option>
               <? endfor; ?>
             </select>日
@@ -78,14 +80,28 @@ require_once (dirname(__FILE__).'/../../lib/Model/Schedule.php');
         <th></th>
       </tr>
 
-      <? foreach ($Tweet->result as $result): ?>
+      <? foreach ($Schedule->result as $result): ?>
       <tr>
         <td><?= $result->id ?></td>
         <td><?= $result->date ?></td>
-        <td><?= $result->stuff ?></td>
+        <td>
+          <? if ($result->stuff == 0): ?>
+            戸森
+          <? elseif ($result->stuff == 1): ?>
+            小池
+          <? elseif ($result->stuff == 2): ?>
+            吉野
+          <? elseif ($result->stuff == 3): ?>
+            榎本
+          <? elseif ($result->stuff == 4): ?>
+            佐久間
+          <? elseif ($result->stuff == 5): ?>
+            清水
+          <? endif; ?>
+        <td>
         <td><?= $result->created_at ?></td>
         <td>
-          <form action="/lib/Model/Tweet.php" class="delete" method="post" onsubmit="return confirm('<?= @$result->id ?>を削除して宜しいですか？')">
+          <form action="/lib/Model/Schedule.php" class="delete" method="post" onsubmit="return confirm('<?= @$result->id ?>を削除して宜しいですか？')">
             <input type="hidden" name="_METHOD" value="DELETE">
             <input type="hidden" name="id" value="<?= $result->id ?>">
             <input type="submit" value="削除する">

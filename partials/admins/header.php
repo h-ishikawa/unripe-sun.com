@@ -3,7 +3,8 @@ $uri = $_SERVER['REQUEST_URI'];
 $replaceUrl = preg_replace('/\//', ' ', $uri);
 ?>
 
-    <h1 onclick="Javascript: location.href='/admins'">Unripe | 管理画面</h1>
+    <h1 onclick="Javascript: location.href='/admins'">Unripe | 管理画面</h1><!--
+ --><a href="/" target="_blank">Unripeウェブサイトへ</a>
 
     <a href="/admins"           class="panel <?= $replaceUrl == ' admins ' ? 'selected' : ''?>          ">管理TOP</a><!--
  --><a href="/admins/tweets"    class="panel <?= $replaceUrl == ' adminstweets ' ? 'selected' : '' ?>   ">つぶやき管理</a><!--

@@ -1,8 +1,10 @@
 <?php
 
-require_once (dirname(__FILE__).'/../../lib/Model.php');
+require_once (dirname(__FILE__).'/../../lib/Model_Tweet.php');
 require_once (dirname(__FILE__).'/../../lib/Model/Tweet.php');
 
+$Tweet = new Tweet();
+$Tweet->get(array());
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +69,21 @@ require_once (dirname(__FILE__).'/../../lib/Model/Tweet.php');
       <? foreach ($Tweet->result as $result): ?>
       <tr>
         <td><?= $result->id ?></td>
-        <td><?= $result->stuff ?></td>
+        <td>
+          <? if ($result->stuff == 0): ?>
+            戸森
+          <? elseif ($result->stuff == 1): ?>
+            小池
+          <? elseif ($result->stuff == 2): ?>
+            吉野
+          <? elseif ($result->stuff == 3): ?>
+            榎本
+          <? elseif ($result->stuff == 4): ?>
+            佐久間
+          <? elseif ($result->stuff == 5): ?>
+            清水
+          <? endif; ?>
+        <td>
         <td><?= $result->tweet ?></td>
         <td><?= $result->created_at ?></td>
         <td>
