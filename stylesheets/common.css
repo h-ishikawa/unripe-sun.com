@@ -43,6 +43,21 @@ html {
   overflow-y: scroll;
 }
 
+body {
+  width: 100%;
+  color: #333333;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #126b2e;
+  text-decoration: underline;
+}
+
 h1, h2, h3, h4, h5, h6, strong, em {
   font-size: 100%;
   font-weight: normal;
@@ -53,11 +68,116 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .container {
   width: 80%;
-//TODO: 上記はアタリ。希望のwidthに設定
+  min-width: 1024px;
+  margin: 0 auto;
 }
 
 .panel {
   display: inline-block;
+  vertical-align: middle;
 //TODO: 横並びのものは、floatを使用せずinline-blockで。
+}
+
+/*
+ ** header
+ */
+.header h1 {
+  width: 143px;
+  height: 0;
+  padding: 40px 0 0;
+  overflow: hidden;
+  background: url('/images/logo.png') no-repeat 0 0;
+}
+
+/*
+ ** navigation
+ */
+.navigation .links {
+  width: 80%;
+}
+
+.navigation .properties {
+  width: 20%;
+}
+
+.navigation a {
+  font-size: 95%;
+}
+
+.navigation .links a {
+  margin: 0 2% 0 0;
+}
+
+.navigation .properties a,
+.navigation .properties img {
+  margin: 0 0 0 10%;
+}
+
+.navigation img.cactus {
+  display: none;
+}
+
+/*
+ ** home
+ */
+.home .header {
+  padding: 10px 0 0;
+}
+
+.home .header .container {
+  height: 400px;
+  position: relative;
+}
+
+.home .header .stuff {
+  height: 350px;
+  bottom: 0;
+  position: absolute;
+}
+
+.home .header .tomori {
+  width: 114px;
+  left: 5%;
+  background: url('/images/home/tomori.png') no-repeat 0 0;
+}
+.home .header .koike {
+  width: 104px;
+  left: 21%;
+  background: url('/images/home/koike.png') no-repeat 0 0;
+}
+.home .header .yoshino {
+  width: 104px;
+  left: 37%;
+  background: url('/images/home/yoshino.png') no-repeat 0 0;
+}
+.home .header .enomoto {
+  width: 95px;
+  left: 53%;
+  background: url('/images/home/enomoto.png') no-repeat 0 0;
+}
+.home .header .sakuma {
+  width: 94px;
+  left: 69%;
+  background: url('/images/home/sakuma.png') no-repeat 0 0;
+}
+
+.home .header .shimizu {
+  width: 97px;
+  left: 85%;
+  background: url('/images/home/shimizu.png') no-repeat 0 0;
+}
+
+.home .navigation {
+  height: 51px;
+  background: url('/images/home/bush.png') repeat-x 0 bottom;
+}
+
+.home .navigation .container {
+  height: 51px;
+  background: url('/images/home/bush-front.png') no-repeat 600px bottom;
+}
+
+.home .navigation img.cactus {
+  display: inline-block;
 }
 
