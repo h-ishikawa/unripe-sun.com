@@ -13,32 +13,32 @@ $(function () {
 
   k.tomori = function (index) {
     $('.home .header .tweet.tomori').hide();
-    $('.home .header .tweet.tomori').eq(index).fadeIn('slow');
+    $('.home .header .tweet.tomori').eq(index).fadeIn(2000);
   };
 
   k.koike = function (index) {
     $('.home .header .tweet.koike').hide();
-    $('.home .header .tweet.koike').eq(index).fadeIn('slow');
+    $('.home .header .tweet.koike').eq(index).fadeIn(2000);
   };
 
   k.yoshino = function (index) {
     $('.home .header .tweet.yoshino').hide();
-    $('.home .header .tweet.yoshino').eq(index).fadeIn('slow');
+    $('.home .header .tweet.yoshino').eq(index).fadeIn(2000);
   };
 
   k.enomoto = function (index) {
     $('.home .header .tweet.enomoto').hide();
-    $('.home .header .tweet.enomoto').eq(index).fadeIn('slow');
+    $('.home .header .tweet.enomoto').eq(index).fadeIn(2000);
   };
 
   k.sakuma = function (index) {
     $('.home .header .tweet.sakuma').hide();
-    $('.home .header .tweet.sakuma').eq(index).fadeIn('slow');
+    $('.home .header .tweet.sakuma').eq(index).fadeIn(2000);
   };
 
   k.shimizu = function (index) {
     $('.home .header .tweet.shimizu').hide();
-    $('.home .header .tweet.shimizu').eq(index).fadeIn('slow');
+    $('.home .header .tweet.shimizu').eq(index).fadeIn(2000);
   };
 
   k.start = function (index) {
@@ -61,13 +61,17 @@ $(function () {
             setTimeout(
               function () { 
                 k.start(2);
-                k.timer();
+                setTimeout(
+                  function () {
+                    k.timer();
+                  }
+                , 5000);
               }
-            , 5000);
+            , 7000);
           }
-        , 5000);
+        , 7000);
       }
-    , 5000);
+    , 2000);
   };
 
   k.timer();
