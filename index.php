@@ -2,6 +2,8 @@
 
 require_once (dirname(__FILE__).'/lib/Model_Tweet.php');
 require_once (dirname(__FILE__).'/lib/Model/Tweet.php');
+require_once (dirname(__FILE__).'/lib/Model_Snap.php');
+require_once (dirname(__FILE__).'/lib/Model/Snap.php');
 
 $queries = array();
 $queries['stuff'] = '1';
@@ -28,6 +30,10 @@ $Tweet_sakuma->get($queries);
 $queries['stuff'] = '6';
 $Tweet_shimizu = new Tweet();
 $Tweet_shimizu->get($queries);
+
+
+$Snap = new Snap();
+$Snap->get(array());
 ?>
 
 <!DOCTYPE html>
@@ -106,8 +112,34 @@ $Tweet_shimizu->get($queries);
 			<div class="fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>			
     	</div>
     	<div class="cb"></div>
-    	
+
       <a class="pageTop" href="#header">PAGE TOP</a></p>
+    </div>
+  </div>
+
+  <div class="snaps">
+    <div id="snaps" class="container">
+      <div class="panel themes">
+        <h3><strong>Unripe</strong>にいらっしゃってくれた方々のヘアデザインスナップ。</h3>
+        <p>スタイリングの参考に。<br>
+           ヘアカタログの代わりにも。<br>
+           <strong>Unripe</strong>で生まれたスタイリングを是非ご覧ください。
+        </p>
+        <a href="">View more hair styles</a>
+      </div><!--
+
+   --><div class="panel slider">
+        <!--
+          <? foreach ($Snap->result as $result): ?>
+         --><a class="panel" href="/images/uploads/<?= $result->file_path ?>">
+              <img src="/images/uploads/thumbnails/<?= $result->file_path ?>" width="220" height="173">
+            </a><!--
+          <? endforeach; ?>
+        -->
+      </div>
+
+      <a class="next" href="javascript: unripe.index.carousel.next();"></a>
+      <a class="prev" href="javascript: unripe.index.carousel.prev();"></a>
     </div>
   </div>
 

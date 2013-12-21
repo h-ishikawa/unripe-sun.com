@@ -17,16 +17,16 @@ class File
       $im = imagecreatefromstring($img);
       $XX = imagesx($im);
       $YY = imagesy($im);
-      $Xa = $XX / 300 ;
-      $Ya = $YY / 200 ; 
+      $Xa = $XX / 220 ;
+      $Ya = $YY / 173 ; 
       if ($Xa >= $Ya) {
-        $X2 = 300;
-        $Y2 = intval((300 / $XX) * $YY) ;
+        $X2 = 220;
+        $Y2 = intval((220 / $XX) * $YY) ;
       }
       
       else {
-        $Y2 = 200;
-        $X2 = intval((200 / $YY) * $XX) ;
+        $Y2 = 173;
+        $X2 = intval((173 / $YY) * $XX) ;
       }
 
       $output = imagecreatetruecolor($X2, $Y2);

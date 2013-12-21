@@ -268,3 +268,86 @@ h1, h2, h3, h4, h5, h6, strong, em {
 .cb{
 	clear: both;
 }
+
+.home .snaps {
+  width: 100%;
+  height: 380px;
+  padding: 53px 0;
+  background: url('/images/home/snap_bg.jpg') 0 0;
+}
+
+.home .snaps .container {
+  width: 1024px;
+  height: 380px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home .snaps .themes {
+  width: 50%;
+}
+
+.home .snaps .themes h3,
+.home .snaps .themes h3 strong {
+  color: #dcdcdc;
+  font-weight: bold;
+}
+
+.home .snaps .themes p {
+  color: #dcdcdc;
+  font-size: 70%;
+}
+
+.home .snaps .themes a {
+  width: 210px;
+  height: 34px;
+  display: block;
+  padding: 10px 0 0 10px;
+  margin: 20px 0 0 152px;
+  background: url('/images/home/snap_check_more_220x44.png') 0 0;
+}
+
+.home .snaps .themes a:hover {
+  text-decoration: none;
+  filter: alpha(opacity = 80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+
+.home .snaps .slider {
+  display: inline;
+}
+
+.home .snaps .slider a {
+  width: 220px;
+  height: 173px;
+  margin: 15px 16px 0;
+}
+
+.home .snaps .slider a:first-child {
+  margin: 10px 16px 0 3px;
+}
+
+.home .snaps .slider.prev a:first-child {
+  margin: 10px 16px 0 7px;
+}
+
+.home .snaps a.prev,
+.home .snaps a.next {
+  width: 20px;
+  height: 50px;
+  display: block;
+  margin: 0;
+  position: absolute;
+  z-index: 100;
+}
+.home .snaps a.prev {
+  top: 72px;
+  left: 487px ;
+  background: url('/images/home/prev.png') 0 0;
+}
+.home .snaps a.next {
+  bottom: 72px;
+  right: 0;
+  background: url('/images/home/next.png') 0 0;
+}

@@ -75,4 +75,35 @@ $(function () {
   };
 
   k.timer();
+
+
+  window.unripe.index.carousel = {};
+
+  var c = window.unripe.index.carousel;
+
+  c.prev = function () {
+    var slider = $('.slider')
+      , images = slider.children('a')
+      , limit = 6
+      , length = images.length
+      , prev = images.slice(length - limit)
+      ;
+  
+    slider.addClass('prev');
+    slider.prepend(prev.clone());
+    prev.remove();
+  };
+  
+  c.next = function () {
+    var slider = $('.slider')
+      , images = slider.children('a')
+      , limit = 6
+      , length = images.length
+      , next = images.slice(0, 6)
+      ;
+  
+    slider.removeClass('prev');
+    slider.append(next.clone());
+    next.remove();
+  };
 });
