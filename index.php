@@ -133,7 +133,25 @@ $Snap->get(array());
    --><div class="panel slider">
         <!--
           <? foreach ($Snap->result as $result): ?>
-          --><a class="panel" href="/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="name: <?= $result->name ?> <br>comment: <?= $result->memo ?>">
+          --><a class="panel" href="/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?>
+               <br>
+               Stuff: 
+               <? if ($result->stuff == 1): ?>
+                 戸森
+               <? elseif ($result->stuff == 2): ?>
+                 小池
+               <? elseif ($result->stuff == 3): ?>
+                 吉野
+               <? elseif ($result->stuff == 4): ?>
+                 榎本
+               <? elseif ($result->stuff == 5): ?>
+                 佐久間
+               <? elseif ($result->stuff == 6): ?>
+                 清水
+               <? endif; ?>
+               <br>
+               Comment: <?= $result->memo ?>
+             ">
               <img src="/images/uploads/thumbnails/<?= $result->file_path ?>" width="220" height="173">
             </a><!--
           <? endforeach; ?>

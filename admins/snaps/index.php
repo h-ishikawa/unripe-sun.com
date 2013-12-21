@@ -34,6 +34,20 @@ $Snap->get(array());
         </tr>
 
         <tr>
+          <td>スタッフ名</td>
+          <td>
+            <select name="stuff">
+              <option value="1">戸森</option>
+              <option value="2">小池</option>
+              <option value="3">吉野</option>
+              <option value="4">榎本</option>
+              <option value="5">佐久間</option>
+              <option value="6">清水</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
           <td>性別</td>
           <td>
               <input type="radio" name="sex" value="1" checked="checked" />女性

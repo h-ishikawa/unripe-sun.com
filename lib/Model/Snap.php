@@ -18,6 +18,7 @@ class Snap extends Model_Snap
     parent::insert(array(
       'name' => @$post->name
       , 'sex' => @$post->sex
+      , 'stuff' => @$post->stuff
       , 'file_path' => @$File->path
       , 'category' => @$post->category
       , 'memo' => @$post->memo
