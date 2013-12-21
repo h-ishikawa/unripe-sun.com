@@ -50,12 +50,12 @@ $Schedule->get(array());
           <td>スタッフ名</td>
           <td>
             <select name="stuff">
-              <option value="0">戸森</option>
-              <option value="1">小池</option>
-              <option value="2">吉野</option>
-              <option value="3">榎本</option>
-              <option value="4">佐久間</option>
-              <option value="5">清水</option>
+              <option value="1">戸森</option>
+              <option value="2">小池</option>
+              <option value="3">吉野</option>
+              <option value="4">榎本</option>
+              <option value="5">佐久間</option>
+              <option value="6">清水</option>
             </select>
           </td>
         </tr>
@@ -85,17 +85,17 @@ $Schedule->get(array());
         <td><?= $result->id ?></td>
         <td><?= $result->date ?></td>
         <td>
-          <? if ($result->stuff == 0): ?>
+          <? if ($result->stuff == 1): ?>
             戸森
-          <? elseif ($result->stuff == 1): ?>
-            小池
           <? elseif ($result->stuff == 2): ?>
-            吉野
+            小池
           <? elseif ($result->stuff == 3): ?>
-            榎本
+            吉野
           <? elseif ($result->stuff == 4): ?>
-            佐久間
+            榎本
           <? elseif ($result->stuff == 5): ?>
+            佐久間
+          <? elseif ($result->stuff == 6): ?>
             清水
           <? endif; ?>
         <td>

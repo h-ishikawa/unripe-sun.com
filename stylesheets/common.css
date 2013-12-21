@@ -45,11 +45,11 @@ html {
 
 body {
   width: 100%;
-  color: #333333;
+  color: #7c6551;
 }
 
 a {
-  color: #333333;
+  color: #7c6551;
   text-decoration: none;
 }
 
@@ -134,37 +134,90 @@ h1, h2, h3, h4, h5, h6, strong, em {
   bottom: 0;
   position: absolute;
 }
-
-.home .header .tomori {
+.home .header .stuff.tomori {
   width: 114px;
   left: 5%;
   background: url('/images/home/tomori.png') no-repeat 0 0;
 }
-.home .header .koike {
+.home .header .stuff.koike {
   width: 104px;
   left: 21%;
   background: url('/images/home/koike.png') no-repeat 0 0;
 }
-.home .header .yoshino {
+.home .header .stuff.yoshino {
   width: 104px;
   left: 37%;
   background: url('/images/home/yoshino.png') no-repeat 0 0;
 }
-.home .header .enomoto {
+.home .header .stuff.enomoto {
   width: 95px;
   left: 53%;
   background: url('/images/home/enomoto.png') no-repeat 0 0;
 }
-.home .header .sakuma {
+.home .header .stuff.sakuma {
   width: 94px;
   left: 69%;
   background: url('/images/home/sakuma.png') no-repeat 0 0;
 }
-
-.home .header .shimizu {
+.home .header .stuff.shimizu {
   width: 97px;
   left: 85%;
   background: url('/images/home/shimizu.png') no-repeat 0 0;
+}
+
+.home .header .tweet {
+  font-size: 90%;
+  position: absolute;
+  display: none;
+  word-break: break-all;
+}
+.home .header .tweet.tomori {
+  width: 83px;
+  height: 65px;
+  top: 0;
+  left: 12%;
+  padding: 27px 21px 27px 27px;
+  background: url('/images/home/tweet/tomori.png') no-repeat 0 0;
+}
+.home .header .tweet.koike {
+  width: 80px;
+  height: 84px;
+  top: 15%;
+  left: 27%;
+  padding: 27px 21px;
+  background: url('/images/home/tweet/koike.png') no-repeat 0 0;
+}
+.home .header .tweet.yoshino {
+  width: 89px;
+  height: 58px;
+  top: -3%;
+  left: 43%;
+  padding: 23px 21px;
+  background: url('/images/home/tweet/yoshino.png') no-repeat 0 0;
+}
+.home .header .tweet.enomoto {
+  width: 81px;
+  height: 70px;
+  top: 30%;
+  left: 46%;
+  padding: 23px 27px 23px 24px;
+  background: url('/images/home/tweet/enomoto.png') no-repeat 0 0;
+}
+.home .header .tweet.sakuma {
+  width: 79px;
+  height: 73px;
+  top: 1%;
+  left: 60%;
+  padding: 23px 26px 23px 21px;
+  background: url('/images/home/tweet/sakuma.png') no-repeat 0 0;
+}
+.home .header .tweet.shimizu {
+  width: 82px;
+  height: 77px;
+  top: 20%;
+  left: 77.5%;
+  padding: 34px 21px 31px 21px;
+  background: url('/images/home/tweet/shimizu.png') no-repeat 0 0;
 }
 
 .home .navigation {

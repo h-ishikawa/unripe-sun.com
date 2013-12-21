@@ -22,8 +22,7 @@ class Tweet extends Model_Tweet
 
     if (@$query['order']) {
       $order = array($query['order']);
-      $queries = '';
-      $queries = array();
+      unset($queries['order']);
     }
 
     else {
@@ -33,6 +32,7 @@ class Tweet extends Model_Tweet
     parent::find(
       $queries, array(
         'order' => $order
+        , 'limit' => 3
       )
     );
   }

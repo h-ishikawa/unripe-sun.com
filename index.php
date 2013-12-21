@@ -1,3 +1,35 @@
+<?php
+
+require_once (dirname(__FILE__).'/lib/Model_Tweet.php');
+require_once (dirname(__FILE__).'/lib/Model/Tweet.php');
+
+$queries = array();
+$queries['stuff'] = '1';
+$queries['order'] = 'created_at ASC';
+$Tweet_tomori = new Tweet();
+$Tweet_tomori->get($queries);
+
+$queries['stuff'] = '2';
+$Tweet_koike = new Tweet();
+$Tweet_koike->get($queries);
+
+$queries['stuff'] = '3';
+$Tweet_yoshino = new Tweet();
+$Tweet_yoshino->get($queries);
+
+$queries['stuff'] = '4';
+$Tweet_enomoto = new Tweet();
+$Tweet_enomoto->get($queries);
+
+$queries['stuff'] = '5';
+$Tweet_sakuma = new Tweet();
+$Tweet_sakuma->get($queries);
+
+$queries['stuff'] = '6';
+$Tweet_shimizu = new Tweet();
+$Tweet_shimizu->get($queries);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +46,10 @@
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/images/iphone.jpg"> 
 <link type="text/css" rel="stylesheet" href="/stylesheets/common.css" media="all" charset="utf-8">
+<script type='text/javascript' src='/javascripts/jquery/jquery-1.8.2.min.js'></script>
+<script type='text/javascript' src='/javascripts/jquery/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='/javascripts/unripe.js'></script>
+<script type='text/javascript' src='/javascripts/unripe/index.js'></script>
 </head>
 <body class="home">
   <div class="header">
