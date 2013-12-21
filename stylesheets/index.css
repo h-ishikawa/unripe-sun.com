@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+#contents_left{
+	width:75%;
+	float: left;
+	display: block;
+	margin: 10px 0;
+}
+#contents_right{
+	width:25%;
+	float: left;
+	display: block;
+	margin: 10px 0;
+}
+
+.contents-mini_left{
+	width:50%;
+	min-width:400px;
+	min-height: 200px;
+	float: left;
+	display: block;
+}
+.contents-mini_right{
+	width:50%;
+	min-width:400px;
+	min-height: 200px;
+	float: left;
+	display: block;
+}
+
+.cb{
+	clear: both;
+}

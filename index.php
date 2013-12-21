@@ -66,6 +66,47 @@ $Tweet_shimizu->get($queries);
 
   <div class="contents">
     <div id="contents" class="container">
+    	<div id="contents_left">
+    		<div id="concept">
+    			<h1>Consept</h1>
+    				<p>横浜の東急東横線、反町駅のすぐ近くにある美容室、unripe（アンライプ）。<br />
+店内は光溢れ、スタッフの手作りのはり金細工や絵が飾られていて、とてもアットホームな雰囲気です。 <br />
+オーガニックのシャンプーやトリートメント製品も扱っています。<br />
+お客様とトコトン話ながら、一緒にヘアスタイルを考えたいと思っています。<br />
+是非、ヘアサロンunripeのComfortable Spaceに遊びに来て下さい！</p>
+    		</div>
+    		
+    		<div class="contents-mini_left">
+	    		<h1>カットメニュー</h1>
+    		</div>
+    		<div class="contents-mini_roght">
+	    		<h1>小池のオススメプラン！</h1>
+    		</div>
+    		<div class="cb"></div>
+    			
+    		<div class="contents-mini_left">
+	    		<h1>カレンダー</h1>
+    		</div>
+    		<div class="contents-mini_roght">
+	    		<h1>割引特典</h1>
+    		</div>
+    		<div class="cb"></div>
+    		
+    	</div>
+    	
+    	<div id="contents_right">
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=337089699705595";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>			
+    	</div>
+    	<div class="cb"></div>
+    	
       <a class="pageTop" href="#header">PAGE TOP</a></p>
     </div>
   </div>
