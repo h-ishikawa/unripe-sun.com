@@ -52,8 +52,10 @@ $Snap->get(array());
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/images/iphone.jpg"> 
 <link type="text/css" rel="stylesheet" href="/stylesheets/common.css" media="all" charset="utf-8">
-<script type='text/javascript' src='/javascripts/jquery/jquery-1.8.2.min.js'></script>
+<link type="text/css" rel="stylesheet" href="/stylesheets/lightbox.css" media="all" charset="utf-8">
+<script type='text/javascript' src='/javascripts/jquery/jquery-1.10.2.min.js'></script>
 <script type='text/javascript' src='/javascripts/jquery/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='/javascripts/jquery/lightbox-2.6.min.js'></script>
 <script type='text/javascript' src='/javascripts/unripe.js'></script>
 <script type='text/javascript' src='/javascripts/unripe/index.js'></script>
 </head>
@@ -131,7 +133,7 @@ $Snap->get(array());
    --><div class="panel slider">
         <!--
           <? foreach ($Snap->result as $result): ?>
-         --><a class="panel" href="/images/uploads/<?= $result->file_path ?>">
+          --><a class="panel" href="/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="name: <?= $result->name ?> <br>comment: <?= $result->memo ?>">
               <img src="/images/uploads/thumbnails/<?= $result->file_path ?>" width="220" height="173">
             </a><!--
           <? endforeach; ?>
