@@ -116,7 +116,7 @@ $Snap->get(array());
   <div class="snaps">
     <div id="snaps" class="container">
       <div class="panel themes">
-        <h3><strong>Unripe</strong>にいらっしゃってくれた方々のヘアデザインスナップ。</h3>
+        <h3><strong>Unripe</strong>にいらっしゃってくれた方々の<em>ヘアデザインスナップ</em>。</h3>
         <p>スタイリングの参考に。<br>
            ヘアカタログの代わりにも。<br>
            <strong>Unripe</strong>で生まれたスタイリングを是非ご覧ください。
