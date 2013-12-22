@@ -186,9 +186,9 @@ foreach($Schedule->result as $result) {
           <h3>割引特典</h3>
           <p>あなたの大切なご家族、お友達をご紹介下さい。紹介して頂いた方には、次回全メニュー30%OFFで施術させて頂きます。</p>
         </div>
-    	</div>
+    	</div><!--
     	
-    	<div class="panel fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>			
+   --><div class="panel fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>			
 
     </div>
   </div>

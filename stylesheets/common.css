@@ -269,6 +269,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
 	margin: 0 0 1ex;
   border-bottom: dotted 2px #7c6551;
 }
+
 /*
  ** home contents cut table
  */
@@ -395,7 +396,6 @@ h1, h2, h3, h4, h5, h6, strong, em {
 	width: 25%;
   height: 100%;
   margin-top:0.5em;
-
 }
 
 .home .contents .fb-like-box span,
