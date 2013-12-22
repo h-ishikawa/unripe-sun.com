@@ -4,6 +4,7 @@ require_once (dirname(__FILE__).'/lib/Model_Tweet.php');
 require_once (dirname(__FILE__).'/lib/Model/Tweet.php');
 require_once (dirname(__FILE__).'/lib/Model_Snap.php');
 require_once (dirname(__FILE__).'/lib/Model/Snap.php');
+require_once (dirname(__FILE__).'/applications/Calendar.php');
 
 $queries = array();
 $queries['stuff'] = '1';
@@ -31,9 +32,10 @@ $queries['stuff'] = '6';
 $Tweet_shimizu = new Tweet();
 $Tweet_shimizu->get($queries);
 
-
 $Snap = new Snap();
 $Snap->get(array());
+
+$Calendar = new Calendar();
 ?>
 
 <!DOCTYPE html>
@@ -102,6 +104,7 @@ $Snap->get(array());
         </div><!--
      --><div class="panel calendar">
           <h3>カレンダー</h3>
+          <?= $Calendar->get() ?>
         </div><!--
      --><div class="panel privilege">
           <h3>割引特典</h3>

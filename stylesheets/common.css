@@ -259,10 +259,54 @@ h1, h2, h3, h4, h5, h6, strong, em {
 .home .contents .plan,
 .home .contents .calendar,
 .home .contents .privilege {
-	width: 50%;
+	width: 47%;
+  padding: 0 3% 0 0;
 	min-height: 15em;
 }
 
+.home .contents h3 {
+	margin: 0 0 1ex;
+  border-bottom: dotted 2px #7c6551;
+}
+
+/*
+ ** home contents calendar
+ */
+.home .contents .calendar table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.home .contents .calendar caption {
+  height: 3ex;
+  padding: .5ex 0 0;
+  color: #ffffff;
+  background-color: #7c6551;
+}
+
+.home .contents .calendar th,
+.home .contents .calendar td {
+  height: 3ex;
+  border: solid 1px #7c6551;
+}
+
+.home .contents .calendar th {
+  font-size: 90%;
+}
+
+.home .contents .calendar td {
+  width: 14%;
+}
+
+.home .contents .calendar .sat,
+.home .contents .calendar .sun {
+  width: 15%;
+}
+
+/*
+ ** home fb-like-box
+ */
 .home .contents .fb-like-box {
 	width: 25%;
   height: 100%;
