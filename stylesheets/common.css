@@ -329,6 +329,16 @@ h1, h2, h3, h4, h5, h6, strong, em {
   width: 14%;
 }
 
+.home .contents .calendar tr th.sun,
+.home .contents .calendar tr td:first-child {
+  color: #ff6347;
+}
+
+.home .contents .calendar tr th.sat,
+.home .contents .calendar tr td:last-child {
+  color: #4682b4;
+}
+
 .home .contents .calendar .sat,
 .home .contents .calendar .sun {
   width: 15%;
