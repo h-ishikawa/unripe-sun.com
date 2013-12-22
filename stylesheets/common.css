@@ -161,12 +161,12 @@ h1, h2, h3, h4, h5, h6, strong, em {
   background: url('/images/home/enomoto.png') no-repeat 0 0;
 }
 .home .header .stuff.sakuma {
-  width: 96px;
+  width: 94px;
   left: 69%;
   background: url('/images/home/sakuma.png') no-repeat 0 0;
 }
 .home .header .stuff.shimizu {
-  width: 98px;
+  width: 97px;
   left: 85%;
   background: url('/images/home/shimizu.png') no-repeat 0 0;
 }
@@ -253,6 +253,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
 .home .contents .container .panel:first-child {
 	width: 75%;
   vertical-align: top;
+  margin-top:0.5em;
 }
 
 .home .contents .cut,
@@ -267,6 +268,35 @@ h1, h2, h3, h4, h5, h6, strong, em {
 .home .contents h3 {
 	margin: 0 0 1ex;
   border-bottom: dotted 2px #7c6551;
+}
+/*
+ ** home contents cut table
+ */
+.home .contents .cut  table {
+  width: 100%;
+  border-spacing: 0;
+  font-size:1em;
+  margin:0 0 1em 0;
+}
+.home .contents .cut  table th {
+  color: #fff;
+  padding: 0.3em;
+  background: #5d3b07;
+  font-weight: bold;
+  line-height: 120%;
+  text-align: center;
+}
+
+.home .contents .cut table tr td {
+  border-bottom: 1px solid #5d3b07;
+  border-left: 1px solid #5d3b07;
+  text-align: center;
+}
+.home .contents .cut  table tr td:last-child {
+  border-right: 1px solid #5d3b07;
+}
+.home .contents .cut  table tr {
+  background: #fff;
 }
 
 /*
@@ -310,6 +340,8 @@ h1, h2, h3, h4, h5, h6, strong, em {
 .home .contents .fb-like-box {
 	width: 25%;
   height: 100%;
+  margin-top:0.5em;
+
 }
 
 .home .contents .fb-like-box span,

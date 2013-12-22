@@ -85,6 +85,7 @@ $Calendar = new Calendar();
 
   <div class="contents">
     <div id="contents" class="container">
+
     	<div class="panel">
     		<div>
     			<h2>Concept</h2>
@@ -94,13 +95,41 @@ $Calendar = new Calendar();
                お客様とトコトン話ながら、一緒に<em>ヘアスタイル</em>を考えたいと思っています。<br />
                是非、<em>ヘアサロン</em><strong>unripe</strong>のComfortable Spaceに遊びに来て下さい！
             </p>
-    		</div>
-    		
+    		</div>   		
         <div class="panel cut">
           <h3>カットメニュー</h3>
+          <table>
+          	<tbody>
+          		<tr>
+          			<th>メニュー</th>
+          			<th>料金</th>
+          		</tr>
+          		<tr>
+          			<td>カット</td>
+          			<td>￥5,250-〜</td>
+          		</tr>
+          		<tr>
+          			<td>トリートメント</td>
+          			<td>￥3,675-〜</td>
+          		</tr>
+          		<tr>
+          			<td>カット&パーマ</td>
+          			<td>￥12,600-〜</td>
+          		</tr>
+          		<tr>
+          			<td>セットアップ</td>
+          			<td>￥6,300-〜</td>
+          		</tr>
+          		<tr>
+          			<td>前髪カット</td>
+          			<td>￥1,050-〜</td>
+          		</tr>
+          	</tbody>
+          </table>
         </div><!--
      --><div class="panel plan">
           <h3>小池のオススメプラン！</h3>
+          <p>冬は乾燥の季節です。あなたの髪も乾燥していませんか？髪に保湿と潤いを与えて健康な髪を整えるサポートを致します。</p>
         </div><!--
      --><div class="panel calendar">
           <h3>カレンダー</h3>
@@ -108,10 +137,11 @@ $Calendar = new Calendar();
         </div><!--
      --><div class="panel privilege">
           <h3>割引特典</h3>
+          <p>あなたの大切なご家族、お友達をご紹介下さい。紹介して頂いた方には、次回全メニュー30%OFFで施術させて頂きます。</p>
         </div>
-    	</div><!--
+    	</div>
     	
-   --><div class="panel fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>			
+    	<div class="panel fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>			
 
     </div>
   </div>
