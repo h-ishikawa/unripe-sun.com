@@ -4,6 +4,8 @@ require_once (dirname(__FILE__).'/lib/Model_Tweet.php');
 require_once (dirname(__FILE__).'/lib/Model/Tweet.php');
 require_once (dirname(__FILE__).'/lib/Model_Snap.php');
 require_once (dirname(__FILE__).'/lib/Model/Snap.php');
+require_once (dirname(__FILE__)."/lib/Model_Schedule.php");
+require_once (dirname(__FILE__)."/lib/Model/Schedule.php");
 require_once (dirname(__FILE__).'/applications/Calendar.php');
 
 $queries = array();
@@ -36,6 +38,15 @@ $Snap = new Snap();
 $Snap->get(array());
 
 $Calendar = new Calendar();
+
+$Schedule = new Schedule();
+$Schedule->get(array());
+
+foreach($Schedule->result as $result) {
+  if (date("Yn") == date("Yn", strtotime($result->date))) {
+    $holidays[] = $result;
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -127,14 +138,50 @@ $Calendar = new Calendar();
           	</tbody>
           </table>
         </div><!--
+
      --><div class="panel plan">
           <h3>小池のオススメプラン！</h3>
           <p>冬は乾燥の季節です。あなたの髪も乾燥していませんか？髪に保湿と潤いを与えて健康な髪を整えるサポートを致します。</p>
         </div><!--
+
      --><div class="panel calendar">
           <h3>カレンダー</h3>
           <?= $Calendar->get() ?>
+
+          <p>【 お休み 】</p>
+          <p class="tomori"><span></span>戸森：
+            <? foreach($holidays as $holiday): ?>
+              <? if($holiday->stuff == 1): ?>
+                <?= date("j", strtotime($holiday->date)) ?>日
+              <? endif; ?>
+            <? endforeach; ?>
+          </p>
+
+          <p class="koike"><span></span>小池：
+            <? foreach($holidays as $holiday): ?>
+              <? if($holiday->stuff == 2): ?>
+                <?= date("j", strtotime($holiday->date)) ?>日
+              <? endif; ?>
+            <? endforeach; ?>
+          </p>
+
+          <p class="yoshino"><span></span>吉野：
+            <? foreach($holidays as $holiday): ?>
+              <? if($holiday->stuff == 3): ?>
+                <?= date("j", strtotime($holiday->date)) ?>日
+              <? endif; ?>
+            <? endforeach; ?>
+          </p>
+
+          <p class="enomoto"><span></span>榎本：
+            <? foreach($holidays as $holiday): ?>
+              <? if($holiday->stuff == 4): ?>
+                <?= date("j", strtotime($holiday->date)) ?>日
+              <? endif; ?>
+            <? endforeach; ?>
+          </p>
         </div><!--
+
      --><div class="panel privilege">
           <h3>割引特典</h3>
           <p>あなたの大切なご家族、お友達をご紹介下さい。紹介して頂いた方には、次回全メニュー30%OFFで施術させて頂きます。</p>

@@ -306,6 +306,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
+  margin: 0 0 10px;
 }
 
 .home .contents .calendar caption {
@@ -344,6 +345,49 @@ h1, h2, h3, h4, h5, h6, strong, em {
   width: 15%;
 }
 
+.home .contents .calendar p {
+  font-size: 80%;
+  margin: 0;
+}
+
+.home .contents .calendar p span {
+  width: 10px;
+  height: 10px;
+  margin: -2px 2px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.home .contents .calendar p.tomori span {
+  background-color: #cd5c5c;
+}
+.home .contents .calendar p.koike span {
+  background-color: #5f9ea0;
+}
+.home .contents .calendar p.yoshino span {
+  background-color: #6b8e23;
+}
+.home .contents .calendar p.enomoto span {
+  background-color: #9370db;
+}
+
+.home .contents .calendar .stuff1,
+.home .contents .calendar .stuff2,
+.home .contents .calendar .stuff3,
+.home .contents .calendar .stuff4 {
+  color: #ffffff!important;
+}
+.home .contents .calendar .stuff1 {
+  background-color: #cd5c5c;
+}
+.home .contents .calendar .stuff2 {
+  background-color: #5f9ea0;
+}
+.home .contents .calendar .stuff3 {
+  background-color: #6b8e23;
+}
+.home .contents .calendar .stuff4 {
+  background-color: #9370db;
+}
 /*
  ** home fb-like-box
  */

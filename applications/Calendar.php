@@ -1,19 +1,32 @@
 <?
+require_once (dirname(__FILE__)."/../lib/Model_Schedule.php");
+require_once (dirname(__FILE__)."/../lib/Model/Schedule.php");
 
 /*
  ** Calendar
  */
 class Calendar 
 {
-  public function get($year = '', $month = '') {
-function repeat($n) {
-	return str_repeat("\t\t<td> </td>\n", $n);
-}
+  public function get($year = "", $month = "") {
+  $Schedule = new Schedule();
+  $Schedule->get(array());
+  $holidays = array();
+  
+  function repeat($n) {
+  	return str_repeat("\t\t<td> </td>\n", $n);
+  }
+
 	if(empty($year) && empty($month)) {
 		$year = date("Y");
 		$month = date("n");
 	}
-	//月末の取得
+
+  foreach($Schedule->result as $result) {
+    if (date("Yn") == date("Yn", strtotime($result->date))) {
+      $holidays[] = $result;
+    }
+  }
+
 	$l_day = date("j", mktime(0, 0, 0, $month + 1, 0, $year));
 
 	$tmp = <<<EOM
@@ -32,7 +45,15 @@ EOM;
 
 	$lc = 0;
 
-	for ($i = 1; $i < $l_day + 1;$i++) {
+	for ($i = 1; $i < $l_day + 1; $i++) {
+    $hol = '';
+
+    foreach($holidays as $holiday) {
+      if ($i == date("d", strtotime($holiday->date))) {
+        $hol = $holiday->stuff;
+		  }
+    }
+
 		$week = date("w", mktime(0, 0, 0, $month, $i, $year));
 
 		if ($week == 0) {
@@ -52,6 +73,10 @@ EOM;
 		if ($i == date("j") && $year == date("Y") && $month == date("n")) {
 			$tmp .= "\t\t<td class=\"today\">{$i}</td>\n";
     }
+
+    else if (@$hol) {
+			$tmp .= "\t\t<td class=\"stuff{$hol}\">{$i}</td>\n";
+		}
     
     else {
 			$tmp .= "\t\t<td>{$i}</td>\n";

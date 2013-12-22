@@ -31,7 +31,7 @@ class Schedule extends Model_Schedule
     }
 
     else {
-      $order = array('created_at DESC');
+      $order = array('date ASC');
     }
 
     parent::find(
