@@ -71,6 +71,7 @@ foreach($Schedule->result as $result) {
 <script type='text/javascript' src='/javascripts/jquery/lightbox-2.6.min.js'></script>
 <script type='text/javascript' src='/javascripts/unripe.js'></script>
 <script type='text/javascript' src='/javascripts/unripe/index.js'></script>
+<script type='text/javascript' src='/javascripts/unripe/scroll.js'></script>
 <script>
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];

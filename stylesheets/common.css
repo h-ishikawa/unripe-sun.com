@@ -120,6 +120,33 @@ h1, h2, h3, h4, h5, h6, strong, em {
 }
 
 /*
+ ** pageTop
+ */
+.pageTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 77%;
+	background: #126b2e;
+	text-decoration: none;
+	color: #fff;
+	width: 100px;
+	padding: 30px 0;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+  filter: alpha(opacity = 80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+
+.pageTop:hover {
+  color: #ffffff;
+	text-decoration: none;
+	background: #999;
+}
+
+/*
  ** home
  */
 
