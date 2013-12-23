@@ -198,6 +198,37 @@ h1, h2, h3, h4, h5, h6, strong, em {
   background: url('/images/home/shimizu.png') no-repeat 0 0;
 }
 
+.home .header .stuff.tomori:hover {
+  width: 114px;
+  left: 5%;
+  background: url('/images/home/tomori_hover.png') no-repeat 0 0;
+}
+.home .header .stuff.koike:hover {
+  width: 110px;
+  left: 21%;
+  background: url('/images/home/koike_hover.png') no-repeat 0 0;
+}
+.home .header .stuff.yoshino:hover {
+  width: 117px;
+  left: 36%;
+  background: url('/images/home/yoshino_hover.png') no-repeat 0 0;
+}
+.home .header .stuff.enomoto:hover {
+  width: 112px;
+  left: 52%;
+  background: url('/images/home/enomoto_hover.png') no-repeat 0 0;
+}
+.home .header .stuff.sakuma:hover {
+  width: 114px;
+  left: 68%;
+  background: url('/images/home/sakuma_hover.png') no-repeat 0 0;
+}
+.home .header .stuff.shimizu:hover {
+  width: 120px;
+  left: 84%;
+  background: url('/images/home/shimizu_hover.png') no-repeat 0 0;
+}
+
 .home .header .tweet {
   font-size: 90%;
   position: absolute;
