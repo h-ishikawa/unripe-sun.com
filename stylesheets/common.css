@@ -314,6 +314,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
   margin-top:0.5em;
 }
 
+.home .contents .news,
 .home .contents .cut,
 .home .contents .plan,
 .home .contents .calendar,
@@ -328,6 +329,15 @@ h1, h2, h3, h4, h5, h6, strong, em {
 	margin: 0 0 1ex;
   border-bottom: dotted 2px #7c6551;
 }
+/*
+ ** home contents news li */
+.home .contents .news li{
+  list-style-type: none;
+}
+.home .contents .news .title{
+  color: red;
+  list-style-type: square;
+}
 
 /*
  ** home contents cut table
@@ -341,7 +351,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
 .home .contents .cut  table th {
   color: #fff;
   padding: 0.3em;
-  background: #5d3b07;
+  background: #7c6551;
   font-weight: bold;
   line-height: 120%;
   text-align: center;
@@ -357,6 +367,22 @@ h1, h2, h3, h4, h5, h6, strong, em {
 }
 .home .contents .cut  table tr {
   background: #fff;
+}
+.home .contents .cut .point {
+  font-size:0.8em;
+}
+.home .contents .cut .point img{
+  vertical-align: top;
+}
+.home .contents .cut .price-off {
+  color: red;
+}
+
+/*
+ ** home contents plan
+ */
+.home .contents .plan img {
+  margin: 10px 30px;
 }
 
 /*
@@ -447,6 +473,16 @@ h1, h2, h3, h4, h5, h6, strong, em {
 }
 .home .contents .calendar .stuff4 {
   background-color: #9370db;
+}
+/*
+ ** home contents privilege
+ */
+ .home .contents .privilege img{
+  margin: 10px 10px;
+  vertical-align: top;
+}
+.home .contents .privilege li{
+  list-style-type: square;
 }
 /*
  ** home fb-like-box

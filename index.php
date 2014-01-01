@@ -108,7 +108,19 @@ foreach($Schedule->result as $result) {
                是非、<em>ヘアサロン</em><strong>unripe</strong>のComfortable Spaceに遊びに来て下さい！
             </p>
     		</div>   		
-        <div class="panel cut">
+        <div class="panel news">
+          <h3>NEWS</h3>
+          <ul>
+            <li class="title">2014年1月1日</li>
+            <a href=""><li>新年の営業について</li></a>
+            <li class="title">2014年1月15日</li>
+            <a href=""><li>成人の日の予約について</li></a>
+            <li class="title">2014年1月30日</li>
+            <a href=""><li>新商品について</li></a>
+          </ul>
+        </div><!--
+
+     --><div class="panel cut">
           <h3>カットメニュー</h3>
           <table>
           	<tbody>
@@ -138,11 +150,13 @@ foreach($Schedule->result as $result) {
           		</tr>
           	</tbody>
           </table>
+          <p class="point">※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></p>
         </div><!--
 
      --><div class="panel plan">
           <h3>小池のオススメプラン！</h3>
-          <p>冬は乾燥の季節です。あなたの髪も乾燥していませんか？髪に保湿と潤いを与えて健康な髪を整えるサポートを致します。</p>
+          <p>冬は乾燥の季節です。あなたの髪も乾燥していませんか？髪に保湿と潤いを与えて健康な髪を整えるサポートを致します。</p><p class="panel plan_img"><img src="images/home/test_img.jpg" alt="test" /><!--
+          --><img src="images/home/test_img.jpg" alt="test" /></p>
         </div><!--
 
      --><div class="panel calendar">
@@ -184,8 +198,15 @@ foreach($Schedule->result as $result) {
         </div><!--
 
      --><div class="panel privilege">
-          <h3>割引特典</h3>
-          <p>あなたの大切なご家族、お友達をご紹介下さい。紹介して頂いた方には、次回全メニュー30%OFFで施術させて頂きます。</p>
+          <h3>製品情報</h3>
+          <!--<ul>
+            <li>シャンプー</li>
+            <li>トリートメント</li>
+            <li>ヘアカラー</li>
+            <li>パーマ</li>
+          </ul>
+          -->
+          <p><img src="images/home/product01.jpg" /><img src="images/home/product02.jpg" /><br />ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></p>
         </div>
     	</div><!--
     	
