@@ -137,6 +137,10 @@ foreach($Schedule->result as $result) {
           			<td>￥3,675-〜</td>
           		</tr>
           		<tr>
+          			<td>カラーリング</td>
+          			<td>￥12,075-〜</td>
+          		</tr>
+          		<tr>
           			<td>カット&パーマ</td>
           			<td>￥12,600-〜</td>
           		</tr>
@@ -150,13 +154,13 @@ foreach($Schedule->result as $result) {
           		</tr>
           	</tbody>
           </table>
-          <p class="point">※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></p>
+          <p class="point">※店長・ディレクターカット・・・プラス￥525-<br />※オーナーカット・・・プラス￥1,050-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></p>
         </div><!--
 
      --><div class="panel plan">
           <h3>小池のオススメプラン！</h3>
-          <p>冬は乾燥の季節です。あなたの髪も乾燥していませんか？髪に保湿と潤いを与えて健康な髪を整えるサポートを致します。</p><p class="panel plan_img"><img src="images/home/test_img.jpg" alt="test" /><!--
-          --><img src="images/home/test_img.jpg" alt="test" /></p>
+          <p>冬は乾燥の季節です。あなたの髪も乾燥していませんか？髪に保湿と潤いを与えて健康な髪を整えるサポートを致します。</p><p class="panel plan_img"><img src="images/home/test_img.jpg" alt="unripeプラン1" /><!--
+          --><img src="images/home/test_img.jpg" alt="unripeプラン2" /></p>
         </div><!--
 
      --><div class="panel calendar">
@@ -199,14 +203,7 @@ foreach($Schedule->result as $result) {
 
      --><div class="panel privilege">
           <h3>製品情報</h3>
-          <!--<ul>
-            <li>シャンプー</li>
-            <li>トリートメント</li>
-            <li>ヘアカラー</li>
-            <li>パーマ</li>
-          </ul>
-          -->
-          <p><img src="images/home/product01.jpg" /><img src="images/home/product02.jpg" /><br />ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></p>
+          <p><img src="images/home/product01.jpg" alt="unripe製品1" /><img src="images/home/product02.jpg"／alt="unripe製品2" /><br />ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></p>
         </div>
     	</div><!--
     	

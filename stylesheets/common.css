@@ -80,6 +80,10 @@ h1, h2, h3, h4, h5, h6, strong, em {
 //TODO: 横並びのものは、floatを使用せずinline-blockで。
 }
 
+.price-off {
+  color: red;
+}
+
 /*
  ** header
  */
@@ -479,7 +483,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
  */
  .home .contents .privilege img{
   margin: 10px 10px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .home .contents .privilege li{
   list-style-type: square;
@@ -583,3 +587,66 @@ h1, h2, h3, h4, h5, h6, strong, em {
   right: 0;
   background: url('/images/home/next.png') 0 0;
 }
+
+/*
+ ** menus
+ */
+
+/*
+ ** menus header
+ */
+.menus .header {
+  padding: 10px 0 0;
+}
+/*
+ ** menus navigation
+ */
+.menus .navigation {
+  height: 51px;
+  background: url('/images/home/bush.png') repeat-x 0 bottom;
+}
+
+.menus .navigation .container {
+  height: 51px;
+  background: url('/images/home/bush-front.png') no-repeat 600px bottom;
+}
+
+.menus .navigation img.cactus {
+  display: inline-block;
+}
+/*
+ ** menus contents
+ */
+.menus .contents {
+	margin: 1.5em 0;
+}
+
+.menus .contents .container .panel:first-child {
+	width: 100%;
+  vertical-align: top;
+  margin-top:0.5em;
+}
+/*
+ ** menus contents menu
+ */
+.menus .contents .menu{
+	width: 100%;
+	min-height: 5em;
+  vertical-align: top;
+}
+
+.menus .contents .m-detail{
+	width: 20%;
+  padding: 0 5% 2% 0;
+	min-height: 15em;
+  vertical-align: top;
+}
+
+.menus .contents .m-detail img{
+	width: 95%;
+  padding: 0 5% 0 0;
+	min-height: 15em;
+  vertical-align: top;
+}
+
+

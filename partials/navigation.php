@@ -16,8 +16,8 @@ $replaceUrl = preg_replace('/\//', ' ', $uri);
     </div><!--
 
  --><div class="panel properties">
-      <a class="panel" href="/contacts"><img src="/images/mail.png" alt=""></a><!--
-   --><a class="panel" href="http://www.facebook.com/pages/Unripe/209519589110505" target="_blank"><img src="/images/facebook.png" alt=""></a><!--
-   --><a class="panel" href="/contacts" target="_blank"><img src="/images/blogger.png" alt=""></a><!--
+      <a class="panel" href="/contacts"><img src="/images/mail.png" alt="お問い合わせ"></a><!--
+   --><a class="panel" href="http://www.facebook.com/pages/Unripe/209519589110505" target="_blank"><img src="/images/facebook.png" alt="facebook"></a><!--
+   --><a class="panel" href="http://unripe-sun.blogspot.jp" target="_blank"><img src="/images/blogger.png" alt="blogger"></a><!--
    --><img class="panel cactus" src="/images/cactus.png" class="panel" alt="">
     </div>
