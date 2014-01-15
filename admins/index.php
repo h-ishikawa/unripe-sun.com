@@ -6,7 +6,6 @@
 <meta name="robots" content="noindex,nofollow">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta http-equiv="Content-Style-Type" content="text/css">
-<link type="text/css" rel="stylesheet" href="/stylesheets/common.css" media="all" charset="utf-8">
 <link type="text/css" rel="stylesheet" href="/stylesheets/admins.css" media="all" charset="utf-8">
 </head>
 <body class="admins index">
