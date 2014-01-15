@@ -1,10 +1,8 @@
 <?php
 
-require_once (dirname(__FILE__).'/lib/Model_Tweet.php');
+require_once (dirname(__FILE__)."/lib/Model/News.php");
 require_once (dirname(__FILE__).'/lib/Model/Tweet.php');
-require_once (dirname(__FILE__).'/lib/Model_Snap.php');
 require_once (dirname(__FILE__).'/lib/Model/Snap.php');
-require_once (dirname(__FILE__)."/lib/Model_Schedule.php");
 require_once (dirname(__FILE__)."/lib/Model/Schedule.php");
 require_once (dirname(__FILE__).'/applications/Calendar.php');
 
@@ -36,6 +34,9 @@ $Tweet_shimizu->get($queries);
 
 $Snap = new Snap();
 $Snap->get(array());
+
+$News = new News();
+$News->get(array());
 
 $Calendar = new Calendar();
 
@@ -110,14 +111,13 @@ foreach($Schedule->result as $result) {
     		</div>   		
         <div class="panel news">
           <h3>NEWS</h3>
+          <? foreach($News->result as $result): ?>
           <ul>
-            <li class="title">2014年1月1日</li>
-            <a href=""><li>新年の営業について</li></a>
-            <li class="title">2014年1月15日</li>
-            <a href=""><li>成人の日の予約について</li></a>
-            <li class="title">2014年1月30日</li>
-            <a href=""><li>新商品について</li></a>
+            <li class="date"><?= date('Y年n月j日', strtotime($result->date)) ?></li>
+            <li class="title"><?= $result->title ?></li>
+            <li class="description"><?= $result->content ?></li>
           </ul>
+          <? endforeach; ?>
         </div><!--
 
      --><div class="panel cut">

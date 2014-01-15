@@ -1,6 +1,5 @@
 <?php
 
-require_once (dirname(__FILE__).'/../../lib/Model_Tweet.php');
 require_once (dirname(__FILE__).'/../../lib/Model/Tweet.php');
 
 $Tweet = new Tweet();

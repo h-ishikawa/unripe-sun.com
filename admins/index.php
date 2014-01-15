@@ -1,10 +1,3 @@
-<?php
-
-//require_once (dirname(__FILE__).'/../lib/Model.php');
-//require_once (dirname(__FILE__).'/../lib/Model/Information.php');
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +15,8 @@
   </div>
 
   <div class="contents container">
+    <h2>ニュース</h2>
+    <a href="/admins/news"             >ニュース管理ページへ</a>
     <h2>つぶやき</h2>
     <a href="/admins/tweets"           >つぶやき管理ページへ</a>
     <h2>スナップ</h2>

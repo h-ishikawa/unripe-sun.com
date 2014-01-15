@@ -1,6 +1,5 @@
 <?php
 
-require_once (dirname(__FILE__).'/../../lib/Model_Snap.php');
 require_once (dirname(__FILE__).'/../../lib/Model/Snap.php');
 
 $Snap = new Snap();

@@ -1,6 +1,5 @@
 <?php
 
-require_once (dirname(__FILE__).'/../../lib/Model_Schedule.php');
 require_once (dirname(__FILE__).'/../../lib/Model/Schedule.php');
 
 $Schedule = new Schedule();
@@ -40,7 +39,7 @@ $Schedule->get(array());
               <? endfor; ?>
             </select>月
             <select name="day">
-              <? for($i = 1; $i < 31; $i = $i + 1): ?>
+              <? for($i = 1; $i < 32; $i = $i + 1): ?>
               <option value="<?= $i ?>"><?= $i ?></option>
               <? endfor; ?>
             </select>日
