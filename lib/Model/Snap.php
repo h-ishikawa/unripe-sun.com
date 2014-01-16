@@ -1,9 +1,9 @@
 <?php
 
-require_once (dirname(__FILE__).'/../Model_Snap.php');
+require_once (dirname(__FILE__).'/../Model.php');
 require_once (dirname(__FILE__).'/../../applications/File.php');
 
-class Snap extends Model_Snap
+class Snap extends Model
 {
   static $table = 'snaps';
 

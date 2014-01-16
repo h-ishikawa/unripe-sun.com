@@ -1,9 +1,9 @@
 <?php
 
-require_once (dirname(__FILE__).'/../Model_Tweet.php');
+require_once (dirname(__FILE__).'/../Model.php');
 require_once (dirname(__FILE__).'/../../applications/File.php');
 
-class Tweet extends Model_Tweet
+class Tweet extends Model
 {
   static $table = 'tweets';
 

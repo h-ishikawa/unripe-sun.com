@@ -2,7 +2,7 @@
 
 require_once (dirname(__FILE__).'/Db.php');
 
-class Model_Snap extends Db
+class Model extends Db
 {
   public function count ($queries = array(), $options = array()) {
       $options['select'] = 'COUNT(DISTINCT me.id) AS count';
@@ -11,7 +11,7 @@ class Model_Snap extends Db
   }
 
   public function find ($queries = array(), $options = array()) {
-      $table = 'snaps';
+      $table = static::$table;
 
       if (@$options['select'] && is_array($options['select'])) {
         $select = implode(', ', $options['select']);
@@ -197,7 +197,7 @@ class Model_Snap extends Db
   }
 
   public function findById ($id) {
-      $table = 'snaps';
+      $table = static::$table;
       $db = parent::getInstance();
       $sql = sprintf('SELECT * FROM %s WHERE id = :id', $table);
       $st = $db->prepare($sql);
@@ -207,7 +207,7 @@ class Model_Snap extends Db
   }
 
   public function findByname ($name) {
-      $table = 'snaps';
+      $table = static::$table;
       $db = parent::getInstance();
       $sql = sprintf('SELECT * FROM %s WHERE name = :name', $table);
       $st = $db->prepare($sql);
@@ -217,7 +217,7 @@ class Model_Snap extends Db
   }
 
   public function insert ($params) {
-      $table = 'snaps';
+      $table = static::$table;
       $keys = array();
       $values = array();
 
@@ -256,7 +256,7 @@ class Model_Snap extends Db
   }
 
   public function update ($datum, $queries) {
-      $table = 'snaps';
+      $table = static::$table;
       $sql = sprintf('UPDATE %s SET ', $table);
       $sets = array();
       $values = array();
@@ -300,7 +300,7 @@ class Model_Snap extends Db
   }
 
   public function delete ($queries) {
-      $table = 'snaps';
+      $table = static::$table;
       $sql = sprintf('DELETE FROM %s', $table);
       $wheres = array();
       $values = array();

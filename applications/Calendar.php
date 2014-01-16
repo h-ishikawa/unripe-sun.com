@@ -1,5 +1,5 @@
 <?
-require_once (dirname(__FILE__)."/../lib/Model_Schedule.php");
+require_once (dirname(__FILE__)."/../lib/Model.php");
 require_once (dirname(__FILE__)."/../lib/Model/Schedule.php");
 
 /*
