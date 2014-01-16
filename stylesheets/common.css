@@ -93,6 +93,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
   padding: 40px 0 0;
   overflow: hidden;
   background: url('/images/logo.png') no-repeat 0 0;
+  cursor: pointer;
 }
 
 /*
@@ -108,6 +109,11 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .navigation a {
   font-size: 95%;
+}
+
+.navigation a.selected {
+  color: #126b2e;
+  text-decoration: underline;
 }
 
 .navigation .links a {
