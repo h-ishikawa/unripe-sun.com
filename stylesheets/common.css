@@ -623,29 +623,55 @@ h1, h2, h3, h4, h5, h6, strong, em {
 /*
  ** menus header
  */
-.menus .header {
+.menus .header,
+.contacts .header {
   padding: 10px 0 0;
 }
+
+.menus .header .stuff,
+.contacts .header .stuff {
+  width: 35%;
+  text-align: right;
+}
+
+.menus .header .description,
+.contacts .header .description {
+  width: 60%;
+  padding: 0 0 0 5%;
+  text-align: center;
+}
+
+.menus .header h2,
+.contacts .header h2 {
+  font-size: 130%;
+  font-weight: bold;
+}
+
 /*
  ** menus navigation
  */
-.menus .navigation {
+.menus .navigation,
+.contacts .navigation {
   height: 51px;
   background: url('/images/home/bush.png') repeat-x 0 bottom;
 }
 
-.menus .navigation .container {
+.menus .navigation .container,
+.contacts .navigation .container {
   height: 51px;
   background: url('/images/home/bush-front.png') no-repeat 600px bottom;
 }
 
-.menus .navigation img.cactus {
+.menus .navigation img.cactus,
+.contacts .navigation img.cactus {
   display: inline-block;
 }
+
 /*
  ** menus contents
  */
-.menus .contents {
+.menus .content,
+.contacts .contents {
 	margin: 1.5em 0;
 }
 
@@ -654,6 +680,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
   vertical-align: top;
   margin-top:0.5em;
 }
+
 /*
  ** menus contents menu
  */
@@ -677,4 +704,19 @@ h1, h2, h3, h4, h5, h6, strong, em {
   vertical-align: top;
 }
 
+/*
+ ** contacts
+ */
+.contacts .thanks,
+.contacts .sorry {
+  display: none;
+}
 
+.contacts .success.thanks,
+.contacts .failed.sorry {
+  display: block;
+}
+
+.contacts a.back {
+  text-decoration: underline;
+}
