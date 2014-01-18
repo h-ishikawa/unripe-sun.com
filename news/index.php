@@ -1,10 +1,18 @@
+<?php
+
+require_once (dirname(__FILE__).'/../lib/Model/News.php');
+
+$News = new News();
+$News->get(array());
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=9">
 <meta http-equiv="X-UA-Compatible" content="IE=8">
-<title>Unripe| menu</title>
+<title>Unripe| ニュース一覧</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -14,10 +22,8 @@
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/images/iphone.jpg"> 
 <link type="text/css" rel="stylesheet" href="/stylesheets/common.css" media="all" charset="utf-8">
-<link type="text/css" rel="stylesheet" href="/stylesheets/lightbox.css" media="all" charset="utf-8">
 <script type='text/javascript' src='/javascripts/jquery/jquery-1.10.2.min.js'></script>
 <script type='text/javascript' src='/javascripts/jquery/jquery.easing.1.3.js'></script>
-<script type='text/javascript' src='/javascripts/jquery/lightbox-2.6.min.js'></script>
 <script type='text/javascript' src='/javascripts/unripe.js'></script>
 <script type='text/javascript' src='/javascripts/unripe/index.js'></script>
 <script type='text/javascript' src='/javascripts/unripe/scroll.js'></script>
@@ -31,7 +37,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 </head>
-<body class="menus">
+<body class="news">
   <div class="header">
     <div id="header" class="container">
       <? require_once('../partials/news/header.php') ?>
@@ -46,132 +52,22 @@
 
   <div class="contents">
     <div id="contents" class="container">
-            
-      <div class="menu">
-          <h3>【カット】価格：5,250円〜 (ロング料金はかかりません。)</h3>
-          <p>■店長・ディレクターカット・・・プラス￥525-<br />■オーナーカット・・・プラス￥1,050-
-            </p>
-        </div>
+      <? foreach ($News->result as $result): ?>
+      <table class="<?= @++$i % 2 ? 'odd' : 'even' ?>">
+        <tr>
+          <td class="date"><?= $result->date ?></td>
+          <td class="title"><?= $result->title ?></td>
+        </tr>
       
-      <div class="panel m-detail">
-          <h3>トレンド01</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-          </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>トレンド02</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>トレンド03</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>トレンド04</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-        
-      <div class="menu">
-          <h3>【トリートメント】価格：3,675円〜</h3>
-          <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-      
-      <div class="panel m-detail">
-          <h3>トリートメント</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>オージェアトリートメント</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>ヘッドスパ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div>  
-
-      <div class="menu">
-          <h3>【カラーリング】価格：12,075円〜</h3>
-          <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-      
-      <div class="panel m-detail">
-          <h3>カラーリング</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-          </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>水素ホイップカラーリング</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-        
-     <div class="menu">
-          <h3>【カット&amp;パーマ】価格：12,600円〜</h3>
-          <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-      
-      <div class="panel m-detail">
-          <h3>パーマ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>水素ホイップパーマ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>エアウェーブ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>デジタルパーマ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>水素ホイップデジタルパーマ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-        
-    <div class="menu">
-          <h3>【スタイリング】</h3>
-          <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-      
-      <div class="panel m-detail">
-          <h3>セットアップ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト<br />価格：3,600円〜
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>前髪カット</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト<br />価格：1,050円〜
-            </p>
-        </div>
+        <tr>
+          <? if (@$result->uri): ?>
+          <td class="content" colspan="2"><a href="<?= @$result->uri ?>"><?= nl2br($result->content) ?></a></td>
+          <? else: ?>
+          <td class="content" colspan="2"><?= nl2br($result->content) ?></td>
+          <? endif; ?>
+        </tr>
+      </table>
+      <? endforeach; ?>
     </div>    
   </div>
   

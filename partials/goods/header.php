@@ -11,5 +11,5 @@ $replaceUrl = preg_replace('/\//', ' ', $uri);
 
  --><div class="panel description">
         <h2>Unripe グッズ</h2>
-        <p class="point">※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。</p>
+        <p class="point">Unripeで取り扱っているシャンプーやトリートメント、カラー剤などの製品をご紹介。<br>Unripeオリジナルマグカップなども・・・。</p>
     </div>

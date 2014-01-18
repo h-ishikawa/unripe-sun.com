@@ -39,6 +39,7 @@ class News extends Model
     parent::find(
       $queries, array(
         'order' => $order
+        , 'limit' => '10'
       )
     );
   }
