@@ -624,17 +624,23 @@ h1, h2, h3, h4, h5, h6, strong, em {
  ** menus header
  */
 .menus .header,
+.news .header,
+.galleries .header,
 .contacts .header {
   padding: 10px 0 0;
 }
 
 .menus .header .stuff,
+.news .header .stuff,
+.galleries .header .stuff,
 .contacts .header .stuff {
   width: 35%;
   text-align: right;
 }
 
 .menus .header .description,
+.news .header .description,
+.galleries .header .description,
 .contacts .header .description {
   width: 60%;
   padding: 0 0 0 5%;
@@ -642,6 +648,8 @@ h1, h2, h3, h4, h5, h6, strong, em {
 }
 
 .menus .header h2,
+.news .header h2,
+.galleries .header h2,
 .contacts .header h2 {
   font-size: 130%;
   font-weight: bold;
@@ -651,18 +659,24 @@ h1, h2, h3, h4, h5, h6, strong, em {
  ** menus navigation
  */
 .menus .navigation,
+.news .navigation,
+.galleries .navigation,
 .contacts .navigation {
   height: 51px;
   background: url('/images/home/bush.png') repeat-x 0 bottom;
 }
 
 .menus .navigation .container,
+.news .navigation .container,
+.galleries .navigation .container,
 .contacts .navigation .container {
   height: 51px;
   background: url('/images/home/bush-front.png') no-repeat 600px bottom;
 }
 
 .menus .navigation img.cactus,
+.news .navigation img.cactus,
+.galleries .navigation img.cactus,
 .contacts .navigation img.cactus {
   display: inline-block;
 }
@@ -670,7 +684,9 @@ h1, h2, h3, h4, h5, h6, strong, em {
 /*
  ** menus contents
  */
-.menus .content,
+.menus .contents,
+.news .contents,
+.galleries .contents,
 .contacts .contents {
 	margin: 1.5em 0;
 }
@@ -702,6 +718,45 @@ h1, h2, h3, h4, h5, h6, strong, em {
   padding: 0 5% 0 0;
 	min-height: 15em;
   vertical-align: top;
+}
+
+
+/*
+ ** news
+ */
+.news table {
+  width: 98%;
+  margin: 0 auto 2ex;
+  border-collapse: collapse;
+  font-size: 90%;
+}
+
+.news table.odd {
+  background-color: #dcdcdc;
+}
+
+.news td {
+  padding: .5ex 2%;
+  border: 1px solid #c0c0c0;
+}
+
+.news td.date {
+  width: 26%;
+  text-align: center;
+}
+
+.news td.title {
+  width: 66%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.news td.content {
+  width: 96%;
+}
+
+.news td a {
+  text-decoration: underline;
 }
 
 /*
