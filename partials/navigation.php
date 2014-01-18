@@ -4,7 +4,7 @@ $replaceUrl = preg_replace('/\//', ' ', $uri);
 ?>
 
     <div class="panel links">
-      <a href="/stuffs"        class="panel <?= $replaceUrl == ' ' ? 'selected' : '' ?>              ">stuff</a><!--
+      <a href="/stuffs"        class="panel <?= $replaceUrl == ' stuffs ' ? 'selected' : '' ?>       ">stuff</a><!--
    --><a href="/menus"         class="panel <?= $replaceUrl == ' menus ' ? 'selected' : '' ?>        ">menu</a><!--
    --><a href="/news"          class="panel <?= $replaceUrl == ' news ' ? 'selected' : '' ?>         ">news</a><!--
    --><a href="/hair-meisters" class="panel <?= $replaceUrl == ' hair-meisters ' ? 'selected' : '' ?>">hair meister</a><!--
