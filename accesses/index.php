@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=9">
 <meta http-equiv="X-UA-Compatible" content="IE=8">
-<title>Unripe| メニュー</title>
+<title>Unripe| アクセス</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -34,7 +34,7 @@
 <body class="menus">
   <div class="header">
     <div id="header" class="container">
-      <? require_once('../partials/menus/header.php') ?>
+      <? require_once('../partials/accesses/header.php') ?>
     </div>
   </div>
 

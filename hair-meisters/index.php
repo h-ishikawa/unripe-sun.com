@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=9">
 <meta http-equiv="X-UA-Compatible" content="IE=8">
-<title>Unripe| menu</title>
+<title>Unripe| ヘアマイスター</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta http-equiv="Content-Script-Type" content="text/javascript">

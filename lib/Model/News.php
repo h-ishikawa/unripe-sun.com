@@ -1,8 +1,8 @@
 <?php
 
-require_once (dirname(__FILE__).'/../Model_News.php');
+require_once (dirname(__FILE__).'/../Model.php');
 
-class News extends Model_News
+class News extends Model
 {
   static $table = 'news';
 
