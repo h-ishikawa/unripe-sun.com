@@ -220,7 +220,7 @@ foreach($Schedule->result as $result) {
            ヘアカタログの代わりにも。<br>
            <strong>Unripe</strong>で生まれたスタイリングを是非ご覧ください。
         </p>
-        <a href="">View more hair styles</a>
+        <a href="/galleries">View more hair styles</a>
       </div><!--
 
    --><div class="panel slider">
@@ -245,7 +245,7 @@ foreach($Schedule->result as $result) {
                <br>
                Comment: <?= $result->memo ?>
              ">
-              <img src="/images/uploads/thumbnails/<?= $result->file_path ?>" width="220" height="173">
+              <img src="/images/uploads/thumbnails/<?= $result->file_path ?>">
             </a><!--
           <? endforeach; ?>
         -->
