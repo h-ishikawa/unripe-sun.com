@@ -20,5 +20,6 @@ $replaceUrl = preg_replace('/\//', ' ', $uri);
       <a class="panel" href="/contacts"><img src="/images/mail.png" alt="お問い合わせ"></a><!--
    --><a class="panel" href="http://www.facebook.com/pages/Unripe/209519589110505" target="_blank"><img src="/images/facebook.png" alt="facebook"></a><!--
    --><a class="panel" href="http://unripe-sun.blogspot.jp" target="_blank"><img src="/images/blogger.png" alt="blogger"></a><!--
+   --><a class="panel" href="/line.html" onclick="window.open('./line.html', '', 'width=500,height=400');  return false;" href="line.html" target="_blank"><img src="/images/line.png" alt="blogger"></a><!--
    --><img class="panel cactus" src="/images/cactus.png" class="panel" alt="">
     </div>
