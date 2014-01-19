@@ -10,6 +10,6 @@ $replaceUrl = preg_replace('/\//', ' ', $uri);
     </div><!--
 
  --><div class="panel description">
-        <h2>Unripe アクセス</h2>
+        <h2>アクセス</h2>
         <p class="point">皆様のお越しをお待ちしております。</p>
     </div>

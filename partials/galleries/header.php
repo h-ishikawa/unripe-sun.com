@@ -6,7 +6,7 @@ $replaceUrl = preg_replace('/\//', ' ', $uri);
     <h1 onclick="Javascript: location.href='/'">Unripe</h1>
 
     <div class="panel stuff">
-        <img src="/images/menus/yoshino.png">
+        <img src="/images/galleries/gallery.png">
     </div><!--
 
  --><div class="panel description">
