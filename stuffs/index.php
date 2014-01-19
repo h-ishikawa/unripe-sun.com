@@ -31,7 +31,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 </head>
-<body class="menus">
+<body class="stuffs">
   <div class="header">
     <div id="header" class="container">
       <? require_once('../partials/stuffs/header.php') ?>
@@ -47,130 +47,81 @@
   <div class="contents">
     <div id="contents" class="container">
             
-      <div class="menu">
-          <h3>【カット】価格：5,250円〜 (ロング料金はかかりません。)</h3>
-          <p>■店長・ディレクターカット・・・プラス￥525-<br />■オーナーカット・・・プラス￥1,050-
-            </p>
-        </div>
       
       <div class="panel m-detail">
-          <h3>トレンド01</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
+          <h3>【Unripe代表】</h3>
+          <p><img src="/images/stuffs/tomori.jpg" />
+          </p>
+        </div><!--
+
+     --><div class="panel m-detail_s">
+          <ul>
+            <li>【戸森 賢一】 KENICHI TOMORI</li>
+            <li>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。</li>
+            </ul>
+        </div><!--
+
+     --><div class="panel m-detail_s">
+          <ul>
+            <li>【小池 宏徳】 HIRONORI KOIKE</li>
+            <li>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。</li>
+            </ul>
+        </div><!--
+
+     --><div class="panel m-detail">
+          <h3>【店長】</h3>
+          <p><img src="/images/stuffs/koike.jpg" />
           </p>
         </div><!--
 
      --><div class="panel m-detail">
-          <h3>トレンド02</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
+          <h3>【スタイリスト】</h3>
+          <p><img src="/images/stuffs/yoshino.jpg" />
+          </p>
+        </div><!--
+
+     --><div class="panel m-detail_s">
+          <ul>
+            <li>【吉野 憲太】 KENTA YOSHINO</li>
+            <li>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。</li>
+            </ul>
+        </div><!--
+
+     --><div class="panel m-detail_s">
+          <ul>
+            <li>【榎本 宮子】 MIYAKO ENOMOTO</li>
+            <li>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。</li>
+            </ul>
         </div><!--
 
      --><div class="panel m-detail">
-          <h3>トレンド03</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>トレンド04</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-        
-      <div class="menu">
-          <h3>【トリートメント】価格：3,675円〜</h3>
-          <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-      
-      <div class="panel m-detail">
-          <h3>トリートメント</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>オージェアトリートメント</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>ヘッドスパ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div>  
-
-      <div class="menu">
-          <h3>【カラーリング】価格：12,075円〜</h3>
-          <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-      
-      <div class="panel m-detail">
-          <h3>カラーリング</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
+          <h3>【スタイリスト】</h3>
+          <p><img src="/images/stuffs/enomoto.jpg" />
           </p>
         </div><!--
 
      --><div class="panel m-detail">
-          <h3>水素ホイップカラーリング</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-        
-     <div class="menu">
-          <h3>【カット&amp;パーマ】価格：12,600円〜</h3>
-          <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-      
-      <div class="panel m-detail">
-          <h3>パーマ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
+          <h3>【スタイリスト】</h3>
+          <p><img src="/images/stuffs/sakuma.jpg" />
+          </p>
         </div><!--
 
-     --><div class="panel m-detail">
-          <h3>水素ホイップパーマ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
+     --><div class="panel m-detail_s">
+          <ul>
+            <li>【佐久間 聖子】 SEIKO SAKUMA</li>
+            <li>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。</li>
+            </ul>
         </div><!--
 
-     --><div class="panel m-detail">
-          <h3>エアウェーブ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>デジタルパーマ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>水素ホイップデジタルパーマ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-        
-    <div class="menu">
-          <h3>【スタイリング】</h3>
-          <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            </p>
-        </div>
-      
-      <div class="panel m-detail">
-          <h3>セットアップ</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト<br />価格：3,600円〜
-            </p>
-        </div><!--
-
-     --><div class="panel m-detail">
-          <h3>前髪カット</h3>
-          <p><img src="" />テストテストテストテストテストテストテストテスト<br />価格：1,050円〜
-            </p>
+     --><div class="panel m-detail_s">
+          <ul>
+            <li>【清水 圭太】 SHIMI</li>
+            <li>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。</li>
+            </ul>
+        </div><div class="panel m-detail">
+          <h3>【スタイリスト】</h3>
+          <p><img src="/images/stuffs/shimizu.jpg" />
+          </p>
         </div>
     </div>    
   </div>

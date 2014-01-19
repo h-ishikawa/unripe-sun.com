@@ -4,10 +4,10 @@ $replaceUrl = preg_replace('/\//', ' ', $uri);
 ?>
 
     <div class="panel links">
-      
-      <a href="/news"          class="panel <?= $replaceUrl == ' news ' ? 'selected' : '' ?>         ">news</a><!--
+      <a href="/"          class="panel <?= $replaceUrl == ' top ' ? 'selected' : '' ?>         ">top</a><!--
+   --><a href="/news"          class="panel <?= $replaceUrl == ' news ' ? 'selected' : '' ?>         ">news</a><!--
    --><a href="/menus"         class="panel <?= $replaceUrl == ' menus ' ? 'selected' : '' ?>        ">menu</a><!--
-   --><a href="/stuffs"        class="panel <?= $replaceUrl == ' stuffs ' ? 'selected' : '' ?>       ">stuff</a><!--
+   --><a href="/stuffs"        class="panel <?= $replaceUrl == ' stuffs ' ? 'selected' : '' ?>       ">staff</a><!--
    --><a href="/hair-meisters" class="panel <?= $replaceUrl == ' hair-meisters ' ? 'selected' : '' ?>">hair meister</a><!--
    --><a href="/goods"         class="panel <?= $replaceUrl == ' goods ' ? 'selected' : '' ?>        ">goods</a><!--
    --><a href="/galleries"     class="panel <?= $replaceUrl == ' galleries ' ? 'selected' : '' ?>    ">gallery</a><!--

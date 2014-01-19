@@ -60,6 +60,10 @@ a:hover {
   text-decoration: underline;
 }
 
+a:hover img {
+  opacity: 0.6;
+}
+
 h1, h2, h3, h4, h5, h6, strong, em {
   font-size: 100%;
   font-weight: normal;
@@ -82,6 +86,10 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .price-off {
   color: red;
+}
+
+li{
+  list-style: none;
 }
 
 /*
@@ -632,6 +640,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
  */
 .menus .header,
 .news .header,
+.stuffs .header,
 .accesses .header,
 .galleries .header,
 .contacts .header {
@@ -640,6 +649,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .menus .header .stuff,
 .news .header .stuff,
+.stuffs .header .stuff,
 .accesses .header .stuff,
 .galleries .header .stuff,
 .contacts .header .stuff {
@@ -649,6 +659,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .menus .header .description,
 .news .header .description,
+.stuffs .header .description,
 .accesses .header .description,
 .galleries .header .description,
 .contacts .header .description {
@@ -659,6 +670,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .menus .header h2,
 .news .header h2,
+.stuffs .header h2,
 .accesses .header h2,
 .galleries .header h2,
 .contacts .header h2 {
@@ -671,6 +683,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
  */
 .menus .navigation,
 .news .navigation,
+.stuffs .navigation,
 .accesses .navigation,
 .galleries .navigation,
 .contacts .navigation {
@@ -680,6 +693,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .menus .navigation .container,
 .news .navigation .container,
+.stuffs .navigation .container,
 .accesses .navigation .container,
 .galleries .navigation .container,
 .contacts .navigation .container {
@@ -689,6 +703,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .menus .navigation img.cactus,
 .news .navigation img.cactus,
+.stuffs .navigation img.cactus,
 .accesses .navigation img.cactus,
 .galleries .navigation img.cactus,
 .contacts .navigation img.cactus {
@@ -728,6 +743,7 @@ h1, h2, h3, h4, h5, h6, strong, em {
  */
 .menus .contents,
 .news .contents,
+.stuffs .contents,
 .galleries .contents,
 .contacts .contents {
   margin: 1.5em 0;
@@ -799,6 +815,30 @@ h1, h2, h3, h4, h5, h6, strong, em {
 
 .news td a {
   text-decoration: underline;
+}
+
+/*
+ ** stuffs contents menu
+ */
+
+.stuffs .contents .m-detail{
+  width: 20%;
+  padding: 0 5% 2% 0;
+  min-height: 15em;
+  vertical-align: top;
+}
+
+.stuffs .contents .m-detail img{
+  padding: 0 5% 0 0;
+  min-height: 15em;
+  vertical-align: top;
+}
+
+.stuffs .contents .m-detail_s{
+  width: 65%;
+  padding: 5% 5% 2% 0;
+  min-height: 15em;
+  vertical-align: top;
 }
 
 /*
