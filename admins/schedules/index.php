@@ -28,7 +28,6 @@ $Schedule->get(array());
           <td>休日</td>
           <td>
             <select name="year">
-              <option value="2013">2013</option>
               <option value="2014">2014</option>
               <option value="2015">2015</option>
             </select>年
@@ -77,6 +76,7 @@ $Schedule->get(array());
         <th>スタッフ名</th>
         <th>投稿日</th>
         <th></th>
+        <th></th>
       </tr>
 
       <? foreach ($Schedule->result as $result): ?>
@@ -105,7 +105,7 @@ $Schedule->get(array());
             <input type="hidden" name="id" value="<?= $result->id ?>">
             <input type="submit" value="削除する">
           </form>
-        <td>
+        </td>
       </tr>
       <? endforeach; ?>
     </table>

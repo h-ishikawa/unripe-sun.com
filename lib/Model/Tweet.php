@@ -37,6 +37,27 @@ class Tweet extends Model
     );
   }
 
+  public function getOne ($query) {
+    $queries = array();
+    $queries = @$query;
+
+    if (@$query['order']) {
+      $order = array($query['order']);
+      unset($queries['order']);
+    }
+
+    else {
+      $order = array('created_at DESC');
+    }
+
+    parent::find(
+      $queries, array(
+        'order' => $order
+        , 'limit' => 1
+      )
+    );
+  }
+
   public function put () {
     $post = (object) $_POST;
   

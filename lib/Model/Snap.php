@@ -46,6 +46,20 @@ class Snap extends Model
     );
   }
 
+  public function get2 ($query) {
+    $queries = array();
+    $queries = $query;
+
+    $order = array('created_at DESC');
+
+    parent::find(
+      $queries, array(
+        'order' => $order
+        , 'limit' => 2
+      )
+    );
+  }
+
   public function put () {
     $post = (object) $_POST;
   
