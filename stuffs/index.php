@@ -106,7 +106,7 @@ foreach($Schedule->result as $result) {
       
       <div class="panel m-detail">
           <h3>【Unripe代表】</h3>
-          <p><img src="/images/stuffs/tomori.jpg" />
+          <p><img src="/images/stuffs/tomori.png" />
           </p>
         </div><!--
 
@@ -168,13 +168,13 @@ foreach($Schedule->result as $result) {
 
      --><div class="panel m-detail">
           <h3>【店長】</h3>
-          <p><img src="/images/stuffs/koike.jpg" />
+          <p><img src="/images/stuffs/koike.png" />
           </p>
         </div><!--
 
      --><div class="panel m-detail">
           <h3>【スタイリスト】</h3>
-          <p><img src="/images/stuffs/yoshino.jpg" />
+          <p><img src="/images/stuffs/yoshino.png" />
           </p>
         </div><!--
 
@@ -236,13 +236,13 @@ foreach($Schedule->result as $result) {
 
      --><div class="panel m-detail">
           <h3>【スタイリスト】</h3>
-          <p><img src="/images/stuffs/enomoto.jpg" />
+          <p><img src="/images/stuffs/enomoto.png" />
           </p>
         </div><!--
 
      --><div class="panel m-detail">
           <h3>【スタイリスト】</h3>
-          <p><img src="/images/stuffs/sakuma.jpg" />
+          <p><img src="/images/stuffs/sakuma.png" />
           </p>
         </div><!--
 
@@ -270,7 +270,7 @@ foreach($Schedule->result as $result) {
             </ul>
         </div><div class="panel m-detail">
           <h3>【スタイリスト】</h3>
-          <p><img src="/images/stuffs/shimizu.jpg" />
+          <p><img src="/images/stuffs/shimizu.png" />
           </p>
         </div>
     </div>    
