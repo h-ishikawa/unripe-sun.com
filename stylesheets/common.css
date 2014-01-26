@@ -348,6 +348,10 @@ li{
   border-bottom: dotted 2px #7c6551;
 }
 
+.details-button {
+  margin: 0 0 0 80%;
+}
+
 /*
  ** home contents news li 
  */
@@ -421,8 +425,10 @@ li{
 /*
  ** home contents plan
  */
-.home .contents .plan img {
-  margin: 10px 30px;
+.home .contents .plan .meister img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 /*
@@ -518,8 +524,11 @@ li{
  ** home contents privilege
  */
  .home .contents .privilege img{
-  margin: 10px 10px;
+  margin: 10px 30px;
   vertical-align: middle;
+}
+.home .contents .privilege span {
+  margin: 0 0 0 75%;
 }
 .home .contents .privilege li{
   list-style-type: square;

@@ -154,13 +154,13 @@ foreach($Schedule->result as $result) {
           		</tr>
           	</tbody>
           </table>
-          <p class="point">※店長・ディレクターカット・・・プラス￥525-<br />※オーナーカット・・・プラス￥1,050-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<a href="menus/"><img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></p>
+          <p class="point">※店長・ディレクターカット・・・プラス￥525-<br />※オーナーカット・・・プラス￥1,050-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<br><span class="details-button"><a href="menus/"><img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
         </div><!--
 
      --><div class="panel plan">
-          <h3>小池のオススメプラン！</h3>
-          <p>冬は乾燥の季節です。あなたの髪も乾燥していませんか？髪に保湿と潤いを与えて健康な髪を整えるサポートを致します。</p><p class="panel plan_img"><img src="images/home/test_img.jpg" alt="unripeプラン1" /><!--
-          --><img src="images/home/test_img.jpg" alt="unripeプラン2" /></p>
+          <h3>ヘアマイスターのアドバイス！</h3>
+          <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスを紹介します。<br><span class="details-button"><a href="hair-meisters/"><img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
+          <p class="meister"><a href="/hair-meisters"><img src="images/home/meister02.jpg" alt="ヘアマイスターアドバイス1" /></a></p>
         </div><!--
 
      --><div class="panel calendar">
@@ -203,7 +203,7 @@ foreach($Schedule->result as $result) {
 
      --><div class="panel privilege">
           <h3>製品情報</h3>
-          <p><img src="images/home/product01.jpg" alt="unripe製品1" /><img src="images/home/product02.jpg"／alt="unripe製品2" /><br />ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<a href="goods/"><img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></p>
+          <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。<br><img src="images/home/test_img.jpg" alt="unripe製品1" /><img src="images/home/test_img.jpg"／alt="unripe製品2" /><span class="details-button"><a href="goods/"><img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
         </div>
     	</div><!--
     	

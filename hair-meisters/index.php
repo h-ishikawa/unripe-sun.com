@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=9">
 <meta http-equiv="X-UA-Compatible" content="IE=8">
-<title>Unripe| ヘアマイスター</title>
+<title>Unripe| ヘアケアマイスター</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -48,8 +48,8 @@
     <div id="contents" class="container">
             
       <div class="menu">
-          <h3>【ヘアマイスター】</h3>
-          <p>ヘアマイスターはヘア知識が豊富で、お客様の毛髪診断が正しく判断し、それに対する処置・アドバイスが的確に出来る人です。<br>厳正なる4段階の認定試験にすべて合格した人にのみ贈られる舞踊業界において名誉と権威のある称号です。</p>
+          <h3>【ヘアケアマイスター】</h3>
+          <p>ヘアケアマイスターはヘア知識が豊富で、お客様の毛髪診断を正しく判断し、それに対する処置・アドバイスが的確に出来る人です。<br>厳正なる4段階の認定試験にすべて合格した人にのみ贈られる舞踊業界において名誉と権威のある称号です。</p>
         </div>
         
         <div class="panel m-detail">
