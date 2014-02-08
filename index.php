@@ -1,267 +1,46 @@
 <?php
 
-require_once (dirname(__FILE__)."/lib/Model/News.php");
-require_once (dirname(__FILE__).'/lib/Model/Tweet.php');
-require_once (dirname(__FILE__).'/lib/Model/Snap.php');
-require_once (dirname(__FILE__)."/lib/Model/Schedule.php");
-require_once (dirname(__FILE__).'/applications/Calendar.php');
+require(dirname(__FILE__) . '/vendor/autoload.php');
 
-$queries = array();
-$queries['stuff'] = '1';
-$queries['order'] = 'created_at ASC';
-$Tweet_tomori = new Tweet();
-$Tweet_tomori->get($queries);
+$app = new App();
+$app->request();
 
-$queries['stuff'] = '2';
-$Tweet_koike = new Tweet();
-$Tweet_koike->get($queries);
-
-$queries['stuff'] = '3';
-$Tweet_yoshino = new Tweet();
-$Tweet_yoshino->get($queries);
-
-$queries['stuff'] = '4';
-$Tweet_enomoto = new Tweet();
-$Tweet_enomoto->get($queries);
-
-$queries['stuff'] = '5';
-$Tweet_sakuma = new Tweet();
-$Tweet_sakuma->get($queries);
-
-$queries['stuff'] = '6';
-$Tweet_shimizu = new Tweet();
-$Tweet_shimizu->get($queries);
-
-$Snap = new Snap();
-$Snap->get(array());
-
-$News = new News();
-$News->get(array());
-
-$Calendar = new Calendar();
-
-$Schedule = new Schedule();
-$Schedule->get(array());
-
-foreach($Schedule->result as $result) {
-  if (date("Yn") == date("Yn", strtotime($result->date))) {
-    $holidays[] = $result;
+try {
+  if (file_exists($app->template) === false || file_exists($app->routePath) === false) {
+    throw new \Exception('this file is not exist.');
   }
 }
-?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=9">
-<meta http-equiv="X-UA-Compatible" content="IE=8">
-<title>Unripe| top</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<meta name="viewport" content="width=device-width initial-scale=1.0" />
-<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="/images/iphone.jpg"> 
-<link type="text/css" rel="stylesheet" href="/stylesheets/common.css" media="all" charset="utf-8">
-<link type="text/css" rel="stylesheet" href="/stylesheets/lightbox.css" media="all" charset="utf-8">
-<script type='text/javascript' src='/javascripts/jquery/jquery-1.10.2.min.js'></script>
-<script type='text/javascript' src='/javascripts/jquery/jquery.easing.1.3.js'></script>
-<script type='text/javascript' src='/javascripts/jquery/lightbox-2.6.min.js'></script>
-<script type='text/javascript' src='/javascripts/unripe.js'></script>
-<script type='text/javascript' src='/javascripts/unripe/index.js'></script>
-<script type='text/javascript' src='/javascripts/unripe/scroll.js'></script>
-<script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=337089699705595";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-</head>
-<body class="home">
-  <div class="header">
-    <div id="header" class="container">
-      <? require_once('partials/home/header.php') ?>
-    </div>
-  </div>
+catch (\Exception $e) {
+  error_log($e->getMessage());
+  $app->notfound();
+}
 
-  <div class="navigation">
-    <div id="navigation" class="container">
-      <? require_once('partials/navigation.php') ?>
-    </div>
-  </div>
+$Controller = '\\Controller\\' . $app->route;
 
-  <div class="contents">
-    <div id="contents" class="container">
+if ($app->method == 'POST') {
+  $Controller::post($app->template, $app->layout);
+  exit;
+}
 
-    	<div class="panel">
-    		<div>
-    			<h2>Concept</h2>
-    				<p>横浜の東急東横線、反町駅のすぐ近くにある美容室、<strong>unripe</strong>（<em>アンライプ</em>）。<br />
-               店内は光溢れ、スタッフの手作りのはり金細工や絵が飾られていて、とても<em>アットホーム</em>な雰囲気です。 <br />
-               <em>オーガニックのシャンプー</em>や<em>トリートメント</em>製品も扱っています。<br />
-               お客様とトコトン話ながら、一緒に<em>ヘアスタイル</em>を考えたいと思っています。<br />
-               是非、<em>ヘアサロン</em><strong>unripe</strong>のComfortable Spaceに遊びに来て下さい！
-            </p>
-    		</div>   		
-        <div class="panel news">
-          <h3>NEWS</h3>
-          <? foreach($News->result as $result): ?>
-          <ul>
-            <li class="date"><?= date('Y年n月j日', strtotime($result->date)) ?></li>
-            <li class="title"><?= $result->title ?></li>
-            <li class="description"><?= $result->content ?></li>
-          </ul>
-          <? endforeach; ?>
-        </div><!--
+else if ($app->method == 'PUT') {
+  $Controller::put($app->template, $app->layout);
+  exit;
+}
 
-     --><div class="panel cut">
-          <h3>カットメニュー</h3>
-          <table>
-          	<tbody>
-          		<tr>
-          			<th>メニュー</th>
-          			<th>料金</th>
-          		</tr>
-          		<tr>
-          			<td>カット</td>
-          			<td>￥5,250-〜</td>
-          		</tr>
-          		<tr>
-          			<td>トリートメント</td>
-          			<td>￥3,675-〜</td>
-          		</tr>
-          		<tr>
-          			<td>カラーリング</td>
-          			<td>￥12,075-〜</td>
-          		</tr>
-          		<tr>
-          			<td>カット&パーマ</td>
-          			<td>￥12,600-〜</td>
-          		</tr>
-          		<tr>
-          			<td>セットアップ</td>
-          			<td>￥6,300-〜</td>
-          		</tr>
-          		<tr>
-          			<td>前髪カット</td>
-          			<td>￥1,050-〜</td>
-          		</tr>
-          	</tbody>
-          </table>
-          <p class="point">※店長・ディレクターカット・・・プラス￥525-<br />※オーナーカット・・・プラス￥1,050-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<br><span class="details-button"><a href="menus/"><img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
-        </div><!--
+else if ($app->method == 'DELETE') {
+  $Controller::delete($app->template, $app->layout);
+  exit;
+}
 
-     --><div class="panel plan">
-          <h3>ヘアマイスターのアドバイス！</h3>
-          <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスを紹介します。<br><span class="details-button"><a href="hair-meisters/"><img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
-          <p class="meister"><a href="/hair-meisters"><img src="images/home/meister02.jpg" alt="ヘアマイスターアドバイス1" /></a></p>
-        </div><!--
+else if ($app->method == 'SEND') {
+  $Controller::send($app->template, $app->layout);
+  exit;
+}
 
-     --><div class="panel calendar">
-          <h3>カレンダー</h3>
-          <?= $Calendar->get() ?>
+else if ($app->method == 'OUT') {
+  $Controller::out($app->template, $app->layout);
+  exit;
+}
 
-          <p>【 お休み 】</p>
-          <p class="tomori"><span></span>戸森：
-            <? foreach($holidays as $holiday): ?>
-              <? if($holiday->stuff == 1): ?>
-                <?= date("j", strtotime($holiday->date)) ?>日
-              <? endif; ?>
-            <? endforeach; ?>
-          </p>
-
-          <p class="koike"><span></span>小池：
-            <? foreach($holidays as $holiday): ?>
-              <? if($holiday->stuff == 2): ?>
-                <?= date("j", strtotime($holiday->date)) ?>日
-              <? endif; ?>
-            <? endforeach; ?>
-          </p>
-
-          <p class="yoshino"><span></span>吉野：
-            <? foreach($holidays as $holiday): ?>
-              <? if($holiday->stuff == 3): ?>
-                <?= date("j", strtotime($holiday->date)) ?>日
-              <? endif; ?>
-            <? endforeach; ?>
-          </p>
-
-          <p class="enomoto"><span></span>榎本：
-            <? foreach($holidays as $holiday): ?>
-              <? if($holiday->stuff == 4): ?>
-                <?= date("j", strtotime($holiday->date)) ?>日
-              <? endif; ?>
-            <? endforeach; ?>
-          </p>
-        </div><!--
-
-     --><div class="panel privilege">
-          <h3>製品情報</h3>
-          <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。<br><img src="images/home/test_img.jpg" alt="unripe製品1" /><img src="images/home/test_img.jpg"／alt="unripe製品2" /><span class="details-button"><a href="goods/"><img src="images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
-        </div>
-    	</div><!--
-    	
-   --><div class="panel fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>			
-
-    </div>
-  </div>
-
-  <div class="snaps">
-    <div id="snaps" class="container">
-      <div class="panel themes">
-        <h3><strong>Unripe</strong>にいらっしゃってくれた方々の<em>ヘアデザインスナップ</em>。</h3>
-        <p>スタイリングの参考に。<br>
-           ヘアカタログの代わりにも。<br>
-           <strong>Unripe</strong>で生まれたスタイリングを是非ご覧ください。
-        </p>
-        <a href="/galleries">View more hair styles</a>
-      </div><!--
-
-   --><div class="panel slider">
-        <!--
-          <? foreach ($Snap->result as $result): ?>
-          --><a class="panel" href="/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?>
-               <br>
-               Stuff: 
-               <? if ($result->stuff == 1): ?>
-                 戸森
-               <? elseif ($result->stuff == 2): ?>
-                 小池
-               <? elseif ($result->stuff == 3): ?>
-                 吉野
-               <? elseif ($result->stuff == 4): ?>
-                 榎本
-               <? elseif ($result->stuff == 5): ?>
-                 佐久間
-               <? elseif ($result->stuff == 6): ?>
-                 清水
-               <? endif; ?>
-               <br>
-               Comment: <?= $result->memo ?>
-             ">
-              <img src="/images/uploads/thumbnails/<?= $result->file_path ?>">
-            </a><!--
-          <? endforeach; ?>
-        -->
-      </div>
-
-      <a class="next" href="javascript: unripe.index.carousel.next();"></a>
-      <a class="prev" href="javascript: unripe.index.carousel.prev();"></a>
-    </div>
-  </div>
-
-  <a class="pageTop" href="#header">PAGE TOP</a></p>
-
-  <div class="footer">
-    <div id="footer" class="container">
-      <? require_once('partials/footer.php') ?>
-    </div>
-  </div>
-</body>
-</html>
+$Controller::index($app->template, $app->layout);

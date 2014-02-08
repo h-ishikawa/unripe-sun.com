@@ -1,337 +1,497 @@
 <?php
 
-require_once (dirname(__FILE__).'/Db.php');
+require_once (dirname(__FILE__) . '/Db.php');
+
+require_once 'Model/Join.php';
+require_once 'Model/Join/Inner.php';
+require_once 'Model/Join/Cross.php';
+require_once 'Model/Join/Left.php';
+require_once 'Model/Join/Right.php';
 
 class Model extends Db
 {
-  public function count ($queries = array(), $options = array()) {
-      $options['select'] = 'COUNT(DISTINCT me.id) AS count';
-      $result = self::find($queries, $options);
-      return (@$result[0]->count ? '' : 0) - 0;
+  protected $table;
+  protected $alias;
+
+  private $limit;
+  private $offset;
+  private $wheres = array();
+  private $values = array();
+  private $orders = array();
+  private $groups = array();
+  private $havings = array();
+  private $sets = array();
+  private $columns = array();
+  private $inserts = array();
+  private $joins = array();
+  private $join;
+  private $distinct;
+
+  private $allows = array(
+      'IF' => true
+    , 'MIN' => true
+    , 'MAX' => true
+    , 'SUM' => true
+    , 'COUNT' => true
+    , 'DATE_FORMAT' => true
+    , 'GROUP_CONCAT' => true
+  );
+
+  public function __construct($settings = array()) {
+    foreach ($settings as $key => $value) {
+      if (property_exists($this, $key)) {
+        $this->$key = $value;
+      }
+    }
+
+    return $this;
   }
 
-  public function find ($queries = array(), $options = array()) {
-      $table = static::$table;
+  public function from() {
+    if (func_num_args() === 1) {
+      $this->table = func_get_arg(0);
+      return $this;
+    }
 
-      if (@$options['select'] && is_array($options['select'])) {
-        $select = implode(', ', $options['select']);
-      }
+    return $this->table ?: get_class($this);
+  }
 
-      else if (!@$options['select']) {
-        $select = '*';
-      }
+  public function alias() {
+    if (func_num_args() === 0) {
+      return $this->alias;
+    }
 
-      if (!@$options['from']) {
-        $from = $table;
-      }
+    $this->alias = func_get_arg(0);
+    return $this;
+  }
 
-      if (!@$options['as']) {
-        $as = 'me';
-      }
+  public function column() {
+    $function;
+    $column;
+    $alias;
 
-      $sql = "SELECT $select FROM $from AS $as";
-      $wheres = array();
+    /**
+     * arguments
+     */
+    if (func_num_args() === 2) {
+      $function = func_get_arg(0);
+      $column = func_get_arg(1);
+    }
+
+    else {
+      $column = func_get_arg(0);
+    }
+
+    /**
+     * alias
+     */
+    if (is_array($column)) {
+      $alias = $column[1];
+      $column = $column[0];
+    }
+
+    /**
+     * column
+     */
+    if (preg_match('/\./', $column) === 0) {
+      $column = "{$this->alias}.$column";
+    }
+
+    if (@$this->allows[$function]) {
+      $column = "$function($column)";
+    }
+
+    if (isset($alias)) {
+      $column .= " AS $alias";
+    }
+
+    $this->columns[] = $column;
+
+    return $this;
+  }
+
+  public function select() {
+    $select = ($this->distinct === true) ? 'SELECT DISTINCT' : 'SELECT';
+    $columns = implode(', ', $this->columns) ?: '*';
+    $table = $this->table ?: get_class($this);
+    $alias = $this->alias ?: 'me';
+    $sql = "$select $columns FROM $table AS $alias";
+
+    /**
+     * JOIN
+     */
+    if (count($this->joins) > 0) {
+      $sql .= ' ' . implode(' ', $this->joins);
+    }
+
+    /**
+     * WHERE
+     */
+    if (count($this->wheres) > 0) {
+      $sql .= sprintf(' WHERE (%s)', implode(' AND ', $this->wheres));
+    }
+
+    /**
+     * GROUP
+     */
+    if (count($this->groups) > 0) {
+      $sql .= sprintf(' GROUP BY %s', implode(', ', $this->groups));
+    }
+
+    /**
+     * HAVING
+     */
+    if (count($this->havings) > 0) {
+      $sql .= sprintf(' HAVING %s', implode(' AND ', $this->havings));
+    }
+
+    /**
+     * ORDER
+     */
+    if (count($this->orders) > 0) {
+      $sql .= sprintf(' ORDER BY %s', implode(', ', $this->orders));
+    }
+
+    /**
+     * LIMIT
+     */
+    if ($this->limit > -1) {
+      $sql .= " LIMIT {$this->limit}";
+    }
+
+    /**
+     * OFFSET
+     */
+    if ($this->offset > -1) {
+      $sql .= " OFFSET {$this->offset}";
+    }
+
+    return $sql;
+  }
+
+  public function distinct() {
+    $this->distinct = true;
+    return $this;
+  }
+
+  public function count() {
+    $table = $this->table ?: get_class($this);
+    $alias = $this->alias ?: 'me';
+    $sql = "SELECT COUNT(*) AS count FROM $table AS $alias";
+
+    /**
+     * JOIN
+     */
+    if (count($this->joins) > 0) {
+      $sql .= ' ' . implode(' ', $this->joins);
+    }
+
+    /**
+     * WHERE
+     */
+    if (count($this->wheres) > 0) {
+      $sql .= sprintf(' WHERE (%s)', implode(' AND ', $this->wheres));
+    }
+
+    return $sql;
+  }
+
+  public function selectOne() {
+    return $this->limit(1)->offset(0)->select();
+  }
+
+  public function where($column, $op, $value = null) {
+    if (is_null($value)) {
+      $value = $op;
+      $op = '=';
+    }
+
+    if (is_array($value)) {
+      $op = 'IN';
       $values = array();
 
-      foreach ($queries as $key => $value) {
-          if (preg_match('/^EXISTS\s*$/', $key)) {
-              if (is_array($value) && isset($value[0])) {
-                  $wheres[] = 'EXISTS (' . array_shift($value) . ')';
+      foreach ($value as $v) {
+        if (is_int($v)) {
+          $values[] = $v;
+        }
 
-                  if (count($value) > 0) {
-                      $values = array_merge($values, $value);
-                  }
-              }
-
-              else if (is_string($value)) {
-                  $wheres[] = $value;
-              }
-
-              continue;
-          }
-
-          else if (preg_match('/\./', $key) === 0) {
-              $key = "$as.$key";
-          }
-
-          if (is_null($value)) {
-              $wheres[] = "($key IS NULL)";
-          }
-
-          else if ($value === true) {
-              $wheres[] = "($key = TRUE)";
-          }
-
-          else if ($value === false) {
-              $wheres[] = "($key = FALSE)";
-          }
-
-          else if (is_array($value) === false) {
-              $wheres[] = "($key = ?)";
-              $values[] = $value;
-          }
-
-          else if (isset($value[0])) {
-              $value = array_filter($value);
-              if (count($value)) {
-                  $wheres[] = sprintf("($key IN (%s))"
-                      , implode(', ', array_fill(1, count($value), '?')));
-                  $values = array_merge($values, $value);
-              }
-          }
-
-          else {
-              list($operator, $value) = each($value);
-              $wheres[] = "($key $operator ?)";
-              $values[] = $value;
-          }
+        else {
+          $values[] = '?';
+          $this->values[] = $v;
+        }
       }
 
-      /**
-       * inner join
-       * @param = array(array(TABLE, AS), array(FROM, TO))
-       * @see = 'JOIN $table AS $as ON ($form, $as.$to)'
-       */
-      for ($i = 0; $i < count(@$options['join']); $i += 2) {
-          list($inner, $join) = array_slice($options['join'], $i, 2);
-          $conditions = array();
-          list($table, $_as) = is_array($inner) ? $inner : array($inner, $inner);
+      $this->wheres[] = sprintf("($column $op (%s))", implode(', ', $values));
+    }
 
-          for ($n = 0; $n < count($join); $n += 2) {
-              list($field, $on) = array_slice($join, $n, 2);
-              $conditions[] = "($_as.$field = $as.$on)";
-          }
+    else if (is_null($value)) {
+      $this->wheres[] = "($column IS NULL)";
+    }
 
-          $sql .= " JOIN $table AS $_as ON (" . implode(' AND ', $conditions) . ')';
-      }
+    else if (is_int($value)) {
+      $this->wheres[] = "($column $op $value)";
+    }
 
-      /**
-       * left join
-       * @param = array(array(TABLE, AS), array(FROM, TO))
-       * @see = 'JOIN $table AS $as ON ($form, $as.$to)'
-       */
-      for ($i = 0; $i < count(@$options['left.join']); $i += 2) {
-          list($inner, $join) = array_slice($options['left.join'], $i, 2);
-          $conditions = array();
-          list($table, $_as) = is_array($inner) ? $inner : array($inner, $inner);
+    else if ($value === 'NULL') {
+      $this->wheres[] = "($column $op $value)";
+    }
 
-          for ($n = 0; $n < count($join); $n += 2) {
-              list($field, $on) = array_slice($join, $n, 2);
-              $conditions[] = "($_as.$field = $as.$on)";
-          }
+    else {
+      $this->wheres[] = "($column $op ?)";
+      $this->values[] = $value;
+    }
 
-          $sql .= " LEFT JOIN $table AS $_as ON (" . implode(' AND ', $conditions) . ')';
-      }
-
-      /**
-       * where
-       */
-
-      if (count($wheres) > 0) {
-          $sql .= ' WHERE ' . implode(' AND ', $wheres);
-      }
-
-      /**
-       * order
-       */
-
-      if (@$options['order']) {
-          $orders = array();
-          $conditions = is_array($options['order'])
-              ? $options['order'] : array($options['order']);
-
-          foreach ($conditions as $condition) {
-              $field = '';
-              $order = 'ASC';
-
-              if (preg_match('/ IS NULL$/', $condition)) {
-                  $field = $condition;
-              }
-
-              else if (preg_match('/\s/', $condition)) {
-                  list($field, $order) = preg_split('/\s+/', $condition, 2);
-              }
-
-              else {
-                  $field = $condition;
-              }
-
-              if (preg_match('/\./', $field) === 0) {
-                  $field = "$field";
-              }
-
-              if (strtolower($order) !== 'asc' && strtolower($order) !== 'desc') {
-                  $order = 'ASC';
-              }
-
-              $orders[] = "$field $order";
-          }
-
-          $sql .= ' ORDER BY ' . implode(', ', $orders);
-      }
-
-      /**
-       * limit offset
-       */
-
-      if (is_numeric(@$options['limit']) && $options['limit'] > 0) {
-          $sql .= " LIMIT ${options['limit']}";
-
-          if (is_numeric(@$options['offset'])) {
-              $sql .= " OFFSET ${options['offset']}";
-          }
-      }
-
-      $db = parent::getInstance();
-      $st = $db->prepare($sql);
-      $st->execute($values);
-      $this->result = $st->fetchAll(PDO::FETCH_OBJ);
-
-      return $this->result;
+    return $this;
   }
 
-  public function findOne ($queries = array(), $options = array()) {
-      $options['limit'] = 1;
-      $results = self::find($queries, $options);
-      return @$results[0];
+  public function wheres($wheres) {
+    foreach ($wheres as $where) {
+      call_user_func_array(array($this, 'where'), $where);
+    }
+    return $this;
   }
 
-  public function findById ($id) {
-      $table = static::$table;
-      $db = parent::getInstance();
-      $sql = sprintf('SELECT * FROM %s WHERE id = :id', $table);
-      $st = $db->prepare($sql);
-      $st->bindParam(':id', $id);
-      $st->execute();
-      return $st->fetchObject();
+  public function orWheres($values) {
+    $wheres = array();
+
+    foreach ($values as $column => $value) {
+      if (is_int($value)) {
+        $wheres[] = "($column = $value)";
+      }
+
+      else {
+        $wheres[] = "($column = ?)";
+        $this->values[] = $value;
+      }
+    }
+
+    $this->wheres[] = '(' . implode(' OR ', $wheres) . ')';
+
+    return $this;
   }
 
-  public function findByname ($name) {
-      $table = static::$table;
-      $db = parent::getInstance();
-      $sql = sprintf('SELECT * FROM %s WHERE name = :name', $table);
-      $st = $db->prepare($sql);
-      $st->bindParam(':name', $name);
-      $st->execute();
-      return $st->fetchObject();
+  public function values() {
+    return $this->values;
   }
 
-  public function insert ($params) {
-      $table = static::$table;
-      $keys = array();
-      $values = array();
+  public function order($column, $order = null) {
+    $order = (strtolower($order) === 'desc') ? 'DESC' : 'ASC';
 
-      foreach ($params as $key => $value) {
-          if ($value === 0 || empty($value) === false) {
-              $keys[] = $key;
-              $values[] = preg_replace('/\r\n|\r/', "\n", $value);
-          }
-      }
+    if (preg_match('/\./', $column) === 0) {
+      $column = $this->alias() . ".$column";
+    }
 
-      $sql = sprintf(
-          'INSERT INTO %s (%s, created_at) VALUES (%s, null)'
-          , $table
-          , implode(', ', $keys)
-          , implode(', ', array_fill(1, count($keys), '?'))
-      );
-      $latestId = null;
-
-      try {
-          $db = parent::getInstance();
-          $db->beginTransaction();
-
-          $st = $db->prepare($sql);
-          $st->execute($values);
-
-          $latestId = $db->lastInsertId();
-          $db->commit();
-      }
-
-      catch (PDOException $e) {
-          $db->rollback();
-          throw new Exception($e);
-      }
-
-      return $latestId - 0;
+    $this->orders[] = "$column $order";
+    return $this;
   }
 
-  public function update ($datum, $queries) {
-      $table = static::$table;
-      $sql = sprintf('UPDATE %s SET ', $table);
-      $sets = array();
-      $values = array();
-      $wheres = array();
+  public function limit($n) {
+    if (is_int($n)) {
+      $this->limit = $n;
+    }
 
-      foreach ($datum as $key => $value) {
-          $sets[] = "$key = ?";
-          $values[] = $value;
-      }
+    else if (is_array($n)) {
+      $this->limit = implode(',', $n);
+    }
 
-      foreach ($queries as $key => $value) {
-          if (empty($value)) {
-              throw new Exception('empty value');
-          }
-          $wheres[] = "$key = ?";
-          $values[] = $value;
-      }
+    else {
+      $this->limit = null;
+    }
 
-      $sql .= implode(', ', $sets);
-
-      if (count($wheres) > 0) {
-          $sql .= ' WHERE ' . implode(' AND ', $wheres);
-      }
-
-      try {
-          $db = parent::getInstance();
-          $db->beginTransaction();
-
-          $st = $db->prepare($sql);
-          $st->execute($values);
-
-          $db->commit();
-      }
-
-      catch (PDOException $e) {
-          $db->rollback();
-          throw new Exception($e);
-      }
-
-      return true;
+    return $this;
   }
 
-  public function delete ($queries) {
-      $table = static::$table;
-      $sql = sprintf('DELETE FROM %s', $table);
-      $wheres = array();
-      $values = array();
+  public function offset($n) {
+    $this->offset = is_int($n) ? $n : null;
+    return $this;
+  }
 
-      foreach ($queries as $key => $value) {
-          if (empty($value)) {
-              throw new Exception('empty value');
-          }
-          $wheres[] = "$key = ?";
-          $values[] = $value;
+  public function group($column) {
+    if (preg_match('/\./', $column) === 0) {
+      $column = $this->alias() . ".$column";
+    }
+
+    $this->groups[] = $column;
+    return $this;
+  }
+
+  public function having($column, $op, $value = null) {
+    if (is_null($value)) {
+      $value = $op;
+      $op = '=';
+    }
+
+    $function;
+    $matches = array();
+
+    if (preg_match('/^([^(]+)\(([^)]+)\)$/', $column, $matches)) {
+      $function = $matches[1];
+      $column   = $matches[2];
+    }
+
+    if (preg_match('/\./', $column) === 0) {
+      $column = $this->alias() . ".$column";
+    }
+
+    if (@$this->allows[$function]) {
+      $column = "$function($column)";
+    }
+
+    $this->havings[] = "($column $op $value)";
+
+    return $this;
+  }
+
+  public function set() {
+    if (func_num_args() === 2) {
+      list($column, $value) = func_get_args();
+      $this->sets[$column] = $value;
+      return $this;
+    }
+
+    $sets = array();
+    $values = array();
+
+    foreach ($this->sets as $column => $value) {
+      if (is_null($value)) {
+        $sets[] = "$column = NULL";
       }
 
-      if (count($wheres) > 0) {
-          $sql .= ' WHERE ' . implode(' AND ', $wheres);
+      else if (is_int($value)) {
+        $sets[] = "$column = $value";
       }
 
-      try {
-          $db = parent::getInstance();
-          $db->beginTransaction();
+      else {
+        $sets[] = "$column = ?";
+        $values[] = $value;
+      }
+    }
 
-          $st = $db->prepare($sql);
-          $st->execute($values);
+    $this->values = array_merge($values, $this->values);
 
-          $db->commit();
+    return sprintf('SET %s', implode(', ', $sets));
+  }
+
+  public function sets($sets) {
+    foreach ($sets as $set) {
+      call_user_func_array(array($this, 'set'), $set);
+    }
+    return $this;
+  }
+
+  public function update() {
+    $sql = sprintf('UPDATE %s %s', $this->from(), $this->alias());
+
+    /**
+     * JOIN
+     */
+    if (count($this->joins) > 0) {
+      $sql .= ' ' . implode(' ', $this->joins);
+    }
+
+    /**
+     * SET
+     */
+
+    $sql .= ' ' . $this->set();
+
+    /**
+     * WHERE
+     */
+    if (count($this->wheres) > 0) {
+      $sql .= sprintf(' WHERE (%s)', implode(' AND ', $this->wheres));
+    }
+
+    /**
+     * LIMIT
+     */
+    if ($this->limit > -1) {
+      $sql .= " LIMIT {$this->limit}";
+    }
+
+    return $sql;
+  }
+
+  public function delete() {
+    $table = $this->table ?: get_class($this);
+    $sql = "DELETE FROM $table";
+
+    /**
+     * WHERE
+     */
+    if (count($this->wheres) > 0) {
+      $sql .= sprintf(' WHERE (%s)', implode(' AND ', $this->wheres));
+    }
+
+    /**
+     * LIMIT
+     */
+    if ($this->limit > -1) {
+      $sql .= " LIMIT {$this->limit}";
+    }
+
+    return $sql;
+  }
+
+  public function insert() {
+    $keys = array();
+    $values = array();
+
+    /**
+     * INTO
+     */
+    foreach ($this->sets as $key => $value) {
+      if (is_null($value)) {
+        $value = 'NULL';
       }
 
-      catch (PDOException $e) {
-          $db->rollback();
-          throw new Exception($e);
+      else if (is_int($value) === false) {
+        $this->values[] = $value;
+        $value = '?';
       }
 
-      return true;
+      $keys[] = $key;
+      $values[] = $value;
+    }
+
+    $sql = sprintf(
+      'INSERT INTO %s (%s) VALUES (%s)'
+      , $this->table ?: get_class($this)
+      , implode(', ', $keys)
+      , implode(', ', $values)
+    );
+
+    return $sql;
+  }
+
+  public function inner() {
+    $this->join = '\Sql\Join\Inner';
+    return $this;
+  }
+
+  public function cross() {
+    $this->join = '\Sql\Join\Cross';
+    return $this;
+  }
+
+  public function left() {
+    $this->join = '\Sql\Join\Left';
+    return $this;
+  }
+
+  public function right() {
+    $this->join = '\Sql\Join\Right';
+    return $this;
+  }
+
+  public function join() {
+    $class = $this->join ?: '\Sql\Join';
+    $this->join = null;
+    return new $class($this, func_get_arg(0));
+  }
+
+  public function joins() {
+    $this->joins[] = func_get_arg(0);
+    return $this;
   }
 }
