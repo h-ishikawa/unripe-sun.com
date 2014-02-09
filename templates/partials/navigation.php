@@ -15,6 +15,6 @@
       <a class="panel" href="/contacts"><img src="/public/images/mail.png" alt="お問い合わせ"></a><!--
    --><a class="panel" href="http://www.facebook.com/pages/Unripe/209519589110505" target="_blank"><img src="/public/images/facebook.png" alt="facebook"></a><!--
    --><a class="panel" href="http://unripe-sun.blogspot.jp" target="_blank"><img src="/public/images/blogger.png" alt="blogger"></a><!--
-   --><a class="panel" href="/public/line.html" onclick="window.open('/line.html', '', 'width=500,height=400');  return false;" target="_blank"><img src="/public/images/line.png" alt="blogger"></a><!--
+   --><a class="panel" href="/public/line.html" onclick="window.open('/public/line.html', '', 'width=500,height=400');  return false;" target="_blank"><img src="/public/images/line.png" alt="blogger"></a><!--
    --><img class="panel cactus" src="/public/images/cactus.png" class="panel" alt="">
     </div>

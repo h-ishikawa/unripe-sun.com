@@ -99,13 +99,13 @@ $settings = (object) array(
 
 --><div class="panel m-detail">
      <h3>エアウェーブ</h3>
-     <p><img src="/images/menus/airwave.jpg">テストテストテストテストテストテストテストテスト
+     <p><img src="/public/images/menus/airwave.jpg">テストテストテストテストテストテストテストテスト
        </p>
    </div><!--
 
 --><div class="panel m-detail">
      <h3>デジタルパーマ</h3>
-     <p><img src="/images/menus/digitalparm.jpg">テストテストテストテストテストテストテストテスト
+     <p><img src="/public/images/menus/digitalparm.jpg">テストテストテストテストテストテストテストテスト
        </p>
    </div><!--
 
@@ -115,7 +115,7 @@ $settings = (object) array(
        </p>
    </div>
    
-div class="menu">
+<div class="menu">
      <h3>【スタイリング】</h3>
      <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
        </p>

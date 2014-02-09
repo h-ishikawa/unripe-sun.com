@@ -4,6 +4,6 @@
     </div><!--
 
  --><div class="panel description">
-        <h2>アクセス</h2>
+        <h2>テスト</h2>
         <p class="point">皆様のお越しをお待ちしております。</p>
     </div>

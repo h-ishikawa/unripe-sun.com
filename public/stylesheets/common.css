@@ -113,7 +113,7 @@ li{
 .accesses .header .staff,
 .recruits .header .staff,
 .contacts .header .staff {
-  width: 300px;
+  width: 400px;
   height: 280px;
 }
 
@@ -819,7 +819,10 @@ li{
 .menus .contents,
 .news .contents,
 .staffs .contents,
+.meisters .contents,
+.goods .contents,
 .galleries .contents,
+.recruits .contents,
 .contacts .contents {
   margin: 1.5em 0;
 }
@@ -833,20 +836,26 @@ li{
 /*
  ** menus contents menu
  */
-.menus .contents .menu{
+.menus .contents .menu,
+.meisters .contents .menu,
+.goods .contents .menu{
   width: 100%;
   min-height: 5em;
   vertical-align: top;
 }
 
-.menus .contents .m-detail{
+.menus .contents .m-detail,
+.meisters .contents .m-detail,
+.goods .contents .m-detail{
   width: 20%;
   padding: 0 5% 2% 0;
   min-height: 15em;
   vertical-align: top;
 }
 
-.menus .contents .m-detail img{
+.menus .contents .m-detail img,
+.meisters .contents .m-detail img,
+.goods .contents .m-detail img{
   width: 100%;
   height: 30%;
   min-height: 12em;
@@ -896,27 +905,44 @@ li{
 /*
  ** staffs contents menu
  */
-
+.staffs .contents .m-detail h3,
+.staffs .contents .m-detail p{
+  width: 100%;
+  text-align: center;
+}
 .staffs .contents .m-detail{
-  width: 20%;
-  padding: 0 5% 2% 0;
+  width: 25%;
   min-height: 15em;
   vertical-align: top;
+  margin: 3% 0 0% 0;
 }
 
 .staffs .contents .m-detail img{
-  padding: 0 5% 0 0;
   min-height: 15em;
   vertical-align: top;
 }
 
 .staffs .contents .m-detail_s{
   width: 65%;
-  padding: 5% 5% 2% 0;
-  min-height: 15em;
+  padding: 3% 5% 2% 0;
+  min-height: 0;
   vertical-align: top;
+  margin: 3% 0 0% 0;
 }
 
+.staffs table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  font-size: 90%;
+  text-align: center;
+}
+
+.staffs td {
+  width: 5%;
+  padding: auto;
+  border: 1px solid #c0c0c0;
+}
 /*
  ** galleries
  */
