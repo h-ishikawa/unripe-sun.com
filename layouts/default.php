@@ -23,6 +23,7 @@ $request = $app->request();
 <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <link rel="stylesheet" href="/public/stylesheets/common.css">
+<link rel="stylesheet" href="/public/stylesheets/lightbox.css">
 <? if (!empty($settings->stylesheets[0])): ?>
 <? foreach ($settings->stylesheets as $stylesheet): ?>
 <link rel="stylesheet" href="/public/stylesheets/<?= $stylesheet ?>.css" />
