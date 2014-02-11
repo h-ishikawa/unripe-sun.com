@@ -18,14 +18,14 @@ class Staffs
     $schedule = $sth;
 
     $sql = new \Model\Tweets();
-    $sql->set('stuff', 1);
+    $sql->where('stuff', 1);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->selectOne());
     $sth->execute($sql->values());
     $tweet_tomori = $sth;
 
     $sql = new \Model\Snaps();
-    $sql->set('stuff', 1);
+    $sql->where('stuff', 1);
     $sql->limit(2);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->select());
@@ -34,14 +34,14 @@ class Staffs
 
 
     $sql = new \Model\Tweets();
-    $sql->set('stuff', 2);
+    $sql->where('stuff', 2);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->selectOne());
     $sth->execute($sql->values());
     $tweet_koike = $sth;
 
     $sql = new \Model\Snaps();
-    $sql->set('stuff', 2);
+    $sql->where('stuff', 2);
     $sql->limit(2);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->select());
@@ -50,14 +50,14 @@ class Staffs
 
 
     $sql = new \Model\Tweets();
-    $sql->set('stuff', 3);
+    $sql->where('stuff', 3);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->selectOne());
     $sth->execute($sql->values());
     $tweet_yoshino = $sth;
 
     $sql = new \Model\Snaps();
-    $sql->set('stuff', 3);
+    $sql->where('stuff', 3);
     $sql->limit(2);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->select());
@@ -66,14 +66,14 @@ class Staffs
 
 
     $sql = new \Model\Tweets();
-    $sql->set('stuff', 4);
+    $sql->where('stuff', 4);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->selectOne());
     $sth->execute($sql->values());
     $tweet_enomoto = $sth;
 
     $sql = new \Model\Snaps();
-    $sql->set('stuff', 4);
+    $sql->where('stuff', 4);
     $sql->limit(2);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->select());
@@ -82,7 +82,7 @@ class Staffs
 
 
     $sql = new \Model\Tweets();
-    $sql->set('stuff', 5);
+    $sql->where('stuff', 5);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->selectOne());
     $sth->execute($sql->values());
@@ -90,7 +90,7 @@ class Staffs
 
 
     $sql = new \Model\Tweets();
-    $sql->set('stuff', 6);
+    $sql->where('stuff', 6);
     $sql->order('created_at', 'desc');
     $sth = $dbh->prepare($sql->selectOne());
     $sth->execute($sql->values());
