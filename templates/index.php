@@ -73,6 +73,7 @@ $settings = (object) array(
         </div><!--
 
      --><div class="panel calendar">
+          <a name="calender"></a>
           <h3>カレンダー</h3>
           <?= \Middleware\Calendar::get() ?>
 
@@ -142,7 +143,7 @@ $settings = (object) array(
               <? while ($result = $option[3]->fetchObject()): ?>
               --><a class="panel" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?>
                    <br>
-                   Stuff: 
+                   Staff: 
                    <? if ($result->stuff == 1): ?>
                      戸森
                    <? elseif ($result->stuff == 2): ?>

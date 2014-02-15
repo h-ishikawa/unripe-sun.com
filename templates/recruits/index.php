@@ -5,6 +5,8 @@ $settings = (object) array(
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
+  , 'h2' => '求人募集'
+  , 'point' => 'あなたもUnripeで働きませんか？ご連絡をお待ちしています。'
 );
 ?>
 

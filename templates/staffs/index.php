@@ -5,6 +5,8 @@ $settings = (object) array(
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
+  , 'h2' => 'Unripeスタッフ紹介'
+  , 'point' => 'Unripeでは、お客様と話し合いながらヘアスタイルを考えていきます。<br>リラックスして気軽にお話をする中で一緒に決めていきましょう。'
 );
 ?>
 
@@ -67,11 +69,11 @@ $settings = (object) array(
     	</tbody>
     </table>
      <ul>
-       <li>【一言】最高のスタッフでお待ちしています。</li>
-       <li>【最新担当スナップ写真】
+       <li>【一言】最高のスタッフでお待ちしています。</li><br>
+       <li class="new_snaps">【戸森 最新担当スナップ写真】<br><br>
        <!--
        <? while ($result = $option[2]->fetchObject()): ?>
-    --><a class="panel" style="width:208px;" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?><br>Stuff: 戸森<br>Comment: <?= $result->memo ?>">
+    --><a class="panel" style="width:208px;" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?><br>Staff: 戸森<br>Comment: <?= $result->memo ?>">
        <img style="display: block;margin: 0 auto;" src="/public/images/uploads/thumbnails/<?= $result->file_path ?>">
        </a><!--
        <? endwhile; ?>
@@ -129,8 +131,8 @@ $settings = (object) array(
     	</tbody>
     </table>
      <ul>
-       <li>【一言】ヘアマイスターの資格を活かして、肌と髪に優しい施術をします。</li>
-       <li>【最新担当スナップ写真】
+       <li>【一言】ヘアマイスターの資格を活かして、肌と髪に優しい施術をします。</li><br>
+       <li class="new_snaps">【小池 最新担当スナップ写真】<br><br>
        <!--
        <? while ($result = $option[4]->fetchObject()): ?>
     --><a class="panel" style="width:208px;" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?><br>Stuff: 小池<br>Comment: <?= $result->memo ?>">
@@ -201,8 +203,8 @@ $settings = (object) array(
     	</tbody>
     </table>
      <ul>
-       <li>【一言】ショートスタイルが得意です。短くしたいけど迷っている方、是非お待ちしています。</li>
-       <li>【最新担当スナップ写真】
+       <li>【一言】ショートスタイルが得意です。短くしたいけど迷っている方、是非お待ちしています。</li><br>
+       <li class="new_snaps">【吉野 最新担当スナップ写真】<br><br>
        <!--
        <? while ($result = $option[6]->fetchObject()): ?>
     --><a class="panel" style="width:208px;" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?><br>Stuff: 吉野<br>Comment: <?= $result->memo ?>">
@@ -263,8 +265,8 @@ $settings = (object) array(
     	</tbody>
     </table>
      <ul>
-       <li>【一言】平日限定で、お子様カットもしています。</li>
-       <li>【最新担当スナップ写真】
+       <li>【一言】平日限定で、お子様カットもしています。</li><br>
+       <li class="new_snaps">【榎本 最新担当スナップ写真】<br><br>
        <!--
        <? while ($result = $option[8]->fetchObject()): ?>
     --><a class="panel" style="width:208px;" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?><br>Stuff: 榎本<br>Comment: <?= $result->memo ?>">

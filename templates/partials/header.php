@@ -4,6 +4,6 @@
     </div><!--
 
  --><div class="panel description">
-        <h2>テスト</h2>
-        <p class="point">皆様のお越しをお待ちしております。</p>
+        <h2><?= @$settings->h2 ?></h2>
+        <p class="point"><?= @$settings->point ?></p>
     </div>

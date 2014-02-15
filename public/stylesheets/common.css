@@ -726,7 +726,7 @@ li{
 .accesses .header .description,
 .recruits .header .description,
 .contacts .header .description {
-  width: 60%;
+  width: 55%;
   padding: 0 0 0 5%;
   text-align: center;
 }
@@ -790,9 +790,10 @@ li{
  */
 .accesses table {
   width: 98%;
-  margin: 10px auto 2ex;
+  margin: 20px auto 2ex;
   border-collapse: collapse;
   font-size: 90%;
+  position: top 0;
 }
 
 .accesses table th{
@@ -809,9 +810,6 @@ li{
   border: 1px solid #c0c0c0;
 }
 
-.accesees .adress{
-  vertical-align: top;
-}
 
 /*
  ** menus contents
@@ -943,6 +941,16 @@ li{
   padding: auto;
   border: 1px solid #c0c0c0;
 }
+.staffs .new_snaps{
+  background: url('/public/images/home/snap_bg.jpg') 0 0;
+  height: 250px;
+  width: 60%;
+}
+.staffs .new_snaps{
+  border: 1px solid ;
+  padding: 1% 0;
+}
+
 /*
  ** galleries
  */

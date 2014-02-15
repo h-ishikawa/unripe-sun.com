@@ -5,6 +5,8 @@ $settings = (object) array(
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
+  , 'h2' => '取り扱い製品のご紹介'
+  , 'point' => 'Unripeで取り扱っているシャンプーやトリートメント、カラー剤などの製品をご紹介。<br>Unripeオリジナルマグカップなども・・・。'
 );
 ?>
 

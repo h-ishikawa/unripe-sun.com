@@ -5,6 +5,8 @@ $settings = (object) array(
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
+  , 'h2' => 'ヘアケアマイスター'
+  , 'point' => 'Unripeには3人のヘアケアマイスターがおります。髪のお悩みは私達にお任せ下さい！'
 );
 ?>
             

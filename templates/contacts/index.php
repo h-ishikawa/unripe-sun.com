@@ -5,6 +5,8 @@ $settings = (object) array(
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('abc', 'cdf', 'ghi')
   , 'stylesheets' => array('abc', 'cdf', 'ghi')
+  , 'h2' => 'お問い合わせ'
+  , 'point' => '下のフォームからお気軽にお問い合わせください！'
 );
 ?>
 

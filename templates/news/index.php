@@ -5,6 +5,8 @@ $settings = (object) array(
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
+  , 'h2' => 'ニュース一覧'
+  , 'point' => 'Unripeでの最新情報やお店についてのお知らせをお届けします。'
 );
 ?>
 

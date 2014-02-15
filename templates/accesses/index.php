@@ -5,6 +5,8 @@ $settings = (object) array(
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
+  , 'h2' => 'アクセス'
+  , 'point' => '皆様のお越しをお待ちしております。'
 );
 ?>
 
@@ -40,8 +42,8 @@ $settings = (object) array(
     </table>
 </div><!--
 
---><div class="panel">
-    <table class="access">
+--><div class="panel accesses">
+    <table>
     	<tbody>
     		<tr>
     			<th colspan="2">ACCESS</th>
@@ -62,8 +64,12 @@ $settings = (object) array(
     			<td>045-628-9736</td>
     		</tr>
     		<tr>
-    			<td>定休日</td>
+    			<td rowspan="2">定休日</td>
     			<td>火曜日</td>
+    		</tr>
+    		<tr>
+    			<td>スタッフのお休みはこちら→。<a href="/#calender"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン"></a></td>
+    			</td>
     		</tr>
     	</tbody>
     </table>
