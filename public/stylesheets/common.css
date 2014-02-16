@@ -789,8 +789,8 @@ li{
  ** accesses table
  */
 .accesses table {
-  width: 98%;
-  margin: 20px auto 2ex;
+  width: 560px;
+  margin: 2% 1% 1% 1ex;
   border-collapse: collapse;
   font-size: 90%;
   position: top 0;
@@ -809,7 +809,9 @@ li{
   padding: .5ex 2%;
   border: 1px solid #c0c0c0;
 }
-
+.accesses td img {
+  vertical-align: text-bottom;
+}
 
 /*
  ** menus contents
@@ -945,19 +947,35 @@ li{
   background: url('/public/images/home/snap_bg.jpg') 0 0;
   height: 250px;
   width: 60%;
+  color: white;
+  padding: 2%;
 }
-.staffs .new_snaps{
-  border: 1px solid ;
-  padding: 1% 0;
+.staffs .snap_box a{
+  border: 1px solid red;
+  width: 100%;
+    margin: 0 50% 0 50%;
+
+}
+.staffs .snap_box img{
+  width: 98%;
+  margin: 0 50% 0 50%;
+}
+.staffs .new_snaps span{
+  margin: : 0 5% 0 5%;
+  border-bottom: dotted 2px #7c6551;
 }
 
 /*
  ** galleries
  */
-.galleries .contents a {
+.galleries .contents .snap_box {
   width: 220px;
   height: 273px;
   margin: 15px 26px 0;
+}
+
+.galleries .contents a {
+  width: 55px;
 }
 
 .galleries .contents img {

@@ -11,7 +11,8 @@ $settings = (object) array(
 ?>
 
 <? while ($result = $option[0]->fetchObject()): ?>
-<a class="panel" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?>
+<div class="panel snap_box">
+<a class="panel" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" rel="lightbox" title="Name: <?= $result->name ?>
   <br>
   Staff: 
   <? if ($result->stuff == 1): ?>
@@ -30,8 +31,9 @@ $settings = (object) array(
   <br>
   Comment: <?= $result->memo ?>
 ">
-  <img src="/public/images/uploads/thumbnails/<?= $result->file_path ?>">
-  <p>Name: <?= $result->name ?></p>
+  <img src="/public/images/uploads/thumbnails/<?= $result->file_path ?>" title="クリックで拡大">
+</a>
+<p>Name: <?= $result->name ?></p>
   <p>Staff: 
   <? if ($result->stuff == 1): ?>
     戸森
@@ -48,5 +50,5 @@ $settings = (object) array(
   <? endif; ?>
   </p>
   <p>Comment: <?= $result->memo ?></p>
-</a>
+</div>
 <? endwhile; ?>

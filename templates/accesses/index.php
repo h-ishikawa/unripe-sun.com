@@ -68,7 +68,7 @@ $settings = (object) array(
     			<td>火曜日</td>
     		</tr>
     		<tr>
-    			<td>スタッフのお休みはこちら→。<a href="/#calender"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン"></a></td>
+    			<td>スタッフのお休みはこちら→&nbsp;&nbsp;<a href="/#calender"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン"></a></td>
     			</td>
     		</tr>
     	</tbody>

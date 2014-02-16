@@ -160,7 +160,7 @@ $settings = (object) array(
                    <br>
                    Comment: <?= $result->memo ?>
                  ">
-                  <img src="/public/images/uploads/thumbnails/<?= $result->file_path ?>">
+                  <img src="/public/images/uploads/thumbnails/<?= $result->file_path ?>" title="クリッックで拡大">
                 </a><!--
               <? endwhile; ?>
             -->
