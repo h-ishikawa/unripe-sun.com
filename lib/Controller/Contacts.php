@@ -65,10 +65,11 @@ class Contacts
     
     setcookie('ONETIMETOKEN', '', time() - 3600, '/contacts/');
     
-    
     $to = 'sevens67@i.softbank.jp';
     $subject= '問い合わせがありました。';
-    $bcc = "Bcc: kobito0826@gmail.com";
+    $header="From: contact.ichicolo.com";
+    $header.="\n";
+    $header.="Bcc: kobito0826@gmail.com";
     
     $name = 'お名前 : ' . $post->name;
     $area = '住所 : ' . @$post->address;
@@ -77,7 +78,7 @@ class Contacts
     $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n";
     $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
     
-    if (mail($to, $subject, $bodyTextData, $bcc . '; FROM:' . $post->email)){
+    if (mail($to, $subject, $bodyTextData, $header)){
       $notification = 'success';
     
       /**
@@ -87,7 +88,7 @@ class Contacts
       $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n" . 'このたびはお問い合わせいただき、誠にありがとうございます。' . "\n" . '改めてご連絡させていただきますので、今しばらくお待ちいただきますようよろしくお願いいたします。'. "\n";
       $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
     
-      mail($post->email, $replySubject, $bodyTextData, $bcc . '; FROM:' . $to);
+      mail($post->email, $replySubject, $bodyTextData, $header);
     }
     
     else{
