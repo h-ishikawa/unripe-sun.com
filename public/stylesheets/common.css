@@ -117,15 +117,15 @@ li{
   height: 280px;
 }
 
-.news .header .staff { background: url('/public/images/news/news.png') no-repeat 0 0; }
-.menus .header .staff { background: url('/public/images/menus/menu.png') no-repeat 0 0; }
-.staffs .header .staff { background: url('/public/images/stuffs/stuff.png') no-repeat 0 0; }
-.meisters .header .staff { background: url('/public/images/meisters/meister.png') no-repeat 0 0; }
-.goods .header .staff { background: url('/public/images/goods/goods.png') no-repeat 0 0; }
-.galleries .header .staff { background: url('/public/images/galleries/gallery.png') no-repeat 0 0; }
-.accesses .header .staff { background: url('/public/images/accesses/accesses.png') no-repeat 0 0; }
-.recruits .header .staff { background: url('/public/images/recruits/recruit.png') no-repeat 0 0; }
-.contacts .header .staff { background: url('/public/images/contacts/contacts.png') no-repeat 0 0; }
+.news .header .staff { background: url('/public/images/news/news.png') no-repeat 0 0; background-position: center center; }
+.menus .header .staff { background: url('/public/images/menus/menu.png') no-repeat 0 0; background-position: center center; }
+.staffs .header .staff { background: url('/public/images/stuffs/stuff.png') no-repeat 0 0; background-position: center center; }
+.meisters .header .staff { background: url('/public/images/meisters/meister.png') no-repeat 0 0; background-position: center center; }
+.goods .header .staff { background: url('/public/images/goods/goods.png') no-repeat 0 0; background-position: center center; }
+.galleries .header .staff { background: url('/public/images/galleries/gallery.png') no-repeat 0 0; background-position: center center; }
+.accesses .header .staff { background: url('/public/images/accesses/accesses.png') no-repeat 0 0; background-position: center center; }
+.recruits .header .staff { background: url('/public/images/recruits/recruit.png') no-repeat 0 0; background-position: center center; }
+.contacts .header .staff { background: url('/public/images/contacts/contacts.png') no-repeat 0 0; background-position: center center; }
 
 /*
  ** navigation
@@ -951,14 +951,11 @@ li{
   padding: 2%;
 }
 .staffs .snap_box a{
-  border: 1px solid red;
   width: 100%;
-    margin: 0 50% 0 50%;
-
+  border: 1px solid red;
 }
 .staffs .snap_box img{
-  width: 98%;
-  margin: 0 50% 0 50%;
+  width: 100%;
 }
 .staffs .new_snaps span{
   margin: : 0 5% 0 5%;
@@ -974,15 +971,11 @@ li{
   margin: 15px 26px 0;
 }
 
-.galleries .contents a {
-  width: 55px;
-}
-
 .galleries .contents img {
   max-width: 220px;
   max-height: 173px;
-  margin: 0 auto;
   display: block;
+  border: 1px solid;
 }
 
 .galleries .contents p {
