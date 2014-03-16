@@ -4,7 +4,7 @@
    --><a href="/menus"     class="panel menus">menu</a><!--
    --><a href="/staffs"    class="panel staffs">staff</a><!--
    --><a href="/meisters"  class="panel meisters">hair meister</a><!--
-   --><a href="/goods"     class="panel goods">goods</a><!--
+   --><a href="/goods"     class="panel goods">products</a><!--
    --><a href="/galleries" class="panel galleries">gallery</a><!--
    --><a href="/accesses"  class="panel accesses">access</a><!--
    --><a href="/recruits"  class="panel recruits">recruit</a><!--

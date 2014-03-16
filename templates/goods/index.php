@@ -1,6 +1,6 @@
 <?php
 $settings = (object) array(
-    'title' => 'グッズ'
+    'title' => '製品紹介'
   , 'keywords' => 'ここに, キーワードを, 書き込む'
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('')
@@ -17,7 +17,7 @@ $settings = (object) array(
   
   <div class="panel m-detail">
       <h3>Aujuaシャンプー</h3>
-      <p><img src="public/images/goods/aujua02.jpg" />毛髪特性、美容習慣、気候によって引き起こされている日本人女性の髪の悩みを解決できるシャンプートリートメントです。
+      <p><img src="public/images/goods/aujua.jpg" /><span>毛髪特性、美容習慣、気候によって引き起こされている日本人女性の髪の悩みを解決できるシャンプートリートメントです。</span>
       </p>
   </div><!--
 
