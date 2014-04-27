@@ -6,6 +6,7 @@ class Calendar
 {
   public static function get($year = "", $month = "") {
   $holidays = array();
+  $hol = array();
 
   $dbh = \Db::getInstance();
 
@@ -51,11 +52,11 @@ EOM;
 	$lc = 0;
 
 	for ($i = 1; $i < $l_day + 1; $i++) {
-    $hol = '';
+    $hol = array();
 
     foreach($holidays as $holiday) {
       if ($i == date("d", strtotime($holiday->date))) {
-        $hol = $holiday->stuff;
+        $hol[] = $holiday->stuff;
 		  }
     }
 
@@ -79,8 +80,16 @@ EOM;
 			$tmp .= "\t\t<td class=\"today\">{$i}</td>\n";
     }
 
-    else if (@$hol) {
-			$tmp .= "\t\t<td class=\"stuff{$hol}\">{$i}</td>\n";
+    else if (is_array($hol)) {
+      $staff_holiday = array();
+
+      foreach ($hol as $num) {
+        $staff_holiday[] = "<span class=\"stuff". $num . "\"></span>";
+      }
+
+      $staff_holiday = implode(' ', $staff_holiday);
+
+			$tmp .= "\t\t<td>{$i}<br>{$staff_holiday}</td>\n";
 		}
     
     else {

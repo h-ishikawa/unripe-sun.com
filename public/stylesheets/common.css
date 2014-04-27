@@ -514,6 +514,7 @@ li{
   margin: 0;
 }
 
+.home .contents .calendar tr td span,
 .home .contents .calendar p span {
   width: 10px;
   height: 10px;
@@ -521,15 +522,19 @@ li{
   display: inline-block;
   vertical-align: middle;
 }
+.home .contents .calendar tr td span.stuff1,
 .home .contents .calendar p.tomori span {
   background-color: #cd5c5c;
 }
+.home .contents .calendar tr td span.stuff2,
 .home .contents .calendar p.koike span {
   background-color: #5f9ea0;
 }
+.home .contents .calendar tr td span.stuff3,
 .home .contents .calendar p.yoshino span {
   background-color: #6b8e23;
 }
+.home .contents .calendar tr td span.stuff4,
 .home .contents .calendar p.enomoto span {
   background-color: #9370db;
 }
