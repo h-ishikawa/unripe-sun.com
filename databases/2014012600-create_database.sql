@@ -1,1 +1,1 @@
-CREATE DATABASE framework_development CHARACTER SET utf8;
+CREATE DATABASE unripe_development CHARACTER SET utf8;
