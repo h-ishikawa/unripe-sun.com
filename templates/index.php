@@ -116,6 +116,8 @@ $settings = (object) array(
               <? endif; ?>
             <? endforeach; ?>
           </p>
+
+          <p>※火曜日は定休日です。</p>
         </div><!--
 
      --><div class="panel privilege">

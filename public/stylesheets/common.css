@@ -493,6 +493,14 @@ li{
 .home .contents .calendar td {
   width: 14%;
 }
+.home .contents .calendar td.today {
+  font-weight: bold;
+  background: #dcdcdc;
+}
+.home .contents .calendar th.tue, 
+.home .contents .calendar td.tue {
+  background: #fff0f5;
+}
 
 .home .contents .calendar tr th.sun,
 .home .contents .calendar tr td:first-child {

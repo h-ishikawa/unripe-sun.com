@@ -41,7 +41,7 @@ class Calendar
 	<tr>
 		<th class="sun">sun</th>
 		<th>mon</th>
-		<th>tue</th>
+		<th class="tue">tue</th>
 		<th>wed</th>
 		<th>thu</th>
 		<th>fri</th>
@@ -50,6 +50,7 @@ class Calendar
 EOM;
 
 	$lc = 0;
+  $w = date("w");
 
 	for ($i = 1; $i < $l_day + 1; $i++) {
     $hol = array();
@@ -76,11 +77,47 @@ EOM;
 			$tmp .= repeat($week);
 		}
 
-		if ($i == date("j") && $year == date("Y") && $month == date("n")) {
-			$tmp .= "\t\t<td class=\"today\">{$i}</td>\n";
+		if ($i == date("j") && $year == date("Y") && $month == date("n") && !empty($hol) && $week[$w] == 2) {
+      $staff_holiday = array();
+
+      foreach ($hol as $num) {
+        $staff_holiday[] = "<span class=\"stuff". $num . "\"></span>";
+      }
+
+      $staff_holiday = implode(' ', $staff_holiday);
+
+			$tmp .= "\t\t<td class=\"today tue\">{$i}<br>{$staff_holiday}</td>\n";
     }
 
-    else if (is_array($hol)) {
+		else if ($i == date("j") && $year == date("Y") && $month == date("n") && !empty($hol)) {
+      $staff_holiday = array();
+
+      foreach ($hol as $num) {
+        $staff_holiday[] = "<span class=\"stuff". $num . "\"></span>";
+      }
+
+      $staff_holiday = implode(' ', $staff_holiday);
+
+			$tmp .= "\t\t<td class=\"today\">{$i}<br>{$staff_holiday}</td>\n";
+    }
+
+		else if ($i == date("j") && $year == date("Y") && $month == date("n") && $week[$w] == 2) {
+			$tmp .= "\t\t<td class=\"today tue\">{$i}</td>\n";
+    }
+
+		else if (!empty($hol) && $week[$w] == 2) {
+      $staff_holiday = array();
+
+      foreach ($hol as $num) {
+        $staff_holiday[] = "<span class=\"stuff". $num . "\"></span>";
+      }
+
+      $staff_holiday = implode(' ', $staff_holiday);
+
+			$tmp .= "\t\t<td class=\"tue\">{$i}<br>{$staff_holiday}</td>\n";
+    }
+
+    else if (!empty($hol)) {
       $staff_holiday = array();
 
       foreach ($hol as $num) {
@@ -91,7 +128,15 @@ EOM;
 
 			$tmp .= "\t\t<td>{$i}<br>{$staff_holiday}</td>\n";
 		}
-    
+
+		else if ($week[$w] == 2) {
+			$tmp .= "\t\t<td class=\"tue\">{$i}</td>\n";
+    }
+
+		else if ($i == date("j") && $year == date("Y") && $month == date("n")) {
+			$tmp .= "\t\t<td class=\"today\">{$i}</td>\n";
+    }
+
     else {
 			$tmp .= "\t\t<td>{$i}</td>\n";
 		}
