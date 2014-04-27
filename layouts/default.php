@@ -75,6 +75,54 @@ $request = $app->request();
     </div>
   </div>
 
+  <!-- top only -->
+  <? if (!$request->separatePath): ?>
+  <div class="snaps">
+    <div id="snaps" class="container">
+      <div class="panel themes">
+        <h3><strong>Unripe</strong>にいらっしゃってくれた方々の<em>ヘアデザインスナップ</em>。</h3>
+        <p>スタイリングの参考に。<br>
+           ヘアカタログの代わりにも。<br>
+           <strong>Unripe</strong>で生まれたスタイリングを是非ご覧ください。
+        </p>
+        <a href="/galleries">View more hair styles</a>
+      </div><!--
+
+   --><div class="panel slider">
+        <!--
+          <? while ($result = $option[3]->fetchObject()): ?>
+          --><a class="panel" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?>
+               <br>
+               Staff: 
+               <? if ($result->stuff == 1): ?>
+                 戸森
+               <? elseif ($result->stuff == 2): ?>
+                 小池
+               <? elseif ($result->stuff == 3): ?>
+                 吉野
+               <? elseif ($result->stuff == 4): ?>
+                 榎本
+               <? elseif ($result->stuff == 5): ?>
+                 佐久間
+               <? elseif ($result->stuff == 6): ?>
+                 清水
+               <? endif; ?>
+               <br>
+               Comment: <?= $result->memo ?>
+             ">
+              <img src="/public/images/uploads/thumbnails/<?= $result->file_path ?>" title="クリッックで拡大">
+            </a><!--
+          <? endwhile; ?>
+        -->
+      </div>
+
+      <a class="next" href="javascript: unripe.index.carousel.next();"></a>
+      <a class="prev" href="javascript: unripe.index.carousel.prev();"></a>
+    </div>
+  </div>
+  <? endif; ?>
+  <!-- top only -->
+
   <a class="pageTop" href="#header">PAGE TOP</a></p>
 
   <div class="footer">
