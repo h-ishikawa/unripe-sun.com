@@ -57,7 +57,7 @@ $settings = (object) array(
     			<td>〒221-0841</td>
     		</tr>
     		<tr>
-    			<td>神奈川県横浜市神奈川区1-2-3 カナギヤビル2F</td>
+    			<td>神奈川県横浜市神奈川区1-2-3 カヤギヤビル2F</td>
     		</tr>
     		<tr>
     			<td>TEL</td>

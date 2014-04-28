@@ -11,7 +11,7 @@ $settings = (object) array(
 ?>
 
  <div class="panel m-detail">
-     <h3>【Unripe代表】 戸森 賢一 </h3>
+     <h3><span></span>【Unripe代表】 戸森 賢一 </h3>
      <p><img src="/public/images/stuffs/tomori.png"></p>
    </div><!--
 
@@ -145,12 +145,12 @@ $settings = (object) array(
    </div><!--
 
 --><div class="panel m-detail">
-     <h3>【店長】 小池 宏徳</h3>
+     <h3><span></span>【店長】 小池 宏徳</h3>
      <p><img src="/public/images/stuffs/koike.png"></p>
    </div><!--
 
 --><div class="panel m-detail">
-     <h3>【アートディレクター】 吉野 憲太</h3>
+     <h3><span></span>【アートディレクター】 吉野 憲太</h3>
      <p><img src="/public/images/stuffs/yoshino.png"></p>
    </div><!--
 
@@ -279,12 +279,12 @@ $settings = (object) array(
    </div><!--
 
 --><div class="panel m-detail">
-     <h3>【スタイリスト】 榎本 宮子</h3>
+     <h3><span></span>【スタイリスト】 榎本 宮子</h3>
      <p><img src="/public/images/stuffs/enomoto.png"></p>
    </div><!--
 
 --><div class="panel m-detail">
-     <h3>【アシスタント】 佐久間 聖子</h3>
+     <h3><span></span>【アシスタント】 佐久間 聖子</h3>
      <p><img src="/public/images/stuffs/sakuma.png"></p>
    </div><!--
 
@@ -377,6 +377,6 @@ $settings = (object) array(
        <li>【一言】これからもUnripeをよろしくお願いします。</li>
        </ul>
    </div><div class="panel m-detail">
-     <h3>【アシスタント】 清水 圭太</h3>
+     <h3><span></span>【アシスタント】 清水 圭太</h3>
      <p><img src="/public/images/stuffs/shimizu.png"></p>
    </div>

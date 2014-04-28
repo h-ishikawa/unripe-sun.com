@@ -10,7 +10,7 @@ $settings = (object) array(
 );
 ?>
 
-<h3>問い合わせ</h3>
+<h3><span></span>問い合わせ</h3>
 <form action="/contacts" method="post" enctype="multipart/form-data">
   <p class="title">下記よりお気軽にご連絡ください。</p>
 

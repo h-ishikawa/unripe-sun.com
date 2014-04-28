@@ -583,8 +583,8 @@ li{
   margin: 10px 30px;
   vertical-align: middle;
 }
-.home .contents .privilege span {
-  margin: 0 0 0 75%;
+.home .contents .privilege details-button {
+  margin: 0 0 0 80%;
 }
 .home .contents .privilege li{
   list-style-type: square;

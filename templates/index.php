@@ -123,6 +123,7 @@ $settings = (object) array(
      --><div class="panel privilege">
           <h3><span></span>製品情報</h3>
           <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。<br><img src="/public/images/home/test_img.jpg" alt="unripe製品1" /><img src="/public/images/home/test_img.jpg"／alt="unripe製品2" /><span class="details-button"><a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
+          
         </div>
     	</div><!--
     	
