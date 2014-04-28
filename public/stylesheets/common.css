@@ -72,6 +72,17 @@ h1, h2, h3, h4, h5, h6, strong, em {
   margin: 0;
 }
 
+h2 span,
+h3 span,
+h4 span {
+  width: 10px;
+  height: 15px;
+  background-color: #126b2e;
+  display: inline-block;
+  margin: -1px 3px 0 0;
+  vertical-align: top;
+}
+
 .container {
   width: 80%;
   min-width: 1024px;
@@ -355,11 +366,11 @@ li{
  ** home contents
  */
 .home .contents {
-        margin: 1.5em 0;
+  margin: 1.5em 0;
 }
 
 .home .contents .container .panel:first-child {
-  width: 75%;
+  width: 73%;
   vertical-align: top;
   margin-top:0.5em;
 }
@@ -579,10 +590,17 @@ li{
   list-style-type: square;
 }
 /*
+ ** home conversion
+ */
+.home .contents .conversion {
+  width: 27%;
+  margin-top:0.5em;
+}
+
+/*
  ** home fb-like-box
  */
 .home .contents .fb-like-box {
-  width: 25%;
   height: 100%;
   margin-top:0.5em;
 }
