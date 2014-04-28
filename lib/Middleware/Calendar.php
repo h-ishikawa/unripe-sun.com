@@ -77,7 +77,7 @@ EOM;
 			$tmp .= repeat($week);
 		}
 
-		if ($i == date("j") && $year == date("Y") && $month == date("n") && !empty($hol) && $week[$w] == 2) {
+		if ($i == date("j") && $year == date("Y") && $month == date("n") && !empty($hol) && $week == 2) {
       $staff_holiday = array();
 
       foreach ($hol as $num) {
@@ -101,11 +101,11 @@ EOM;
 			$tmp .= "\t\t<td class=\"today\">{$i}<br>{$staff_holiday}</td>\n";
     }
 
-		else if ($i == date("j") && $year == date("Y") && $month == date("n") && $week[$w] == 2) {
+		else if ($i == date("j") && $year == date("Y") && $month == date("n") && $week == 2) {
 			$tmp .= "\t\t<td class=\"today tue\">{$i}</td>\n";
     }
 
-		else if (!empty($hol) && $week[$w] == 2) {
+		else if (!empty($hol) && $week == 2) {
       $staff_holiday = array();
 
       foreach ($hol as $num) {
@@ -129,7 +129,7 @@ EOM;
 			$tmp .= "\t\t<td>{$i}<br>{$staff_holiday}</td>\n";
 		}
 
-		else if ($week[$w] == 2) {
+		else if ($week == 2) {
 			$tmp .= "\t\t<td class=\"tue\">{$i}</td>\n";
     }
 
