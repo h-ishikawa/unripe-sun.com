@@ -1,6 +1,6 @@
 <?php
 $settings = (object) array(
-    'title' => 'ニュース一覧'
+    'title' => 'ギャラリー一覧'
   , 'keywords' => 'ここに, キーワードを, 書き込む'
   , 'description' => 'ここにディスクリプションを書き込む'
   , 'scripts' => array('')

@@ -62,7 +62,7 @@
     </td>
     <td><?= $result->tweet ?></td>
     <td><?= $result->created_at ?></td>
-    <td>
+    <td class="delete">
       <form action="/admins/tweets" class="delete" method="post" onsubmit="return confirm('<?= @$result->tweet ?>を削除して宜しいですか？')">
         <input type="hidden" name="_METHOD" value="DELETE">
         <input type="hidden" name="id" value="<?= $result->id ?>">

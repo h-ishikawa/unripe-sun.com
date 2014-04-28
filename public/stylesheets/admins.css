@@ -117,6 +117,7 @@ table.even {
   text-align: center;
 }
 
-.contents td.buttons {
+.contents td.buttons,
+.contents td.delete {
   text-align: right;
 }

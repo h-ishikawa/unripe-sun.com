@@ -1,12 +1,5 @@
-    <form class="news" action="/admins/news" method="POST">
+    <form class="coupons" action="/admins/coupons" method="POST">
       <table class="new">
-        <tr>
-          <td>休日</td>
-          <td>
-            <input class="date" type="date" name="date" value="">
-          </td>
-        </tr>
-
         <tr>
           <td>タイトル</td>
           <td>
@@ -15,19 +8,21 @@
         </tr>
 
         <tr>
-          <td>内容</td>
+          <td>対象</td>
           <td>
-            <textarea name="content" placeholder="お知らせ内容を入力してください。"></textarea>
+            <select name="target">
+              <option value="1">初回来店者様向け</option>
+              <option value="2">常連様向け</option>
+            </select>
           </td>
         </tr>
 
         <tr>
-          <td>リンク（※貼りたい場合は入力してください）</td>
+          <td>内容</td>
           <td>
-            <input class="uri" type="text" name="uri" value="" placeholder="http://">
+            <textarea name="content" placeholder="クーポンの内容を入力してください。" rows="15"></textarea>
           </td>
         </tr>
-
 
         <tr>
           <td class="buttons" colspan="2">
@@ -42,8 +37,8 @@
     <table>
       <tr>
         <th>ID</th>
-        <th>日付</th>
         <th>タイトル</th>
+        <th>対象</th>
         <th></th>
       </tr>
     
@@ -58,10 +53,10 @@
     <table class="lists <?= @++$i % 2 ? 'odd' : 'even' ?>">
       <tr>
         <td><?= $result->id ?></td>
-        <td><?= $result->date ?></td>
         <td><?= $result->title ?></td>
+        <td><?= $result->target ?></td>
         <td class="delete">
-          <form action="/admins/news" method="POST" onsubmit="return confirm('お知らせ:<?= $result->id ?>を削除しますか？');">
+          <form action="/admins/coupons" method="POST" onsubmit="return confirm('クーポン:<?= $result->id ?>を削除しますか？');">
             <input type="hidden" name="id" value="<?= $result->id ?>">
             <input type="hidden" name="_METHOD" value="DELETE">
             <input type="submit" value="削除">

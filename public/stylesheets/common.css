@@ -597,12 +597,40 @@ li{
   margin-top:0.5em;
 }
 
+.home .contents .conversion h4 {
+  margin: 0 0 10px;
+}
+
+.home .contents .conversion .banners {
+  margin: 0 0 35px;
+}
+
+.home .contents .conversion .banners a {
+  width: 276px;
+  height: 150px;
+  display: block;
+  padding: 0;
+}
+
+.home .contents .conversion .banners a:first-child {
+  margin: 0 0 15px;
+}
+
+.home .contents .conversion .banners p {
+  width: 254px;
+  font-size: 75%;
+  margin: 15px 0 0;
+  padding: 8px 10px;
+  color: #ffffff;
+  background-color: #999999;
+  border: solid 1px #666666;
+}
+
 /*
  ** home fb-like-box
  */
 .home .contents .fb-like-box {
   height: 100%;
-  margin-top:0.5em;
 }
 
 .home .contents .fb-like-box span,
@@ -731,7 +759,9 @@ li{
 .galleries .header,
 .accesses .header,
 .recruits .header,
-.contacts .header {
+.contacts .header,
+.couponfirst .header,
+.couponrepeat .header {
   padding: 10px 0 0;
 }
 
@@ -743,7 +773,9 @@ li{
 .galleries .header .stuff,
 .accesses .header .stuff,
 .recruits .header .stuff,
-.contacts .header .stuff {
+.contacts .header .stuff,
+.couponfirst .header .stuff,
+.couponrepeat .header .stuff {
   width: 35%;
   text-align: right;
 }
@@ -756,7 +788,9 @@ li{
 .galleries .header .description,
 .accesses .header .description,
 .recruits .header .description,
-.contacts .header .description {
+.contacts .header .description,
+.couponfirst .header .description,
+.couponrepeat .header .description {
   width: 55%;
   padding: 0 0 0 5%;
   text-align: center;
@@ -770,7 +804,9 @@ li{
 .galleries .header h2,
 .accesses .header h2,
 .recruits .header h2,
-.contacts .header h2 {
+.contacts .header h2,
+.couponfirst .header h2,
+.couponrepeat .header h2 {
   font-size: 130%;
   font-weight: bold;
 }
@@ -786,7 +822,9 @@ li{
 .galleries .navigation,
 .accesses .navigation,
 .recruits .navigation,
-.contacts .navigation {
+.contacts .navigation,
+.couponfirst .navigation,
+.couponrepeat .navigation {
   height: 51px;
   background: url('/public/images/home/bush.png') repeat-x 0 bottom;
 }
@@ -799,7 +837,9 @@ li{
 .galleries .navigation .container,
 .accesses .navigation .container,
 .recruits .navigation .container,
-.contacts .navigation .container {
+.contacts .navigation .container,
+.couponfirst .navigation .container,
+.couponrepeat .navigation .container {
   height: 51px;
   background: url('/public/images/home/bush-front.png') no-repeat 600px bottom;
 }
@@ -812,7 +852,9 @@ li{
 .galleries .navigation img.cactus,
 .accesses .navigation img.cactus,
 .recruits .navigation img.cactus,
-.contacts .navigation img.cactus {
+.contacts .navigation img.cactus,
+.couponfirst .navigation img.cactus,
+.couponrepeat .navigation img.cactus {
   display: inline-block;
 }
 
@@ -1035,6 +1077,66 @@ li{
 
 .contacts a.back {
   text-decoration: underline;
+}
+
+/*
+ ** couponfirst
+ */
+.couponfirst .contents .container {
+  min-height: 700px;
+  background: url("/public/images/coupons/coupon_first_bg.png") right 0 no-repeat;
+  overflow: hidden;
+}
+
+.couponfirst .contents .container > div {
+  margin: 0 0 60px;
+  padding: 50px 0 0;
+  border-top: dotted 3px #999999;
+}
+
+.couponfirst .contents .container > div:first-child {
+  margin: -3px 0 60px;
+}
+
+.couponfirst .contents .container > div h3 {
+  color: #5f9ea0;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+.couponfirst .contents .container > div p {
+  font-size: 150%;
+  color: #000000;
+}
+
+/*
+ ** couponrepeat
+ */
+.couponrepeat .contents .container {
+  min-height: 700px;
+  background: url("/public/images/coupons/coupon_repeat_bg.png") right 0 no-repeat;
+  overflow: hidden;
+}
+
+.couponrepeat .contents .container > div {
+  margin: 0 0 60px;
+  padding: 50px 0 0;
+  border-top: dotted 3px #999999;
+}
+
+.couponrepeat .contents .container > div:first-child {
+  margin: -3px 0 60px;
+}
+
+.couponrepeat .contents .container > div h3 {
+  color: #cd5c5c;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+.couponrepeat .contents .container > div p {
+  font-size: 150%;
+  color: #000000;
 }
 
 /*

@@ -10,7 +10,7 @@ $settings = (object) array(
 
     	<div class="panel">
     		<div>
-    			<h2>Concept</h2>
+    			<h2><span></span>Concept</h2>
     				<p>横浜の東急東横線、反町駅のすぐ近くにある美容室、<strong>unripe</strong>（<em>アンライプ</em>）。<br />
                店内は光溢れ、スタッフの手作りのはり金細工や絵が飾られていて、とても<em>アットホーム</em>な雰囲気です。 <br />
                <em>オーガニックのシャンプー</em>や<em>トリートメント</em>製品も扱っています。<br />
@@ -19,7 +19,7 @@ $settings = (object) array(
             </p>
     		</div>   		
         <div class="panel news">
-          <h3>NEWS</h3>
+          <h3><span></span>NEWS</h3>
           <? while ($result = $option[1]->fetchObject()): ?>
           <ul>
             <li class="date"><?= date('Y年n月j日', strtotime($result->date)) ?></li>
@@ -30,7 +30,7 @@ $settings = (object) array(
         </div><!--
 
      --><div class="panel cut">
-          <h3>カットメニュー</h3>
+          <h3><span></span>カットメニュー</h3>
           <table>
           	<tbody>
           		<tr>
@@ -67,14 +67,14 @@ $settings = (object) array(
         </div><!--
 
      --><div class="panel plan">
-          <h3>ヘアマイスターのアドバイス！</h3>
+          <h3><span></span>ヘアマイスターのアドバイス！</h3>
           <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスを紹介します。<br><span class="details-button"><a href="/meisters"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
           <p class="meister"><a href="/meisters"><img src="/public/images/home/meister02.jpg" alt="ヘアマイスターアドバイス1" /></a></p>
         </div><!--
 
      --><div class="panel calendar">
           <a name="calender"></a>
-          <h3>カレンダー</h3>
+          <h3><span></span>カレンダー</h3>
           <?= \Middleware\Calendar::get() ?>
 
           <p>【 お休み 】</p>
@@ -121,9 +121,24 @@ $settings = (object) array(
         </div><!--
 
      --><div class="panel privilege">
-          <h3>製品情報</h3>
+          <h3><span></span>製品情報</h3>
           <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。<br><img src="/public/images/home/test_img.jpg" alt="unripe製品1" /><img src="/public/images/home/test_img.jpg"／alt="unripe製品2" /><span class="details-button"><a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
         </div>
     	</div><!--
     	
-   --><div class="panel fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>			
+   --><div class="panel conversion">
+        <h4><span></span>お得なクーポン</h4>
+        <div class="banners">
+          <a href="/couponfirst">
+            <img src="/public/images/home/coupon01.jpg" alt="初回来店のお客様へ">
+          </a>
+          <a href="/couponrepeat">
+            <img src="/public/images/home/coupon02.jpg" alt="いつも来店頂いているお客様へ">
+          </a>
+
+          <p>『初回来店の方』・『いつも来店頂いてるお客様』へ、お得なクーポンをご用意しました！<br>不定期で更新しますので、要チェックです！</p>
+        </div>
+
+        <h4><span></span>最新情報（facebook）</h4>
+        <div class="fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
+      </div>

@@ -136,7 +136,7 @@
     </td>
     <td><?= nl2br(@$result->memo) ?></td>
     <td><?= $result->created_at ?></td>
-    <td>
+    <td class="delete">
       <form action="/admins/snaps" class="update" method="post" onsubmit="return confirm('<?= @$result->name ?>さんを削除して宜しいですか？')">
         <input type="hidden" name="_METHOD" value="DELETE">
         <input type="hidden" name="id" value="<?= $result->id ?>">
