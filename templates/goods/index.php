@@ -40,13 +40,13 @@ $settings = (object) array(
   </div><!--
 
  --><div class="panel m-detail">
-      <h3><span></span>パワーディルト トリートメント</h3>
+      <h3><span></span>パワーディクトトリートメント</h3>
       <p><img src="/public/images/goods/powerdict.png" alt="パワーディルト トリートメント" />髪に必要な成分を入れ込み、髪の内側から外側にかけて4層でコーテリングするスペシャルトリートメントです。
         </p>
   </div><!--
     
   --><div class="panel m-detail">
-      <h3><span></span>前処理&後処理トリートメント</h3>
+      <h3><span></span>前・後処理トリートメント</h3>
       <p><img src="/public/images/goods/alentour.jpg" alt="前処理&後処理トリートメント" />お客様一人ひとりの髪質、ダメージ、仕上がりに合わせた施術を行います。
         </p>
   </div><!--
@@ -58,7 +58,7 @@ $settings = (object) array(
   </div><br>
   <div class="panel m-detail">
       <h3><span></span>パーマ</h3>
-      <p><img src="" />15種類の薬剤でしか置くことが出来ないAujuaのトリートメントは5184通り中からあなただけに合ったプログラムです。
+      <p><img src="/public/images/menus/parm.jpg" />15種類の薬剤でしか置くことが出来ないAujuaのトリートメントは5184通り中からあなただけに合ったプログラムです。
         </p>
   </div><!--
 

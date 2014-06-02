@@ -39,31 +39,31 @@ $settings = (object) array(
           		</tr>
           		<tr>
           			<td>カット</td>
-          			<td>￥5,250-〜</td>
+          			<td>￥5,400-〜</td>
           		</tr>
           		<tr>
           			<td>トリートメント</td>
-          			<td>￥3,675-〜</td>
+          			<td>￥3,780-〜</td>
           		</tr>
           		<tr>
-          			<td>カラーリング</td>
-          			<td>￥12,075-〜</td>
+          			<td>カット&カラー</td>
+          			<td>￥12,420-〜</td>
           		</tr>
           		<tr>
           			<td>カット&パーマ</td>
-          			<td>￥12,600-〜</td>
+          			<td>￥12,960-〜</td>
           		</tr>
           		<tr>
           			<td>セットアップ</td>
-          			<td>￥6,300-〜</td>
+          			<td>￥6,480-〜</td>
           		</tr>
           		<tr>
           			<td>前髪カット</td>
-          			<td>￥1,050-〜</td>
+          			<td>￥1,080-〜</td>
           		</tr>
           	</tbody>
           </table>
-          <p class="point">※店長・ディレクターカット・・・プラス￥525-<br />※オーナーカット・・・プラス￥1,050-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<br><span class="details-button"><a href="/menus"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
+          <p class="point">※店長・ディレクターカット・・・プラス￥540-<br />※オーナーカット・・・プラス￥1,080-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<br><span class="details-button"><a href="/menus"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
         </div><!--
 
      --><div class="panel plan">
@@ -122,7 +122,7 @@ $settings = (object) array(
 
      --><div class="panel privilege">
           <h3><span></span>製品情報</h3>
-          <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。<br><img src="/public/images/home/test_img.jpg" alt="unripe製品1" /><img src="/public/images/home/test_img.jpg"／alt="unripe製品2" /><span class="details-button"><a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
+          <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。<br><span class="details-button"><a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
           
         </div>
     	</div><!--
