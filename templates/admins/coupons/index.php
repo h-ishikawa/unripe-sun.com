@@ -53,8 +53,15 @@
     <table class="lists <?= @++$i % 2 ? 'odd' : 'even' ?>">
       <tr>
         <td><?= $result->id ?></td>
+
         <td><?= $result->title ?></td>
-        <td><?= $result->target ?></td>
+
+        <? if ($result->target == 1): ?>
+        <td>初回来店者様向け</td>
+        <? else: ?>
+        <td>常連様向け</td>
+        <? endif; ?>
+
         <td class="delete">
           <form action="/admins/coupons" method="POST" onsubmit="return confirm('クーポン:<?= $result->id ?>を削除しますか？');">
             <input type="hidden" name="id" value="<?= $result->id ?>">

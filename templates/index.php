@@ -87,32 +87,32 @@ $settings = (object) array(
             <? endwhile; ?>
 
             <? foreach($holidays as $holiday): ?>
-              <? if($holiday->stuff == 1): ?>
-                <?= date("j", strtotime($holiday->date)) ?>日
+              <? if(@$holiday->stuff == 1): ?>
+                <?= date("j", strtotime(@$holiday->date)) ?>日
               <? endif; ?>
             <? endforeach; ?>
           </p>
 
           <p class="koike"><span></span>小池：
             <? foreach($holidays as $holiday): ?>
-              <? if($holiday->stuff == 2): ?>
-                <?= date("j", strtotime($holiday->date)) ?>日
+              <? if(@$holiday->stuff == 2): ?>
+                <?= date("j", strtotime(@$holiday->date)) ?>日
               <? endif; ?>
             <? endforeach; ?>
           </p>
 
           <p class="yoshino"><span></span>吉野：
             <? foreach($holidays as $holiday): ?>
-              <? if($holiday->stuff == 3): ?>
-                <?= date("j", strtotime($holiday->date)) ?>日
+              <? if(@$holiday->stuff == 3): ?>
+                <?= date("j", strtotime(@$holiday->date)) ?>日
               <? endif; ?>
             <? endforeach; ?>
           </p>
 
           <p class="enomoto"><span></span>榎本：
             <? foreach($holidays as $holiday): ?>
-              <? if($holiday->stuff == 4): ?>
-                <?= date("j", strtotime($holiday->date)) ?>日
+              <? if(@$holiday->stuff == 4): ?>
+                <?= date("j", strtotime(@$holiday->date)) ?>日
               <? endif; ?>
             <? endforeach; ?>
           </p>
