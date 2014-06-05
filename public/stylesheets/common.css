@@ -590,6 +590,14 @@ li{
   list-style-type: square;
 }
 /*
+ ** home contents shu
+ */
+ .home .contents .shu img{
+  margin: 10px 0px;
+  vertical-align: middle;
+}
+
+/*
  ** home conversion
  */
 .home .contents .conversion {

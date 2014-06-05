@@ -118,13 +118,21 @@ $settings = (object) array(
           </p>
 
           <p>※火曜日は定休日です。</p>
+          <br>
         </div><!--
 
      --><div class="panel privilege">
           <h3><span></span>製品情報</h3>
           <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。<br><span class="details-button"><a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
           
+        </div><!--
+
+     --><div class="panel privilege">
+          <h3><span></span>shu uemura</h3>
+          <p>個々のお客様に合わせたスキンケア、メイクアップのパーソナルなトータルビューティーをご提案させて頂きます。<br><span class="details-button"><a href="/meisters#shu"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
+          <p class="shu"><a href="/meisters#shu"><img src="/public/images/meisters/shuuemura-top.jpg" alt="ヘアマイスターアドバイス1" /></a></p>
         </div>
+        
     	</div><!--
     	
    --><div class="panel conversion">
