@@ -40,6 +40,7 @@
  * base-poperties
  */
 html {
+  width: 100%;
   overflow-y: scroll;
 }
 
@@ -48,6 +49,7 @@ body {
   margin: 0;
   padding: 0;
   color: #7c6551;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -81,6 +83,14 @@ h4 span {
   display: inline-block;
   margin: -1px 3px 0 0;
   vertical-align: top;
+}
+
+.header,
+.navigation,
+.contents,
+.snaps,
+.footer {
+  width:100%;
 }
 
 .container {
@@ -372,7 +382,7 @@ li{
 .home .contents .container .panel:first-child {
   width: 73%;
   vertical-align: top;
-  margin-top:0.5em;
+  margin-top: 0.5em;
 }
 
 .home .contents .news,

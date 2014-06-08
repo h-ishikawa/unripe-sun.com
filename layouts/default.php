@@ -13,11 +13,11 @@ $request = $app->request();
 <meta charset="UTF-8">
 <meta name="keywords" content="<?= @$settings->keywords ?>">
 <meta name="description" content="<?= @$settings->description ?>">
-<meta name="viewport" content="width=device-width initial-scale=1.0" />
 <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/public/images/iphone.jpg"> 
-<meta name="robots" content="noindex, nofollow">
 <meta name="author" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=1024px">
 <title><?= @$settings->title ?> - Unripe</title>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
