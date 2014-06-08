@@ -14,7 +14,7 @@ $settings = (object) array(
 <p>ご住所：<?= htmlspecialchars(@$option[0]->address, ENT_QUOTES) ?></p>
 <p>E-mailアドレス：<?= htmlspecialchars($option[0]->email, ENT_QUOTES) ?></p>
 <p>電話番号：<?= htmlspecialchars(@$option[0]->tel, ENT_QUOTES) ?></p>
-<p>お問い合わせ内容：<br><?= htmlspecialchars(nl2br($option[0]->description), ENT_QUOTES) ?></p>
+<p>お問い合わせ内容：<br><?= nl2br( htmlspecialchars($option[0]->description)) ?></p>
 
 <form action="/contacts" method="post">
   <input type="hidden" value="<?= htmlspecialchars($option[0]->name, ENT_QUOTES) ?>" name="name">

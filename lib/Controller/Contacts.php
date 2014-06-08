@@ -65,11 +65,13 @@ class Contacts
     
     setcookie('ONETIMETOKEN', '', time() - 3600, '/contacts/');
     
-    $to = 'sevens67@i.softbank.jp';
+    $to = 'contact@ichicolo.com';
     $subject= '問い合わせがありました。';
-    $header="From: contact.ichicolo.com";
-    $header.="\n";
-    $header.="Bcc: kobito0826@gmail.com";
+    $header = "MIME-Version: 1.0\r\n"
+      . "Content-Transfer-Encoding: 7bit\r\n"
+      . "Content-Type: text/plain; charset=ISO-2022-JP\r\n"
+      . "Message-Id: <" . md5(uniqid(microtime())) . "@unripe-sun.com/>\r\n"
+      . "From: ichicolo<contact@ichicolo.com>\r\n";
     
     $name = 'お名前 : ' . $post->name;
     $area = '住所 : ' . @$post->address;
@@ -78,7 +80,10 @@ class Contacts
     $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n";
     $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
     
-    if (mail($to, $subject, $bodyTextData, $header)){
+    mb_language('uni');
+    mb_internal_encoding('UTF-8');
+    
+    if (mail($to, $subject, $bodyTextData, mb_encode_mimeheader($header), "-f contact@ichicolo.com")) {
       $notification = 'success';
     
       /**
@@ -87,8 +92,8 @@ class Contacts
       $replySubject = 'お問い合わせありがとうございます。';
       $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n" . 'このたびはお問い合わせいただき、誠にありがとうございます。' . "\n" . '改めてご連絡させていただきますので、今しばらくお待ちいただきますようよろしくお願いいたします。'. "\n";
       $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
-    
-      mail($post->email, $replySubject, $bodyTextData, $header);
+      
+      mail($post->email, $replySubject, $bodyTextData, mb_encode_mimeheader($header), "-f contact@ichicolo.com");
     }
     
     else{
