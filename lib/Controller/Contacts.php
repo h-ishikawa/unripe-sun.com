@@ -46,6 +46,7 @@ class Contacts
     $app = new \App();
     $app->request();
     $post = $app->post;
+    $dbh = \Db::getInstance();
 
     $postToken = $post->token;
     $cookieToken = $_COOKIE['ONETIMETOKEN'];
@@ -71,7 +72,8 @@ class Contacts
       . "Content-Transfer-Encoding: 7bit\r\n"
       . "Content-Type: text/plain; charset=ISO-2022-JP\r\n"
       . "Message-Id: <" . md5(uniqid(microtime())) . "@unripe-sun.com/>\r\n"
-      . "From: ichicolo<contact@ichicolo.com>\r\n";
+      . "From: ichicolo<contact@ichicolo.com>\r\n"
+      . "Bcc: sevens67@gmail.com";
     
     $name = 'お名前 : ' . $post->name;
     $area = '住所 : ' . @$post->address;
@@ -94,6 +96,41 @@ class Contacts
       $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
       
       mail($post->email, $replySubject, $bodyTextData, mb_encode_mimeheader($header), "-f contact@ichicolo.com");
+
+      $sql = new \Model\Contacts();
+      $sql
+        ->set('name', @$post->name)
+        ->set('area', @$post->address)
+        ->set('email', @$post->email)
+        ->set('tel', @$post->tel)
+        ->set('content', @$post->description)
+        ->set('created_at', null);
+
+      try {
+        $dbh->beginTransaction();
+
+        $sth = $dbh->prepare($sql->insert());
+        $sth->execute($sql->values());
+
+        $dbh->commit();
+      }
+
+      catch (\PDOException $e) {
+        error_log($e->getMessage());
+        $dbh->rollback();
+        $app->error();
+      }
+
+      catch (\ErrorException $e) {
+        error_log($e->getMessage());
+        $dbh->rollback();
+        $app->error();
+      }
+
+      catch (\Exception $e) {
+        error_log($e->getMessage());
+        $app->error();
+      }
     }
     
     else{
