@@ -402,7 +402,7 @@ li{
 }
 
 .details-button {
-  margin: 0 0 0 80%;
+  text-align:right;
 }
 
 /*
@@ -590,7 +590,7 @@ li{
  ** home contents privilege
  */
  .home .contents .privilege img{
-  margin: 10px 30px;
+  //margin: 10px 30px;
   vertical-align: middle;
 }
 .home .contents .privilege details-button {

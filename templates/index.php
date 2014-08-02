@@ -63,12 +63,18 @@ $settings = (object) array(
           		</tr>
           	</tbody>
           </table>
-          <p class="point">※店長・ディレクターカット・・・プラス￥540-<br />※オーナーカット・・・プラス￥1,080-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。<br><span class="details-button"><a href="/menus"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
+          <p class="point">※店長・ディレクターカット・・・プラス￥540-<br />※オーナーカット・・・プラス￥1,080-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。</p>
+          <p class="details-button">
+            <a href="/menus"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
+          </p>
         </div><!--
 
      --><div class="panel plan">
           <h3><span></span>ヘアマイスターのアドバイス！</h3>
-          <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスを紹介します。<br><span class="details-button"><a href="/meisters"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
+          <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスを紹介します。</p>
+          <p class="details-button">
+            <a href="/meisters"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
+          </p>
           <p class="meister"><a href="/meisters"><img src="/public/images/home/meister02.jpg" alt="ヘアマイスターアドバイス1" /></a></p>
         </div><!--
 
@@ -131,14 +137,20 @@ $settings = (object) array(
 
      --><div class="panel privilege">
           <h3><span></span>製品情報</h3>
-          <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。<br><span class="details-button"><a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
+          <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。</p>
           
+          <p class="details-button">
+            <a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
+          </p>
         </div><!--
 
      --><div class="panel privilege">
           <h3><span></span>shu uemura</h3>
-          <p>個々のお客様に合わせたスキンケア、メイクアップのパーソナルなトータルビューティーをご提案させて頂きます。<br><span class="details-button"><a href="/meisters#shu"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a></span></p>
-          <p class="shu"><a href="/meisters#shu"><img src="/public/images/meisters/shuuemura-top.jpg" alt="ヘアマイスターアドバイス1" /></a></p>
+          <p>個々のお客様に合わせたスキンケア、メイクアップのパーソナルなトータルビューティーをご提案させて頂きます。</p>
+          <p class="details-button">
+            <a href="/meisters#shu"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
+          </p>
+          <p class="shu"><a href="/meisters#shu"><img src="/public/images/meisters/shuuemura-top.jpg" width="351" alt="ヘアマイスターアドバイス1" /></a></p>
         </div>
         
     	</div><!--
