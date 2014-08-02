@@ -1,8 +1,8 @@
 <?php
 $settings = (object) array(
     'title' => 'スタッフ'
-  , 'keywords' => 'スタッフ,Unripe,アンライプ,美容室,ヘアサロン,横浜,反町'
-  , 'description' => '美容室unripe（アンライプ）のスタッフ紹介のページです。unripe（アンライプ）は横浜の東急東横線反町駅のすぐ近くにある美容室です。'
+  , 'keywords' => 'スタッフ,自己紹介,Unripe,アンライプ,美容室,ヘアサロン,横浜,反町'
+  , 'description' => '美容室unripe（アンライプ）のスタッフ紹介のページです。どのスタッフも話好きですので、気さくにお声かけ下さい。unripe（アンライプ）は横浜の東急東横線反町駅のすぐ近くにある美容室です。'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
   , 'h2' => 'Unripeスタッフ紹介'

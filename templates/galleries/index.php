@@ -1,8 +1,8 @@
 <?php
 $settings = (object) array(
     'title' => 'ギャラリー一覧'
-  , 'keywords' => 'ギャラリー一覧,Unripe,アンライプ,美容室,ヘアサロン,横浜,反町'
-  , 'description' => '美容室unripe（アンライプ）のギャラリー一覧のページです。unripe（アンライプ）は横浜の東急東横線反町駅のすぐ近くにある美容室です。'
+  , 'keywords' => 'ギャラリー一覧,ヘアカタログ,Unripe,アンライプ,美容室,ヘアサロン,横浜,反町'
+  , 'description' => '美容室unripe（アンライプ）のギャラリー一覧のページです。unripeで生まれたスタイリングをご覧下さい。unripe（アンライプ）は横浜の東急東横線反町駅のすぐ近くにある美容室です。'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
   , 'h2' => 'スナップ写真一覧'

@@ -1,7 +1,7 @@
 <?php
 $settings = (object) array(
     'title' => 'アクセス'
-  , 'keywords' => 'アクセス,Unripe,アンライプ,美容室,ヘアサロン,横浜,反町'
+  , 'keywords' => 'アクセス,Unripe,アンライプ,美容室,ヘアサロン,横浜,反町,東急東横線'
   , 'description' => '美容室unripe（アンライプ）のアクセスのページです。unripe（アンライプ）は横浜の東急東横線反町駅のすぐ近くにある美容室です。'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
