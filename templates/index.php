@@ -24,7 +24,7 @@ $settings = (object) array(
           <ul>
             <li class="date"><?= date('Y年n月j日', strtotime($result->date)) ?></li>
             <li class="title"><?= $result->title ?></li>
-            <li class="description"><?= $result->content ?></li>
+            <li class="description"><?= nl2br($result->content) ?></li>
           </ul>
           <? endwhile; ?>
         </div><!--

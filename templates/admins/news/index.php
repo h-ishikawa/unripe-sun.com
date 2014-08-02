@@ -1,7 +1,7 @@
     <form class="news" action="/admins/news" method="POST">
       <table class="new">
         <tr>
-          <td>休日</td>
+          <td>日付</td>
           <td>
             <input class="date" type="date" name="date" value="">
           </td>
