@@ -7,3 +7,8 @@ RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 <Files ~ "^\.ht">
 deny from all
 </Files>
+
+AddType video/ogg .ogg .ogv
+AddType video/mp4 .mp4
+AddType audio/ogg .ogg
+AddType application/ogg .ogg .ogv
