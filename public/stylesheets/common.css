@@ -389,13 +389,17 @@ li{
 .home .contents .cut,
 .home .contents .plan,
 .home .contents .calendar,
-.home .contents .privilege {
+.home .contents .privilege,
+.home .contents .movie {
   width: 47%;
   padding: 0 3% 0 0;
   min-height: 15em;
   vertical-align: top;
 }
-
+.home .contents .movie video{
+  margin: 0 auto; 
+  display: block;
+}
 .home .contents h3 {
   margin: 0 0 1ex;
   border-bottom: dotted 2px #7c6551;

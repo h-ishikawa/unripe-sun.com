@@ -142,15 +142,18 @@ $settings = (object) array(
           <p class="details-button">
             <a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
           </p>
-        </div><!--
-
-     --><div class="panel privilege">
           <h3><span></span>shu uemura</h3>
           <p>個々のお客様に合わせたスキンケア、メイクアップのパーソナルなトータルビューティーをご提案させて頂きます。</p>
           <p class="details-button">
             <a href="/meisters#shu"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
           </p>
-          <p class="shu"><a href="/meisters#shu"><img src="/public/images/meisters/shuuemura-top.jpg" width="351" alt="ヘアマイスターアドバイス1" /></a></p>
+        </div><!--
+
+     --><div class="panel movie">
+          <h3><span></span>ヘアショー</h3>
+          <p>2012年3月20日にヨコハマ創造都市センターで行われたヘアショー(…and Hair)に参加致しました。</p>
+          <video src="/public/video/unripe-hair-show.mp4" width="360"></video>
+
         </div>
         
     	</div><!--
