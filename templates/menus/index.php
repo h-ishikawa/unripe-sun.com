@@ -16,7 +16,7 @@ $settings = (object) array(
    </div>
  
  <div class="panel m-detail">
-     <p><img src="/public/images/menus/trend06.jpg">
+     <p><img src="/public/images/menus/trend01.jpg">
      </p>
    </div><!--
 
@@ -31,7 +31,7 @@ $settings = (object) array(
    </div><!--
 
 --><div class="panel m-detail">
-     <p><img src="/public/images/menus/trend05.jpg">
+     <p><img src="/public/images/menus/trend06.jpg">
        </p>
    </div>
    
