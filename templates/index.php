@@ -63,7 +63,7 @@ $settings = (object) array(
           		</tr>
           	</tbody>
           </table>
-          <p class="point">※店長・ディレクターカット・・・プラス￥540-<br />※オーナーカット・・・プラス￥1,080-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には<br />次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。</p>
+          <p class="point">※店長・ディレクターカット・・・プラス￥540-<br />※オーナーカット・・・プラス￥1,080-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。</p>
           <p class="details-button">
             <a href="/menus"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
           </p>
@@ -160,7 +160,7 @@ $settings = (object) array(
         <div class="banners">
 
           <? $result = $option[4]->fetchObject() ?>
-          <? if(empty(@$result->id) === true): ?>
+          <? if(empty($result->id) === true): ?>
           <img src="/public/images/home/coupon01_non.jpg" alt="初回来店のお客様へ">
 
           <? else: ?>
@@ -171,7 +171,7 @@ $settings = (object) array(
           <? endif; ?>
 
           <? $result = $option[5]->fetchObject() ?>
-          <? if(empty(@$result)): ?>
+          <? if(empty($result)): ?>
           <img src="/public/images/home/coupon02_non.jpg" alt="いつも来店頂いているお客様へ">
 
           <? else: ?>

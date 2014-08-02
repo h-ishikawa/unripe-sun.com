@@ -54,11 +54,15 @@ $settings = (object) array(
     		</tr>
     		<tr>
     			<td>【今月の休み】</td>
-    			<td><? foreach(@$holidays as $holiday): ?>
-         <? if($holiday->stuff == 1): ?>
-           <?= date("j", strtotime($holiday->date)) ?>日
-         <? endif; ?>
-       <? endforeach; ?></td>
+          <td>
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 1): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
+          </td>
     		</tr>
     		<tr>
     			<td>【最近のつぶやき】</td>
@@ -115,12 +119,15 @@ $settings = (object) array(
     		</tr>
     		<tr>
     			<td>【今月の休み】</td>
-    			<td><? foreach(@$holidays as $holiday): ?>
-         <? if($holiday->stuff == 2): ?>
-           <?= date("j", strtotime($holiday->date)) ?>日
-         <? endif; ?>
-       <? endforeach; ?>
-       </td>
+          <td>
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 2): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
+          </td>
     		</tr>
     		<tr>
     			<td>【最近のつぶやき】</td>
@@ -187,12 +194,15 @@ $settings = (object) array(
     		</tr>
     		<tr>
     			<td>【今月の休み】</td>
-    			<td><? foreach(@$holidays as $holiday): ?>
-         <? if($holiday->stuff == 3): ?>
-           <?= date("j", strtotime($holiday->date)) ?>日
-         <? endif; ?>
-       <? endforeach; ?>
-       </td>
+          <td>
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 3): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
+          </td>
     		</tr>
     		<tr>
     			<td>【最近のつぶやき】</td>
@@ -249,12 +259,15 @@ $settings = (object) array(
     		</tr>
     		<tr>
     			<td>【今月の休み】</td>
-    			<td><? foreach(@$holidays as $holiday): ?>
-         <? if($holiday->stuff == 4): ?>
-           <?= date("j", strtotime($holiday->date)) ?>日
-         <? endif; ?>
-       <? endforeach; ?>
-       </td>
+          <td>
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 4): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
+          </td>
     		</tr>
     		<tr>
     			<td>【最近のつぶやき】</td>
