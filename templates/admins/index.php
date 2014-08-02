@@ -8,3 +8,5 @@
 <a href="/admins/schedules"        >スケジュール管理ページへ</a>
 <h2>クーポン</h2>
 <a href="/admins/coupons"          >クーポン管理ページへ</a>
+<h2>お問い合わせ</h2>
+<a href="/admins/contacts"         >お問い合わせ管理ページへ</a>
