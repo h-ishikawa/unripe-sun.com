@@ -1,8 +1,8 @@
 <?php
 $settings = (object) array(
     'title' => 'HOME'
-  , 'keywords' => 'ここに, キーワードを, 書き込む'
-  , 'description' => 'ここにディスクリプションを書き込む'
+  , 'keywords' => 'Unripe,アンライプ,美容室,ヘアサロン,横浜,反町'
+  , 'description' => 'unripe（アンライプ）は横浜の東急東横線反町駅のすぐ近くにある美容室です。是非、ヘアサロンunripeのComfortable Spaceに遊びに来て下さい！'
   , 'scripts' => array('')
   , 'stylesheets' => array('')
 );
@@ -86,35 +86,43 @@ $settings = (object) array(
               <? endif; ?>
             <? endwhile; ?>
 
-            <? foreach($holidays as $holiday): ?>
-              <? if(@$holiday->stuff == 1): ?>
-                <?= date("j", strtotime(@$holiday->date)) ?>日
-              <? endif; ?>
-            <? endforeach; ?>
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 1): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
           </p>
 
           <p class="koike"><span></span>小池：
-            <? foreach($holidays as $holiday): ?>
-              <? if(@$holiday->stuff == 2): ?>
-                <?= date("j", strtotime(@$holiday->date)) ?>日
-              <? endif; ?>
-            <? endforeach; ?>
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 2): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
           </p>
 
           <p class="yoshino"><span></span>吉野：
-            <? foreach($holidays as $holiday): ?>
-              <? if(@$holiday->stuff == 3): ?>
-                <?= date("j", strtotime(@$holiday->date)) ?>日
-              <? endif; ?>
-            <? endforeach; ?>
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 3): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
           </p>
 
           <p class="enomoto"><span></span>榎本：
-            <? foreach($holidays as $holiday): ?>
-              <? if(@$holiday->stuff == 4): ?>
-                <?= date("j", strtotime(@$holiday->date)) ?>日
-              <? endif; ?>
-            <? endforeach; ?>
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 4): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
           </p>
 
           <p>※火曜日は定休日です。</p>
@@ -138,12 +146,28 @@ $settings = (object) array(
    --><div class="panel conversion">
         <h4><span></span>お得なクーポン</h4>
         <div class="banners">
+
+          <? $result = $option[4]->fetchObject() ?>
+          <? if(empty(@$result->id) === true): ?>
+          <img src="/public/images/home/coupon01_non.jpg" alt="初回来店のお客様へ">
+
+          <? else: ?>
           <a href="/couponfirst">
             <img src="/public/images/home/coupon01.jpg" alt="初回来店のお客様へ">
           </a>
+
+          <? endif; ?>
+
+          <? $result = $option[5]->fetchObject() ?>
+          <? if(empty(@$result)): ?>
+          <img src="/public/images/home/coupon02_non.jpg" alt="いつも来店頂いているお客様へ">
+
+          <? else: ?>
           <a href="/couponrepeat">
             <img src="/public/images/home/coupon02.jpg" alt="いつも来店頂いているお客様へ">
           </a>
+
+          <? endif; ?>
 
           <p>『初回来店の方』・『いつも来店頂いてるお客様』へ、お得なクーポンをご用意しました！<br>不定期で更新しますので、要チェックです！</p>
         </div>

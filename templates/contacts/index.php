@@ -1,8 +1,8 @@
 <?php
 $settings = (object) array(
-    'title' => 'contacts'
-  , 'keywords' => 'ここに, キーワードを, 書き込む'
-  , 'description' => 'ここにディスクリプションを書き込む'
+    'title' => 'お問い合わせ'
+  , 'keywords' => ',お問い合わせ,アンライプ,美容室,ヘアサロン,横浜,反町'
+  , 'description' => '美容室unripe（アンライプ）のお問い合わせのページです。unripe（アンライプ）は横浜の東急東横線反町駅のすぐ近くにある美容室です。'
   , 'scripts' => array('abc', 'cdf', 'ghi')
   , 'stylesheets' => array('abc', 'cdf', 'ghi')
   , 'h2' => 'お問い合わせ'

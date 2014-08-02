@@ -35,8 +35,22 @@ class Index
     $sth->execute($sql->values());
     $schedules = $sth;
 
+    $sql = new \Model\Coupons();
+    $sql->where('target', '1');
+    $sql->order('created_at', 'desc');
+    $sth = $dbh->prepare($sql->select());
+    $sth->execute($sql->values());
+    $coupon1 = $sth;
+
+    $sql = new \Model\Coupons();
+    $sql->where('target', '2');
+    $sql->order('created_at', 'desc');
+    $sth = $dbh->prepare($sql->select());
+    $sth->execute($sql->values());
+    $coupon2 = $sth;
+
     $dbh->commit();
 
-    \View::html($template, $layout, array($tweets, $news, $schedules, $snaps), null);
+    \View::html($template, $layout, array($tweets, $news, $schedules, $snaps, $coupon1, $coupon2), null);
   }
 }
