@@ -11,6 +11,6 @@ $settings = (object) array(
 <? while ($result = $option[0]->fetchObject()): ?>
 <div>
   <h3><?= $result->title ?></h3>
-  <p><?= $result->content ?></p>
+  <p><?= nl2br($result->content) ?></p>
 </div>
 <? endwhile; ?>
