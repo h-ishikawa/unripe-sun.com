@@ -343,7 +343,7 @@ $settings = (object) array(
     </table>
      <ul>
        <li>【一言】細かい気配りと、心地良いマッサージを心掛けていきます。</li>
-       <li class="new_snaps"><span>【榎本 最新担当スナップ写真】</span><br><br>
+       <li class="new_snaps"><span>【佐久間 最新担当スナップ写真】</span><br><br>
        <!--
        <? while ($result = $option[10]->fetchObject()): ?>
     --><a class="panel" style="width:208px;" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?><br>Stuff: 榎本<br>Comment: <?= $result->memo ?>">

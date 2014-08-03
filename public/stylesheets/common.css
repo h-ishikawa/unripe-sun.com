@@ -883,9 +883,10 @@ li{
 /*
  ** accesses table
  */
+
 .accesses table {
-  width: 560px;
-  margin: 2% 1% 1% 1ex;
+  width: 500px;
+  margin: 10px 5px 5px 5px;
   border-collapse: collapse;
   font-size: 90%;
   position: top 0;
@@ -1046,6 +1047,7 @@ li{
   color: white;
   padding: 2%;
 }
+
 .staffs .new_snaps a{
   padding: 0 15px 0 0;
 }
