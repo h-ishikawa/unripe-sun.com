@@ -1106,7 +1106,6 @@ li{
  */
 .couponfirst .contents .container {
   min-height: 700px;
-  background: url("/public/images/coupons/coupon_first_bg.png") right 0 no-repeat;
   overflow: hidden;
 }
 
@@ -1136,7 +1135,6 @@ li{
  */
 .couponrepeat .contents .container {
   min-height: 700px;
-  background: url("/public/images/coupons/coupon_repeat_bg.png") right 0 no-repeat;
   overflow: hidden;
 }
 

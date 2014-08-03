@@ -12,7 +12,7 @@ class Staffs
     $dbh->beginTransaction();
 
     $sql = new \Model\Schedules();
-    $sql->order('created_at', 'desc');
+    $sql->order('date', 'asc');
     $sth = $dbh->prepare($sql->select());
     $sth->execute($sql->values());
     $schedule = $sth;
