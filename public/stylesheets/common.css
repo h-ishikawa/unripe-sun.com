@@ -1042,9 +1042,12 @@ li{
 .staffs .new_snaps{
   background: url('/public/images/home/snap_bg.jpg') 0 0;
   height: 250px;
-  width: 60%;
+  //width: 60%;
   color: white;
   padding: 2%;
+}
+.staffs .new_snaps a{
+  padding: 0 15px 0 0;
 }
 .staffs .snap_box a{
   width: 100%;

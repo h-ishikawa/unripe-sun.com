@@ -71,9 +71,9 @@ class Contacts
     $header = "MIME-Version: 1.0\r\n"
       . "Content-Transfer-Encoding: 7bit\r\n"
       . "Content-Type: text/plain; charset=ISO-2022-JP\r\n"
-      . "Message-Id: <" . md5(uniqid(microtime())) . "@unripe-sun.com/>\r\n"
-      . "From: ichicolo<contact@ichicolo.com>\r\n"
-      . "Bcc: sevens67@gmail.com";
+      . "Message-Id: <" . md5(uniqid(microtime())) . "@major.ocn.ne.jp/>\r\n"
+      . "From: Unripe<unripe@major.ocn.ne.jp>\r\n"
+      . "Bcc: contact@ichicolo.com";
     
     $name = 'お名前 : ' . $post->name;
     $area = '住所 : ' . @$post->address;
@@ -85,7 +85,7 @@ class Contacts
     mb_language('uni');
     mb_internal_encoding('UTF-8');
     
-    if (mail($to, $subject, $bodyTextData, mb_encode_mimeheader($header), "-f contact@ichicolo.com")) {
+    if (mail($to, $subject, $bodyTextData, mb_encode_mimeheader($header), "-f unripe@major.ocn.ne.jp")) {
       $notification = 'success';
     
       /**
@@ -95,7 +95,7 @@ class Contacts
       $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n" . 'このたびはお問い合わせいただき、誠にありがとうございます。' . "\n" . '改めてご連絡させていただきますので、今しばらくお待ちいただきますようよろしくお願いいたします。'. "\n";
       $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
       
-      mail($post->email, $replySubject, $bodyTextData, mb_encode_mimeheader($header), "-f contact@ichicolo.com");
+      mail($post->email, $replySubject, $bodyTextData, mb_encode_mimeheader($header), "-f unripe@major.ocn.ne.jp");
 
       $sql = new \Model\Contacts();
       $sql
