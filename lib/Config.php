@@ -14,10 +14,10 @@ class Config
     if ($request->mode == 'production') {
       return (object) array(
         'db' => (object) array(
-          'host' => ''
-          , 'database' => ''
-          , 'username' => ''
-          , 'password' => ''
+          'host' => 'sddb0040027077.cgidb'
+          , 'database' => 'sddb0040027077'
+          , 'username' => 'sd_dba_MTYxNDUy'
+          , 'password' => 'JuzmWh4U'
         )
       );
     }

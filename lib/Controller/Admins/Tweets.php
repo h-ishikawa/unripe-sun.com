@@ -6,6 +6,7 @@ class Tweets
 {
   public static function index ($template, $layout) {
     $layout = dirname(__FILE__) . '/../../../layouts/admin.php';
+    \Middleware\Auth::authorization();
     $app = new \App();
     $app->request();
     $get = $app->get;
