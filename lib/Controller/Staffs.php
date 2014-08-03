@@ -88,6 +88,14 @@ class Staffs
     $sth->execute($sql->values());
     $tweet_sakuma = $sth;
 
+    $sql = new \Model\Snaps();
+    $sql->where('stuff', 5);
+    $sql->limit(2);
+    $sql->order('created_at', 'desc');
+    $sth = $dbh->prepare($sql->select());
+    $sth->execute($sql->values());
+    $snap_sakuma = $sth;
+
 
     $sql = new \Model\Tweets();
     $sql->where('stuff', 6);
@@ -111,6 +119,7 @@ class Staffs
         , $tweet_enomoto
         , $snap_enomoto
         , $tweet_sakuma
+        , $snap_sakuma
         , $tweet_shimizu
       , ), null);
   }

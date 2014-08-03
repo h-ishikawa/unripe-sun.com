@@ -343,6 +343,15 @@ $settings = (object) array(
     </table>
      <ul>
        <li>【一言】細かい気配りと、心地良いマッサージを心掛けていきます。</li>
+       <li class="new_snaps"><span>【榎本 最新担当スナップ写真】</span><br><br>
+       <!--
+       <? while ($result = $option[10]->fetchObject()): ?>
+    --><a class="panel" style="width:208px;" href="/public/images/uploads/<?= $result->file_path ?>" data-lightbox="snap" title="Name: <?= $result->name ?><br>Stuff: 榎本<br>Comment: <?= $result->memo ?>">
+       <img style="display: block;margin: 0 auto;" src="/public/images/uploads/thumbnails/<?= $result->file_path ?>" title="クリックで拡大">
+       </a><!--
+       <? endwhile; ?>
+       -->
+       </li>
        </ul>
    </div><!--
 
@@ -379,7 +388,7 @@ $settings = (object) array(
     		</tr>
     		<tr>
     			<td>【最近のつぶやき】</td>
-    			<td><? while ($result = $option[10]->fetchObject()): ?>
+    			<td><? while ($result = $option[11]->fetchObject()): ?>
          <?= $result->tweet; ?>
        <? endwhile; ?>
        </td>
