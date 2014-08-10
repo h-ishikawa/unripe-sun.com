@@ -13,12 +13,12 @@ $request = $app->request();
 <meta charset="UTF-8">
 <meta name="keywords" content="<?= @$settings->keywords ?>">
 <meta name="description" content="<?= @$settings->description ?>">
-<link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/public/images/iphone.jpg"> 
 <meta name="author" content="">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=1024px">
-<title><?= @$settings->title ?> - Unripe</title>
+<title><?= @$settings->title ?> - Unripe（横浜の東急東横線反町駅そばの美容室）</title>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->

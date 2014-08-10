@@ -11,11 +11,11 @@ $settings = (object) array(
     	<div class="panel">
     		<div>
     			<h2><span></span>Concept</h2>
-    				<p>横浜の東急東横線、反町駅のすぐ近くにある美容室、<strong>unripe</strong>（<em>アンライプ</em>）。<br />
+    				<p>横浜の東急東横線、反町駅のすぐ近くにある美容室、<strong>Unripe</strong>（<em>アンライプ</em>）。<br />
                店内は光溢れ、スタッフの手作りのはり金細工や絵が飾られていて、とても<em>アットホーム</em>な雰囲気です。 <br />
                <em>オーガニックのシャンプー</em>や<em>トリートメント</em>製品も扱っています。<br />
                お客様とトコトン話ながら、一緒に<em>ヘアスタイル</em>を考えたいと思っています。<br />
-               是非、<em>ヘアサロン</em><strong>unripe</strong>のComfortable Spaceに遊びに来て下さい！
+               是非、<em>ヘアサロン</em><strong>Unripe</strong>のComfortable Spaceに遊びに来て下さい！
             </p>
     		</div>   		
         <div class="panel news">
@@ -30,8 +30,8 @@ $settings = (object) array(
         </div><!--
 
      --><div class="panel cut">
-          <h3><span></span>カットメニュー</h3>
-          <table>
+          <h3><span></span>メニュー</h3>
+          <table style="margin:0;">
           	<tbody>
           		<tr>
           			<th>メニュー</th>
@@ -39,39 +39,36 @@ $settings = (object) array(
           		</tr>
           		<tr>
           			<td>カット</td>
-          			<td>￥5,400-〜</td>
-          		</tr>
-          		<tr>
-          			<td>トリートメント</td>
-          			<td>￥3,780-〜</td>
+          			<td>￥5,400〜</td>
           		</tr>
           		<tr>
           			<td>カット&カラー</td>
-          			<td>￥12,420-〜</td>
+          			<td>￥12,420〜</td>
           		</tr>
           		<tr>
           			<td>カット&パーマ</td>
-          			<td>￥12,960-〜</td>
+          			<td>￥12,960〜</td>
           		</tr>
           		<tr>
-          			<td>セットアップ</td>
-          			<td>￥6,480-〜</td>
+          			<td>カット&デジタルパーマ</td>
+          			<td>￥18,360〜</td>
           		</tr>
           		<tr>
           			<td>前髪カット</td>
-          			<td>￥1,080-〜</td>
+          			<td>￥1,080</td>
           		</tr>
           	</tbody>
           </table>
-          <p class="point">※店長・ディレクターカット・・・プラス￥540-<br />※オーナーカット・・・プラス￥1,080-<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。</p>
+          <p class="point" style="margin:2px 0 0;text-align:right;">※料金はすべて税込です。</p>
+          <p class="point">※店長・ディレクターカット・・・プラス￥540<br />※オーナーカット・・・プラス￥1,080<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。</p>
           <p class="details-button">
             <a href="/menus"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
           </p>
         </div><!--
 
      --><div class="panel plan">
-          <h3><span></span>ヘアマイスターのアドバイス！</h3>
-          <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスを紹介します。</p>
+          <h3><span></span>ヘアケアマイスターのアドバイス！</h3>
+          <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスをさせて頂きます。</p>
           <p class="details-button">
             <a href="/meisters"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
           </p>
@@ -151,9 +148,11 @@ $settings = (object) array(
 
      --><div class="panel movie">
           <h3><span></span>ヘアショー</h3>
-          <p>2012年3月20日にヨコハマ創造都市センターで行われたヘアショー(…and Hair)に参加致しました。</p>
-          <video src="/public/video/unripe-hair-show.mp4" controls="controls" width="360"></video>
-
+          <!-- <p>2012年3月20日にヨコハマ創造都市センターで行われたヘアショー(…and Hair)に参加致しました。</p> -->
+          <video controls="controls" width="360">
+          <source src="/public/video/unripe-hair-show.mp4" type="video/mp4" />
+          <source src="/public/video/unripe-hair-show.ogv" type="video/ogg" />
+          </video>
         </div>
         
     	</div><!--

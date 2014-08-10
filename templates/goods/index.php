@@ -41,7 +41,7 @@ $settings = (object) array(
 
  --><div class="panel m-detail">
       <h3><span></span>パワーディクト</h3>
-      <p><img src="/public/images/goods/powerdict.png" alt="パワーディルト トリートメント" />髪に必要な成分を入れ込み、髪の内側から外側にかけて4層でコーテリングするスペシャルトリートメントです。
+      <p><img src="/public/images/goods/powerdict.png" alt="パワーディルト トリートメント" />髪に必要な成分を入れ込み、髪の内側から外側にかけて5層でコーティングするスペシャルトリートメントです。
         </p>
   </div><!--
     
@@ -58,7 +58,7 @@ $settings = (object) array(
   </div><br>
   <div class="panel m-detail">
       <h3><span></span>パーマ</h3>
-      <p><img src="/public/images/menus/parm.jpg" />15種類の薬剤でしか置くことが出来ないAujuaのトリートメントは5184通り中からあなただけに合ったプログラムです。
+      <p><img src="/public/images/menus/parm.jpg" />髪質にあわせて、15種類の薬剤の中から選びます。トリートメントをしたような手触りに仕上がります！
         </p>
   </div><!--
 
@@ -75,7 +75,7 @@ $settings = (object) array(
   </div><!--
 
  --><div class="panel m-detail">
-      <h3><span></span>Steam Pot</h3>
+      <h3><span></span>Steam Pod</h3>
       <p><img src="/public/images/goods/steampod.jpg" alt="Steam Pot" />スチームポッドは水分を素早くたっぷり浸透させ今までにない柔らかな質感、ラウンドストレートを実現しました。
         </p>
   </div>
