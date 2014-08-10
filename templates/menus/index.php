@@ -34,6 +34,14 @@ td.point{
   border-bottom:dotted 1px #7c6551;
   padding:0 5px 8px;
 }
+td.point p{
+  float:left;
+  padding:15px 0 0;
+}
+td.point img{
+  width:120px;
+  float:right;
+}
 th,td{
   padding:8px 5px;
 }
@@ -72,28 +80,28 @@ th,td{
     <td>￥3,780〜</td>
   <tr>
   <tr>
-    <td class="point" colspan="2">あなただけのオーダーメイドトリートメント★Aujuaなら髪の悩みを改善出来る!!<br>今までの髪の悩みも解消出来る!!実力派のスタイリストに相談してください。</td>
+    <td class="point" colspan="2"><p>あなただけのオーダーメイドトリートメント★Aujuaなら髪の悩みを改善出来る!!<br>今までの髪の悩みも解消出来る!!実力派のスタイリストに相談してください。</p><img src="/public/images/goods/powerdict.png"></td>
   <tr>
   <tr class="mn">
     <td class="title">オージェアトリートメント</td>
     <td></td>
   <tr>
   <tr>
-    <td class="point" colspan="2">限られた店舗でしか置くことが出来ない、Aujuaのトリートメントは5184通りの中からあなただけに合ったプログラムを作成</td>
+    <td class="point" colspan="2"><p>限られた店舗でしか置くことが出来ない、Aujuaのトリートメントは5184通りの中からあなただけに合ったプログラムを作成</p><img src="/public/images/goods/aujua_tr.jpg"></td>
   <tr>
   <tr class="mn">
     <td class="title">ヘッドスパ</td>
     <td></td>
   <tr>
   <tr>
-    <td class="point" colspan="2">頭皮の汚れを取り除き、内側からキレイに♪リフトアップ効果も期待できる、頭皮のエステ！</td>
+    <td class="point" colspan="2"><p>頭皮の汚れを取り除き、内側からキレイに♪リフトアップ効果も期待できる、頭皮のエステ！</p><img src="/public/images/menus/spa.jpg"></td>
   <tr>
   <tr class="mn">
     <td class="title">水素ホイップトリートメント</td>
     <td></td>
   <tr>
   <tr>
-    <td class="point" colspan="2">パーマやカラーのメニューと組み合わせることによって、今までにないツヤと手触り！<br>凝縮した生ケラチン・生コラーゲンの力でグングン浸透。カラーの色持ちや、パーマのカールの持ちが良くなります。</td>
+    <td class="point" colspan="2"><p>パーマやカラーのメニューと組み合わせることによって、今までにないツヤと手触り！<br>凝縮した生ケラチン・生コラーゲンの力でグングン浸透。カラーの色持ちや、パーマのカールの持ちが良くなります。</p><img src="/public/images/menus/whip.jpg"></td>
   <tr>
 </table>
 
@@ -112,7 +120,7 @@ th,td{
     <td class="title">カラーリング</td>
   <tr>
   <tr>
-    <td class="point" colspan="2">600種類以上のカラー剤の中から、お客様1人1人に合うオンリーワンカラーを選びます。<br>スタイリストは肌色診断も出来る為、お客様に一番合う色を提案させて頂きます。</td>
+    <td class="point" colspan="2"><p>600種類以上のカラー剤の中から、お客様1人1人に合うオンリーワンカラーを選びます。<br>スタイリストは肌色診断も出来る為、お客様に一番合う色を提案させて頂きます。</p><img src="/public/images/goods/color.jpg"></td>
   <tr>
 </table>
 
@@ -120,12 +128,9 @@ th,td{
   <tr>
     <th colspan="2"><h3>カット&パーマ</h3></th>
   <tr>
-  <tr class="mn">
+  <tr>
     <td class="title">基本料金</td>
     <td>￥12,960〜</td>
-  <tr>
-  <tr>
-    <td class="point" colspan="2">髪質にあわせて、15種類の薬剤の中から選びます。トリートメントをしたような手触りに仕上がります！</td>
   <tr>
   <tr>
     <td class="title">カット&デジタルパーマ</td>
@@ -140,14 +145,14 @@ th,td{
     <td></td>
   <tr>
   <tr>
-    <td class="point" colspan="2">髪質にあわせて、15種類の薬剤の中から選びます。トリートメントをしたような手触りに仕上がります！</td>
+    <td class="point" colspan="2"><p>髪質にあわせて、15種類の薬剤の中から選びます。トリートメントをしたような手触りに仕上がります！</p><img src="/public/images/menus/parm.jpg"></td>
   <tr>
   <tr class="mn">
     <td class="title">デジタルパーマ</td>
     <td></td>
   <tr>
   <tr>
-    <td class="point" colspan="2">従来のデジタルパーマより、低温でかける為ダメージが少なく、潤艶な質感と手触りが出せます。<br>パーマ液は酸性～化粧品まであり、なりたいイメージに合わせて使用します。</td>
+    <td class="point" colspan="2"><p>従来のデジタルパーマより、低温でかける為ダメージが少なく、潤艶な質感と手触りが出せます。<br>パーマ液は酸性～化粧品まであり、なりたいイメージに合わせて使用します。</p><img src="/public/images/menus/digitalparm.jpg"></td>
   <tr>
 </table>
 
@@ -168,9 +173,12 @@ th,td{
   <tr>
     <th colspan="2"><h3>セットアップ</h3></th>
   <tr>
-  <tr>
+  <tr class="mn">
     <td class="title">基本料金</td>
     <td>￥6,480</td>
+  <tr>
+  <tr>
+    <td class="point" colspan="2"><p></p><img src="/public/images/menus/setup.jpg"></td>
   <tr>
 </table>
 
@@ -178,8 +186,11 @@ th,td{
   <tr>
     <th colspan="2"><h3>前髪カット</h3></th>
   <tr>
-  <tr>
+  <tr class="mn">
     <td class="title">基本料金</td>
     <td>￥1,080</td>
+  <tr>
+  <tr>
+    <td class="point" colspan="2"><p></p><img src="/public/images/menus/maegami.jpg"></td>
   <tr>
 </table>
