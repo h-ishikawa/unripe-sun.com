@@ -58,7 +58,7 @@ $settings = (object) array(
   </div><br>
   <div class="panel m-detail">
       <h3><span></span>パーマ</h3>
-      <p><img src="/public/images/menus/parm.jpg" />15種類の薬剤でしか置くことが出来ないAujuaのトリートメントは5184通り中からあなただけに合ったプログラムです。
+      <p><img src="/public/images/menus/parm.jpg" />髪質にあわせて、15種類の薬剤の中から選びます。トリートメントをしたような手触りに仕上がります！
         </p>
   </div><!--
 
