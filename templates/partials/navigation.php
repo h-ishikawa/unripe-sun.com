@@ -8,7 +8,8 @@
    --><a href="/galleries" class="panel galleries">gallery</a><!--
    --><a href="/accesses"  class="panel accesses">access</a><!--
    --><a href="/recruits"  class="panel recruits">recruit</a><!--
-   --><a href="/contacts"  class="panel contacts">contact</a>
+   --><a href="/contacts"  class="panel contacts">contact</a><!--
+   --><a href="http://unripe-sun.blogspot.jp"  class="panel" target="_blank">blog</a>
     </div><!--
 
  --><div class="panel properties">
