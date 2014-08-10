@@ -151,7 +151,7 @@ $settings = (object) array(
 
      --><div class="panel movie">
           <h3><span></span>ヘアショー</h3>
-          <p>2012年3月20日にヨコハマ創造都市センターで行われたヘアショー(…and Hair)に参加致しました。</p>
+          <!-- <p>2012年3月20日にヨコハマ創造都市センターで行われたヘアショー(…and Hair)に参加致しました。</p> -->
           <video src="/public/video/unripe-hair-show.mp4" controls="controls" width="360"></video>
 
         </div>
