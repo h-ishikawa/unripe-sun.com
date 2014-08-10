@@ -67,8 +67,8 @@ $settings = (object) array(
         </div><!--
 
      --><div class="panel plan">
-          <h3><span></span>ヘアマイスターのアドバイス！</h3>
-          <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスを紹介します。</p>
+          <h3><span></span>ヘアケアマイスターのアドバイス！</h3>
+          <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスをさせて頂きます。</p>
           <p class="details-button">
             <a href="/meisters"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
           </p>
