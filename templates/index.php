@@ -11,11 +11,11 @@ $settings = (object) array(
     	<div class="panel">
     		<div>
     			<h2><span></span>Concept</h2>
-    				<p>横浜の東急東横線、反町駅のすぐ近くにある美容室、<strong>unripe</strong>（<em>アンライプ</em>）。<br />
+    				<p>横浜の東急東横線、反町駅のすぐ近くにある美容室、<strong>Unripe</strong>（<em>アンライプ</em>）。<br />
                店内は光溢れ、スタッフの手作りのはり金細工や絵が飾られていて、とても<em>アットホーム</em>な雰囲気です。 <br />
                <em>オーガニックのシャンプー</em>や<em>トリートメント</em>製品も扱っています。<br />
                お客様とトコトン話ながら、一緒に<em>ヘアスタイル</em>を考えたいと思っています。<br />
-               是非、<em>ヘアサロン</em><strong>unripe</strong>のComfortable Spaceに遊びに来て下さい！
+               是非、<em>ヘアサロン</em><strong>Unripe</strong>のComfortable Spaceに遊びに来て下さい！
             </p>
     		</div>   		
         <div class="panel news">
