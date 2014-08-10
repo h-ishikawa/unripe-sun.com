@@ -13,7 +13,7 @@ $request = $app->request();
 <meta charset="UTF-8">
 <meta name="keywords" content="<?= @$settings->keywords ?>">
 <meta name="description" content="<?= @$settings->description ?>">
-<link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/public/images/iphone.jpg"> 
 <meta name="author" content="">
 <meta name="apple-mobile-web-app-capable" content="yes">
