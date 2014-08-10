@@ -94,21 +94,32 @@ $settings = (object) array(
      <p><img src="/public/images/menus/digitalparm.jpg">従来のデジタルパーマより、<br>低温でかける為ダメージが少なく、潤艶な質感と手触りが出せます。パーマ液は酸性～化粧品まであり、なりたいイメージに合わせて使用します。
        </p>
    </div>
-   
+
 <div class="menu">
      <h3><span></span>【スタイリング】</h3>
-     <p>お気軽にスタイルングも致します。
+     <p>お気軽にスタイリングも致します。
+       </p>
+   </div>
+   
+<div class="menu">
+     <h3><span></span>カット＆デジタルパーマ</h3>
+     <p>価格：18,360円〜
+       </p>
+   </div>
+<div class="menu">
+     <h3><span></span>カット＆ストレートパーマ</h3>
+     <p>価格：18,360円〜
        </p>
    </div>
  
  <div class="panel m-detail">
      <h3><span></span>セットアップ</h3>
-     <p><img src="/public/images/menus/setup.jpg">価格：3,780円〜
+     <p><img src="/public/images/menus/setup.jpg">価格：6,480円
        </p>
    </div><!--
 
 --><div class="panel m-detail">
      <h3><span></span>前髪カット</h3>
-     <p><img src="/public/images/menus/maegami.jpg">価格：1,080円〜
+     <p><img src="/public/images/menus/maegami.jpg">価格：1,080円
        </p>
    </div>
