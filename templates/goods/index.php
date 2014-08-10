@@ -75,7 +75,7 @@ $settings = (object) array(
   </div><!--
 
  --><div class="panel m-detail">
-      <h3><span></span>Steam Pot</h3>
+      <h3><span></span>Steam Pod</h3>
       <p><img src="/public/images/goods/steampod.jpg" alt="Steam Pot" />スチームポッドは水分を素早くたっぷり浸透させ今までにない柔らかな質感、ラウンドストレートを実現しました。
         </p>
   </div>
