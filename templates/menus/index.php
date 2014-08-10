@@ -50,6 +50,7 @@ th,td{
 }
 </style>
 
+<p class="point" style="margin:2px 0;text-align:right;font-size:90%;">※下記料金はすべて税込です。</p>
 <table>
   <tr>
     <th colspan="2"><h3>カット</h3></th>
