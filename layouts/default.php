@@ -18,7 +18,7 @@ $request = $app->request();
 <meta name="author" content="">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=1024px">
-<title><?= @$settings->title ?> - Unripe</title>
+<title><?= @$settings->title ?> - Unripe（横浜の東急東横線反町駅そばの美容室）</title>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
