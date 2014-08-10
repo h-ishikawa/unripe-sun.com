@@ -90,12 +90,6 @@ $settings = (object) array(
    </div><!--
 
 --><div class="panel m-detail">
-     <h3><span></span>エアウェーブ</h3>
-     <p><img src="/public/images/menus/airwave.jpg">化粧品登録のパーマ液でかける、髪にノンダメージの柔らかいパーマです。
-       </p>
-   </div><!--
-
---><div class="panel m-detail">
      <h3><span></span>デジタルパーマ</h3>
      <p><img src="/public/images/menus/digitalparm.jpg">従来のデジタルパーマより、<br>低温でかける為ダメージが少なく、潤艶な質感と手触りが出せます。パーマ液は酸性～化粧品まであり、なりたいイメージに合わせて使用します。
        </p>
