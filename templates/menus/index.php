@@ -81,14 +81,14 @@ th,td{
     <td>￥3,780〜</td>
   <tr>
   <tr>
-    <td class="point" colspan="2"><p>あなただけのオーダーメイドトリートメント★Aujuaなら髪の悩みを改善出来る!!<br>今までの髪の悩みも解消出来る!!実力派のスタイリストに相談してください。</p><img src="/public/images/goods/powerdict.png"></td>
+    <td class="point" colspan="2"><p>あなただけのオーダーメイドトリートメント<br>今までの髪の悩みも解消出来る!!実力派のスタイリストに相談してください。</p><img src="/public/images/goods/powerdict.png"></td>
   <tr>
   <tr class="mn">
     <td class="title">オージェアトリートメント</td>
     <td></td>
   <tr>
   <tr>
-    <td class="point" colspan="2"><p>限られた店舗でしか置くことが出来ない、Aujuaのトリートメントは5184通りの中からあなただけに合ったプログラムを作成</p><img src="/public/images/goods/aujua_tr.jpg"></td>
+    <td class="point" colspan="2"><p>限られた店舗でしか置くことが出来ない、Aujuaのトリートメントは5184通りの中からあなただけに合ったプログラムを作成。<br>★Aujuaなら髪の悩みを改善出来る!!</p><img src="/public/images/goods/aujua_tr.jpg"></td>
   <tr>
   <tr class="mn">
     <td class="title">ヘッドスパ</td>
