@@ -61,7 +61,7 @@ $settings = (object) array(
     		</tr>
     		<tr>
     			<td>TEL</td>
-    			<td>045-628-9736</td>
+    			<td>045-628-9738</td>
     		</tr>
     		<tr>
     			<td rowspan="2">定休日</td>
