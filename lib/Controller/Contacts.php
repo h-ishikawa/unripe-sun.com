@@ -66,15 +66,15 @@ class Contacts
     
     setcookie('ONETIMETOKEN', '', time() - 3600, '/contacts/');
     
-    $to = 'contact@ichicolo.com';
-    $subject= '問い合わせがありました。';
-    $header = "MIME-Version: 1.0\r\n"
-      . "Content-Transfer-Encoding: 7bit\r\n"
-      . "Content-Type: text/plain; charset=ISO-2022-JP\r\n"
-      . "Message-Id: <" . md5(uniqid(microtime())) . "@major.ocn.ne.jp/>\r\n"
-      . "From: Unripe<unripe@major.ocn.ne.jp>\r\n"
+    $to = 'unripe@major.ocn.ne.jp,suiken-cut@ezweb.ne.jp,diva-79.kenichi-0312@docomo.ne.jp,t19pista@ezweb.ne.jp,puni-kuma_kobuta.v-oo-v@softbank.ne.jp,saku-holy@docomo.ne.jp,contact@ichicolo.com';
+    $header = "MIME-Version: 1.0\n"
+      . "Content-Transfer-Encoding: 7bit\n"
+      . "Content-Type: text/plain; charset=ISO-2022-JP\n"
+      . "Message-Id: <" . md5(uniqid(microtime())) . "@major.ocn.ne.jp/>\n"
+      . "From: Unripe<unripe@major.ocn.ne.jp>\n"
       . "Bcc: contact@ichicolo.com";
-    
+    $subject= 'message from unripe-sun.com';
+   
     $name = 'お名前 : ' . $post->name;
     $area = '住所 : ' . @$post->address;
     $email = 'E-mailアドレス : ' . $post->email;
@@ -82,7 +82,6 @@ class Contacts
     $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n";
     $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
     
-    mb_language('uni');
     mb_internal_encoding('UTF-8');
     
     if (mail($to, $subject, $bodyTextData, mb_encode_mimeheader($header), "-f unripe@major.ocn.ne.jp")) {
@@ -91,8 +90,8 @@ class Contacts
       /**
        * 返信
        */
-      $replySubject = 'お問い合わせありがとうございます。';
-      $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n" . 'このたびはお問い合わせいただき、誠にありがとうございます。' . "\n" . '改めてご連絡させていただきますので、今しばらくお待ちいただきますようよろしくお願いいたします。'. "\n";
+      $replySubject = 'Thank you for your contact! message from unripe-sun.com';
+      $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n\n\n" . 'このたびはお問い合わせいただき、誠にありがとうございます。' . "\n" . '改めてご連絡させていただきますので、今しばらくお待ちいただきますようよろしくお願いいたします。'. "\n";
       $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
       
       mail($post->email, $replySubject, $bodyTextData, mb_encode_mimeheader($header), "-f unripe@major.ocn.ne.jp");
