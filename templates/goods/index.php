@@ -40,7 +40,7 @@ $settings = (object) array(
   </div><!--
 
  --><div class="panel m-detail">
-      <h3><span></span>パワーディクト</h3>
+      <h3><span></span>トリートメント</h3>
       <p><img src="/public/images/goods/powerdict.png" alt="パワーディルト トリートメント" />髪に必要な成分を入れ込み、髪の内側から外側にかけて5層でコーティングするスペシャルトリートメントです。
         </p>
   </div><!--
