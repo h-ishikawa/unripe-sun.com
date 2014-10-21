@@ -67,14 +67,14 @@ class Contacts
     setcookie('ONETIMETOKEN', '', time() - 3600, '/contacts/');
     
     $to = 'unripe@major.ocn.ne.jp,suiken-cut@ezweb.ne.jp,diva-79.kenichi-0312@docomo.ne.jp,t19pista@ezweb.ne.jp,puni-kuma_kobuta.v-oo-v@softbank.ne.jp,saku-holy@docomo.ne.jp,contact@ichicolo.com';
+    //$to = 'sevens67@gmail.com,sevens67@icloud.com,sevens67@i.softbank.jp,ichicolo.com@gmail.com,contact@ichicolo.com';
     $header = "MIME-Version: 1.0\n"
       . "Content-Transfer-Encoding: 7bit\n"
       . "Content-Type: text/plain; charset=ISO-2022-JP\n"
       . "Message-Id: <" . md5(uniqid(microtime())) . "@major.ocn.ne.jp/>\n"
-      . "From: Unripe<unripe@major.ocn.ne.jp>\n"
-      . "Bcc: contact@ichicolo.com";
-    $subject= 'message from unripe-sun.com';
-   
+      . "From: Unripe<unripe@major.ocn.ne.jp>\n";
+    $subject= mb_encode_mimeheader('message from unripe-sun.com', 'ISO-2022-JP-MS');
+
     $name = 'お名前 : ' . $post->name;
     $area = '住所 : ' . @$post->address;
     $email = 'E-mailアドレス : ' . $post->email;
@@ -83,18 +83,16 @@ class Contacts
     $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
     
     mb_internal_encoding('UTF-8');
-    
-    if (mail($to, $subject, $bodyTextData, mb_encode_mimeheader($header), "-f unripe@major.ocn.ne.jp")) {
+
+    if (mail($to, $subject, mb_convert_encoding($bodyTextData, 'ISO-2022-JP-MS'), $header)) {
       $notification = 'success';
     
       /**
        * 返信
        */
-      $replySubject = 'Thank you for your contact! message from unripe-sun.com';
-      $description = 'お問い合わせ内容 : ' . "\n" . preg_replace( '/<br \/>/', '', $post->description ) . "\n\n\n" . 'このたびはお問い合わせいただき、誠にありがとうございます。' . "\n" . '改めてご連絡させていただきますので、今しばらくお待ちいただきますようよろしくお願いいたします。'. "\n";
-      $bodyTextData = implode("\n\n", array($name, $area, $email, $tel, $description)); 
+      $replySubject = mb_encode_mimeheader('Thank you for your contact! message from unripe-sun.com', 'ISO-2022-JP-MS');
       
-      mail($post->email, $replySubject, $bodyTextData, mb_encode_mimeheader($header), "-f unripe@major.ocn.ne.jp");
+      mail($post->email, $replySubject, mb_convert_encoding('このたびはお問い合わせいただき、誠にありがとうございます。' . "\n" . '改めてご連絡させていただきますので、今しばらくお待ちいただきますようよろしくお願いいたします。'. "\n\n" . $bodyTextData, 'ISO-2022-JP-MS'), $header);
 
       $sql = new \Model\Contacts();
       $sql
