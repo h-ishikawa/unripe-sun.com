@@ -45,7 +45,7 @@ $settings = (object) array(
     <textarea placeholder="お問い合わせ内容をご入力ください。" class="description" name="description" rows="10" cols="70" required><?= @$option[0]->description ?></textarea>
     <span class="error incorrect">文字数がオーバーしています（800文字まで）。</span>
   </div>
-  <p class="late_ms">※お問い合わせ頂いてから3日位経っても返信がない場合は、<br>再度メールしていただくか、お電話して下さい。</p>
+  <p class="late_ms">※お問い合わせ頂いてから3日位経っても返信がない場合は、お手数ですが再度メールしていただくか、お電話して下さい。</p>
 
   <input class="submit" type="submit" value="内容を確認する" />
   <input type="reset" value="リセット" />
