@@ -49,7 +49,7 @@ body {
   margin: 0;
   padding: 0;
   color: #7c6551;
-  -webkit-text-size-adjust: 100%;
+  //-webkit-text-size-adjust: 100%;
 }
 
 a {
