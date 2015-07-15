@@ -128,6 +128,16 @@ $settings = (object) array(
             <? endif; ?>
           </p>
 
+          <p class="sakuma"><span></span>佐久間：
+            <? if(!empty($holidays)): ?>
+              <? foreach($holidays as $holiday): ?>
+                <? if(@$holiday->stuff == 5): ?>
+                  <?= date("j", strtotime(@$holiday->date)) ?>日
+                <? endif; ?>
+              <? endforeach; ?>
+            <? endif; ?>
+          </p>
+
           <p>※火曜日は定休日です。</p>
           <br>
         </div><!--

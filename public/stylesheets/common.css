@@ -571,6 +571,10 @@ li{
 .home .contents .calendar p.enomoto span {
   background-color: #FFCC66;
 }
+.home .contents .calendar tr td span.stuff5,
+.home .contents .calendar p.sakuma span {
+  background-color: #990099;
+}
 
 .home .contents .calendar .stuff1,
 .home .contents .calendar .stuff2,
