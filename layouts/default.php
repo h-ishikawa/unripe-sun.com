@@ -9,6 +9,7 @@ $request = $app->request();
 <!doctype html>
 <html>
 <head>
+<meta name="google-site-verification" content="GtyAKOs87DCFtW5HzxTQAB-PMWUTzdSmP5KZi-P5F-s" />
 <meta http-equiv="content-language" content="ja">
 <meta charset="UTF-8">
 <meta name="keywords" content="<?= @$settings->keywords ?>">
@@ -121,7 +122,7 @@ $request = $app->request();
                <br>
                Comment: <?= $result->memo ?>
              ">
-              <img src="/public/images/uploads/thumbnails/<?= $result->file_path ?>" title="クリッックで拡大">
+              <img src="/public/images/uploads/thumbnails/<?= $result->file_path ?>" title="クリックで拡大">
             </a><!--
           <? endwhile; ?>
         -->

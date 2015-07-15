@@ -1,4 +1,4 @@
-    <h1 onclick="Javascript: location.href='/'">Unripe</h1>
+    <h1 onclick="Javascript: location.href='/'">横浜の東急東横線、反町駅のすぐ近くにある美容室、Unripe（アンライプ）</h1>
 
     <div class="panel staff">
     </div><!--

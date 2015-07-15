@@ -11,7 +11,7 @@ $settings = (object) array(
     	<div class="panel">
     		<div>
     			<h2><span></span>Concept</h2>
-    				<p>横浜の東急東横線、反町駅のすぐ近くにある美容室、<strong>Unripe</strong>（<em>アンライプ</em>）。<br />
+    				<p><em>横浜の東急東横線</em>、<em>反町駅</em>のすぐ近くにある<em>美容室</em>、<strong>Unripe</strong>（<em>アンライプ</em>）。<br />
                店内は光溢れ、スタッフの手作りのはり金細工や絵が飾られていて、とても<em>アットホーム</em>な雰囲気です。 <br />
                <em>オーガニックのシャンプー</em>や<em>トリートメント</em>製品も扱っています。<br />
                お客様とトコトン話ながら、一緒に<em>ヘアスタイル</em>を考えたいと思っています。<br />
@@ -60,9 +60,9 @@ $settings = (object) array(
           	</tbody>
           </table>
           <p class="point" style="margin:2px 0 0;text-align:right;">※料金はすべて税込です。</p>
-          <p class="point">※店長・ディレクターカット・・・プラス￥540<br />※オーナーカット・・・プラス￥1,080<br />※ロング料金はかかりません。<br />※是非、あなたの大切なご家族、お友達をご紹介して頂いた方には次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。</p>
+          <p class="point">※店長・ディレクターカット・・・プラス￥540<br />※オーナーカット・・・プラス￥1,080<br />※ロング料金はかかりません。<br />あなたの大切なご家族、お友達をご紹介して頂いた方には<br>次回、全メニュー<span class="price-off">30%OFF</span>で施術させて頂きます。</p>
           <p class="details-button">
-            <a href="/menus"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
+            <a href="/menus"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン"></a>
           </p>
         </div><!--
 
@@ -70,9 +70,9 @@ $settings = (object) array(
           <h3><span></span>ヘアケアマイスターのアドバイス！</h3>
           <p>季節に合わせたヘアケアは健康な髪を保つのにとても大切です。あなたの髪をサポートするアドバイスをさせて頂きます。</p>
           <p class="details-button">
-            <a href="/meisters"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
+            <a href="/meisters"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン"></a>
           </p>
-          <p class="meister"><a href="/meisters"><img src="/public/images/home/meister02.jpg" alt="ヘアマイスターアドバイス1" /></a></p>
+          <p class="meister"><a href="/meisters"><img src="/public/images/home/meister02.jpg" alt="ヘアマイスターアドバイス1"></a></p>
         </div><!--
 
      --><div class="panel calendar">
@@ -137,12 +137,12 @@ $settings = (object) array(
           <p>Unripeで使用しているシャンプーやトリートメント剤、カラー剤などはお客様の髪に最適なこだわりある製品を取り揃えております。</p>
           
           <p class="details-button">
-            <a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
+            <a href="/goods"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン"></a>
           </p>
           <h3><span></span>shu uemura</h3>
           <p>個々のお客様に合わせたスキンケア、メイクアップのパーソナルなトータルビューティーをご提案させて頂きます。</p>
           <p class="details-button">
-            <a href="/meisters#shu"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン" /></a>
+            <a href="/meisters#shu"><img src="/public/images/home/menu-details.png" alt="メニュー詳細ボタン"></a>
           </p>
         </div><!--
 
