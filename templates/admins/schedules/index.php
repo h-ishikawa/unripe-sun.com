@@ -15,6 +15,7 @@
           <option value="2">小池</option>
           <option value="3">吉野</option>
           <option value="4">榎本</option>
+          <option value="5">佐久間</option>
         </select>
       </td>
     </tr>
@@ -54,6 +55,8 @@
         吉野
       <? elseif ($result->stuff == 4): ?>
         榎本
+      <? elseif ($result->stuff == 5): ?>
+        佐久間
       <? endif; ?>
     </td>
     <td><?= $result->created_at ?></td>
