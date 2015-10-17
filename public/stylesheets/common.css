@@ -1530,6 +1530,14 @@ li{
     width: 100%;
     margin: 20px 0 0;
   }
+
+  /*
+   ** contacts
+   */
+  .contacts input,
+  .contacts textarea {
+    font-size: 110%;
+  }
 }
 
 @media screen and (max-width:480px){
@@ -1636,5 +1644,18 @@ li{
    */
   .accesses .contents iframe {
     height: 400px;
+  }
+
+  /*
+   ** contacts
+   */
+  .contacts input,
+  .contacts textarea {
+    width: 100%;
+  }
+
+  .contacts input[type="submit"],
+  .contacts input[type="reset"]{
+    margin: 0 0 10px;
   }
 }
