@@ -1368,6 +1368,7 @@ li{
 @media screen and (max-width:480px){
   .home .contents .news, .home .contents .cut, .home .contents .plan, .home .contents .calendar, .home .contents .privilege, .home .contents .movie {
     width: 100%;
+    margin: 0 0 20px;
   }
 
   .home .contents .conversion .banners a {
@@ -1375,8 +1376,39 @@ li{
     height: auto;
   }
 
+  .home .contents .conversion .banners a:first-child {
+    margin: 0 0 15px 0;
+  }
+
   .home .contents .conversion .banners a img {
     width: 100%;
     height: auto;
+  }
+
+  .home .snaps .slider {
+    height: 115px;
+  }
+
+  .home .snaps .themes a {
+    margin: 10px 0 0!important;
+  }
+
+  .home .snaps a.prev, .home .snaps a.next {
+    margin: 10px 0 0;
+  }
+
+  .home .snaps a.next {
+    margin: 10px 0 0 40px;
+  }
+
+  .copyright {
+    background-image: url("/public/images/home/footer_weed.gif");
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    padding: 0;
+  }
+
+  .copyright img {
+    display: none;
   }
 }
