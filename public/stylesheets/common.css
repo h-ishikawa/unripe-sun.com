@@ -1468,7 +1468,7 @@ li{
   }
 
   /*
-   **
+   ** staff
    */
   .staffs .contents .m-detail img {
     width: 100%;
@@ -1487,6 +1487,15 @@ li{
     width: 100%!important;
   }
 
+  /*
+   ** goods
+   */
+  .goods .contents .m-detail {
+    width: 45%;
+    padding: 0 5% 2% 0;
+    min-height: 15em;
+    vertical-align: top;
+  }
 }
 
 @media screen and (max-width:480px){
@@ -1566,4 +1575,13 @@ li{
     width: 90%;
   }
   
+
+  /*
+   ** goods
+   */
+  .goods .contents .m-detail {
+    width: 100%;
+    padding: 0 0 2% 0;
+  }
+>>>>>>> /goods レスポンシブスタイル実装
 }
