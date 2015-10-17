@@ -1363,6 +1363,20 @@ li{
     width: 100%;
     padding: 0;
   }
+
+
+  /*
+   ** 各ページ
+   */
+
+  .header .staff {
+    width: 45%!important;
+    background-size: contain!important;
+  }
+
+  .header .description {
+    padding: 0!important;
+  }
 }
 
 @media screen and (max-width:480px){
