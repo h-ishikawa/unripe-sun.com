@@ -13,7 +13,9 @@ $settings = (object) array(
     <div class="menu">
       <h3><span></span>【ヘアケアマイスター】</h3>
       <p>ヘアケアマイスターはヘア知識が豊富で、お客様の毛髪診断が正しくでき、それに対する処置・アドバイスが的確に出来る人です。<br>厳正なる4段階の認定試験にすべて合格した人にのみ贈られる美容業界において名誉と権威のある称号です。</p>
-      <img src="/public/images/home/meister02.jpg" alt="ヘアマイスターアドバイス1" />
+      <div class="hr_img">
+        <img src="/public/images/home/meister02.jpg" alt="ヘアマイスターアドバイス1" />
+      </div>
     </div>
     <br><br>
     <div class="menu">

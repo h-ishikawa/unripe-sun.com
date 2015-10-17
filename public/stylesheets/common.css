@@ -1255,88 +1255,88 @@ li{
     width: 100%;
   }
   
-.home .header .container {
-  height: 250px;
-  position: relative;
-}
-.home .header .stuff {
-  height: 200px;
-  bottom: 0;
-  position: absolute;
-}
-.home .header .stuff.tomori {
-  width: 74px;
-  left: 5%;
-  background: url('/public/images/home/tomori.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.koike {
-  width: 70px;
-  left: 21%;
-  background: url('/public/images/home/koike.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.yoshino {
-  width:70px;
-  left: 37%;
-  background: url('/public/images/home/yoshino.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.enomoto {
-  width: 65px;
-  left: 53%;
-  background: url('/public/images/home/enomoto.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.sakuma {
-  width: 64px;
-  left: 69%;
-  background: url('/public/images/home/sakuma.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.shimizu {
-  width: 67px;
-  left: 85%;
-  background: url('/public/images/home/shimizu.png') no-repeat 0 0;
-  background-size:contain;
-}
-
-.home .header .stuff.tomori:hover {
-  width: 74px;
-  left: 5%;
-  background: url('/public/images/home/tomori_hover.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.koike:hover {
-  width: 72px;
-  left: 21%;
-  background: url('/public/images/home/koike_hover.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.yoshino:hover {
-  width: 78px;
-  left: 36%;
-  background: url('/public/images/home/yoshino_hover.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.enomoto:hover {
-  width: 77px;
-  left: 52%;
-  background: url('/public/images/home/enomoto_hover.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.sakuma:hover {
-  width: 77px;
-  left: 68%;
-  background: url('/public/images/home/sakuma_hover.png') no-repeat 0 0;
-  background-size:contain;
-}
-.home .header .stuff.shimizu:hover {
-  width: 82px;
-  left: 84%;
-  background: url('/public/images/home/shimizu_hover.png') no-repeat 0 0;
-  background-size:contain;
-}
+  .home .header .container {
+    height: 250px;
+    position: relative;
+  }
+  .home .header .stuff {
+    height: 200px;
+    bottom: 0;
+    position: absolute;
+  }
+  .home .header .stuff.tomori {
+    width: 74px;
+    left: 5%;
+    background: url('/public/images/home/tomori.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.koike {
+    width: 70px;
+    left: 21%;
+    background: url('/public/images/home/koike.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.yoshino {
+    width:70px;
+    left: 37%;
+    background: url('/public/images/home/yoshino.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.enomoto {
+    width: 65px;
+    left: 53%;
+    background: url('/public/images/home/enomoto.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.sakuma {
+    width: 64px;
+    left: 69%;
+    background: url('/public/images/home/sakuma.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.shimizu {
+    width: 67px;
+    left: 85%;
+    background: url('/public/images/home/shimizu.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  
+  .home .header .stuff.tomori:hover {
+    width: 74px;
+    left: 5%;
+    background: url('/public/images/home/tomori_hover.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.koike:hover {
+    width: 72px;
+    left: 21%;
+    background: url('/public/images/home/koike_hover.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.yoshino:hover {
+    width: 78px;
+    left: 36%;
+    background: url('/public/images/home/yoshino_hover.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.enomoto:hover {
+    width: 77px;
+    left: 52%;
+    background: url('/public/images/home/enomoto_hover.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.sakuma:hover {
+    width: 77px;
+    left: 68%;
+    background: url('/public/images/home/sakuma_hover.png') no-repeat 0 0;
+    background-size:contain;
+  }
+  .home .header .stuff.shimizu:hover {
+    width: 82px;
+    left: 84%;
+    background: url('/public/images/home/shimizu_hover.png') no-repeat 0 0;
+    background-size:contain;
+  }
 
   .home #contents div div:first-child {
     margin: 0 0 20px;
@@ -1451,7 +1451,6 @@ li{
   /*
    ** 各ページ
    */
-
   .header .staff {
     width: 45%!important;
     background-size: contain!important;
@@ -1460,9 +1459,34 @@ li{
   .header .description {
     padding: 0!important;
   }
-  .m-detail{
-    width: 100%;
+   
+  /*
+   ** meisters
+   */
+  .meisters .contents .m-detail{
+    width: 30%;
   }
+
+  /*
+   **
+   */
+  .staffs .contents .m-detail img {
+    width: 100%;
+    min-height: initial;
+    min-height: auto;
+    height: auto!important;
+  }
+
+  .staffs .new_snaps a {
+    width: 30%!important;
+    margin: 0 10%;
+    padding: 0;
+  }
+
+  .staffs .new_snaps a img {
+    width: 100%!important;
+  }
+
 }
 
 @media screen and (max-width:480px){
@@ -1512,4 +1536,34 @@ li{
   .copyright img {
     display: none;
   }
+
+  /*
+   ** 各ページ
+   */
+
+  /*
+   ** staff
+   */
+  .staffs .contents .m-detail {
+    width: 30%;
+  }
+
+  .staffs .contents .m-detail_s {
+    width: 65%;
+    padding: 3% 0 2% 0;
+    min-height: 0;
+    vertical-align: top;
+    margin: 3% 0 0% 0;
+  }
+  
+  /*
+   ** meisters
+   */
+  .meisters .contents .m-detail{
+    width: 90%;
+  }
+  .meisters .contents .hr_img img{
+    width: 90%;
+  }
+  
 }
