@@ -1299,6 +1299,68 @@ li{
   .home .contents .fb-page iframe {
     width: 100%;
   }
+
+  .home .snaps {
+    height: 300px;
+  }
+
+  .home .snaps .container {
+    width: 90%;
+  }
+
+  .home .snaps .themes {
+    width: 100%!important;
+  }
+
+  .home .snaps .themes p {
+    float: left;
+  }
+
+  .home .snaps .themes a {
+    padding: 10px 0 0 10px!important;
+    margin: 20px 0 0!important;
+    float: right;
+  }
+
+  .home .snaps a.prev,
+  .home .snaps a.next {
+    width: 20px;
+    height: 50px;
+    display: block;
+    margin: 20px 0 0;;
+    position: relative;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    float: right;
+  }
+
+  .home .snaps a.next {
+    margin: 20px 0 0 40px;
+  }
+
+  .home .snaps .slider {
+    height: 170px;
+    display: block!important;
+    overflow: hidden;
+  }
+
+  .home .snaps .slider a {
+    width: 20%!important;
+    height: auto!important;
+    margin: 15px 2% 0px!important;
+  }
+
+  .home .snaps .slider a img {
+    width: 100%!important;
+    height: auto!important;
+  }
+
+  .footer .container {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width:480px){
