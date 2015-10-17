@@ -1252,10 +1252,67 @@ li{
   .home .contents .conversion {
     width: 100%;
   }
+
+  .home #contents div div:first-child {
+    margin: 0 0 20px;
+  }
+
+  .home .contents .conversion {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .home .contents .conversion .banners a {
+    width: 47%;
+    height: auto;
+    float: left;
+    overflow: hidden;
+    margin: 0 0 15px;
+  }
+
+  .home .contents .conversion .banners a:first-child {
+    margin: 0 6% 0 0;
+  }
+
+  .home .contents .conversion .banners a img {
+    width: 100%;
+    height: auto;
+  }
+
+  .home .contents .conversion .banners p {
+    width: 90%;
+    padding: 15px 5%;
+    font-size: 120%;
+    clear: both;
+  }
+
+  .home .contents .fb-page {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home .contents .fb-page span {
+    width: 100%;
+  }
+
+  .home .contents .fb-page iframe {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:480px){
   .home .contents .news, .home .contents .cut, .home .contents .plan, .home .contents .calendar, .home .contents .privilege, .home .contents .movie {
     width: 100%;
+  }
+
+  .home .contents .conversion .banners a {
+    width: 100%;
+    height: auto;
+  }
+
+  .home .contents .conversion .banners a img {
+    width: 100%;
+    height: auto;
   }
 }

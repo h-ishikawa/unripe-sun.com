@@ -197,5 +197,5 @@ $settings = (object) array(
         </div>
 
         <h4><span></span>最新情報（facebook）</h4>
-        <div class="fb-like-box" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-height="600px" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
+        <div class="fb-page" data-href="https://www.facebook.com/pages/Unripe/209519589110505" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/Unripe/209519589110505"><a href="https://www.facebook.com/pages/Unripe/209519589110505">Unripe</a></blockquote></div></div>
       </div>
