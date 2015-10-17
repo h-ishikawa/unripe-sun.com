@@ -1496,6 +1496,19 @@ li{
     min-height: 15em;
     vertical-align: top;
   }
+
+  /*
+   ** galleries
+   */
+  .galleries .contents .snap_box {
+    width: 26%;
+    height: auto;
+    margin: 15px 2% 0;
+  }
+
+  .galleries .contents .snap_box img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:480px){
@@ -1583,5 +1596,17 @@ li{
     width: 100%;
     padding: 0 0 2% 0;
   }
->>>>>>> /goods レスポンシブスタイル実装
+
+  /*
+   ** galleries
+   */
+  .galleries .contents .snap_box {
+    width: 41%;
+    height: auto;
+    margin: 15px 4% 0;
+  }
+
+  .galleries .contents .snap_box img {
+    width: 100%;
+  }
 }
