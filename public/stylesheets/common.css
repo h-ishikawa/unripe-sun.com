@@ -1208,6 +1208,8 @@ li{
 @media screen and (max-width:800px){
   .container {
     width: 90%;
+    min-width: initial;
+    min-width: auto;
     padding: 0 5%;
     min-width: auto;
   }
