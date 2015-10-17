@@ -1253,8 +1253,12 @@ li{
 }
 
 @media screen and (max-width:480px){
-  .home .contents .news, .home .contents .cut, .home .contents .plan, .home .contents .calendar, .home .contents .privilege, .home .contents .movie {
+  .container {
     width: 90%;
     padding: 0 5%;
+  }
+
+  .home .contents .news, .home .contents .cut, .home .contents .plan, .home .contents .calendar, .home .contents .privilege, .home .contents .movie {
+    width: 100%;
   }
 }
