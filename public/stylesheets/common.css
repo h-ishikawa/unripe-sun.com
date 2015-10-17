@@ -1503,6 +1503,7 @@ li{
     background-repeat: repeat-x;
     background-position: left bottom;
     padding: 0;
+    font-size: small;
   }
 
   .copyright img {
