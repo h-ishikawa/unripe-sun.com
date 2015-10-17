@@ -1207,7 +1207,8 @@ li{
 
 @media screen and (max-width:800px){
   .container {
-    width: 100%;
+    width: 90%;
+    padding: 0 5%;
     min-width: auto;
   }
 
@@ -1254,11 +1255,6 @@ li{
 }
 
 @media screen and (max-width:480px){
-  .container {
-    width: 90%;
-    padding: 0 5%;
-  }
-
   .home .contents .news, .home .contents .cut, .home .contents .plan, .home .contents .calendar, .home .contents .privilege, .home .contents .movie {
     width: 100%;
   }
