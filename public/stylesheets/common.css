@@ -1465,6 +1465,14 @@ li{
    */
   .meisters .contents .m-detail{
     width: 30%;
+    padding: 0 3% 2% 0;
+  }
+
+  .meisters .contents .m-detail img {
+    width: 100%;
+    min-height: initial;
+    min-height: auto;
+    height: auto;
   }
 
   /*
@@ -1611,10 +1619,11 @@ li{
    ** meisters
    */
   .meisters .contents .m-detail{
-    width: 90%;
+    width: 100%;
+    padding: 0 0 2% 0;
   }
   .meisters .contents .hr_img img{
-    width: 90%;
+    width: 100%;
   }
   
 
