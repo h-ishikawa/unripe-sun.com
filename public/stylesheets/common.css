@@ -1509,6 +1509,27 @@ li{
   .galleries .contents .snap_box img {
     width: 100%;
   }
+
+
+  /*
+   ** accesses
+   */
+  .accesses #contents div:first-child {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .accesses .contents table {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .accesses .contents iframe {
+    width: 100%;
+    margin: 20px 0 0;
+  }
 }
 
 @media screen and (max-width:480px){
@@ -1608,5 +1629,12 @@ li{
 
   .galleries .contents .snap_box img {
     width: 100%;
+  }
+
+  /*
+   ** accesses
+   */
+  .accesses .contents iframe {
+    height: 400px;
   }
 }
