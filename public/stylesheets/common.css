@@ -1208,7 +1208,10 @@ li{
 @media screen and (max-width:800px){
   .container {
     width: 90%;
+    min-width: initial;
     min-width: auto;
+    padding: 0 5%;
+
   }
 
   #mobile-bar {
@@ -1216,12 +1219,13 @@ li{
     position: absolute;
     top:5px;
     right:5px;
-    padding: 12px 10px;
     background-color: #7c6551;
     z-index: 100;
   }
 
   #mobile-bar a {
+    display: block;
+    padding: 15px 10px;
     font-size: 80%;
     color: #fff;
     cursor: pointer;
@@ -1333,15 +1337,129 @@ li{
   background: url('/public/images/home/shimizu_hover.png') no-repeat 0 0;
   background-size:contain;
 }
+
+  .home #contents div div:first-child {
+    margin: 0 0 20px;
+  }
+
+  .home .contents .conversion {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .home .contents .conversion .banners a {
+    width: 47%;
+    height: auto;
+    float: left;
+    overflow: hidden;
+    margin: 0 0 15px;
+  }
+
+  .home .contents .conversion .banners a:first-child {
+    margin: 0 6% 0 0;
+  }
+
+  .home .contents .conversion .banners a img {
+    width: 100%;
+    height: auto;
+  }
+
+  .home .contents .conversion .banners p {
+    width: 90%;
+    padding: 15px 5%;
+    font-size: 120%;
+    clear: both;
+  }
+
+  .home .contents .fb-page {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home .contents .fb-page span {
+    width: 100%;
+  }
+
+  .home .contents .fb-page iframe {
+    width: 100%;
+  }
+
+  .home .snaps {
+    height: 300px;
+  }
+
+  .home .snaps .container {
+    width: 90%;
+  }
+
+  .home .snaps .themes {
+    width: 100%!important;
+  }
+
+  .home .snaps .themes p {
+    float: left;
+  }
+
+  .home .snaps .themes a {
+    padding: 10px 0 0 10px!important;
+    margin: 20px 0 0!important;
+    float: right;
+  }
+
+  .home .snaps a.prev,
+  .home .snaps a.next {
+    width: 20px;
+    height: 50px;
+    display: block;
+    margin: 20px 0 0;;
+    position: relative;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    float: right;
+  }
+
+  .home .snaps a.next {
+    margin: 20px 0 0 40px;
+  }
+
+  .home .snaps .slider {
+    height: 170px;
+    display: block!important;
+    overflow: hidden;
+  }
+
+  .home .snaps .slider a {
+    width: 20%!important;
+    height: auto!important;
+    margin: 15px 2% 0px!important;
+  }
+
+  .home .snaps .slider a img {
+    width: 100%!important;
+    height: auto!important;
+  }
+
+  .footer .container {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width:480px){
-  .container {
-    width: 90%;
-    padding: 0 5%;
-  }
-
   .home .contents .news, .home .contents .cut, .home .contents .plan, .home .contents .calendar, .home .contents .privilege, .home .contents .movie {
     width: 100%;
+  }
+
+  .home .contents .conversion .banners a {
+    width: 100%;
+    height: auto;
+  }
+
+  .home .contents .conversion .banners a img {
+    width: 100%;
+    height: auto;
   }
 }
