@@ -25,6 +25,7 @@ $request = $app->request();
 <![endif]-->
 <link rel="stylesheet" href="/public/stylesheets/common.css">
 <link rel="stylesheet" href="/public/stylesheets/lightbox.css">
+<link rel="stylesheet" href="/public/javascripts/mobile-menu/styles.css">
 <? if (!empty($settings->stylesheets[0])): ?>
 <? foreach ($settings->stylesheets as $stylesheet): ?>
 <link rel="stylesheet" href="/public/stylesheets/<?= $stylesheet ?>.css" />
@@ -42,6 +43,18 @@ $request = $app->request();
 <script type='text/javascript' src='/public/javascripts/unripe.js'></script>
 <script type='text/javascript' src='/public/javascripts/unripe/index.js'></script>
 <script type='text/javascript' src='/public/javascripts/unripe/scroll.js'></script>
+<script type='text/javascript' src='/public/javascripts/mobile-menu/jquery.mobile-menu.js'></script>
+
+<script>
+  $(function(){
+    $("body").mobile_menu({
+      menu: ['#main-nav ul'],
+      menu_width: 200,
+      prepend_button_to: '#mobile-bar'
+    });
+  });
+</script>
+
 <script>
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -66,6 +79,23 @@ $request = $app->request();
 
 <body class="<?= $request->separatePath ?: 'home' ?>">
   <div class="header">
+    <nav id="mobile-bar"></nav>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="/"          class="home">top</a></li>
+        <li><a href="/news"      class="news">news</a></li>
+        <li><a href="/menus"     class="menus">menu</a></li>
+        <li><a href="/staffs"    class="staffs">staff</a></li>
+        <li><a href="/meisters"  class="meisters">hair meister</a></li>
+        <li><a href="/goods"     class="goods">products</a></li>
+        <li><a href="/galleries" class="galleries">gallery</a></li>
+        <li><a href="/accesses"  class="accesses">access</a></li>
+        <li><a href="/recruits"  class="recruits">recruit</a></li>
+        <li><a href="/contacts"  class="contacts">contact</a></li>
+        <li><a href="http://unripe-sun.blogspot.jp"  class="panel" target="_blank">blog</a></li>
+      </ul>
+    </nav>
+    
     <div id="header" class="container">
       <? if ($app->route == 'Index'): ?>
       <?php require_once(dirname(__FILE__) . '/../templates/partials/home/header.php'); ?>

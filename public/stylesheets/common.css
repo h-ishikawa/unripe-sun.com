@@ -85,6 +85,10 @@ h4 span {
   vertical-align: top;
 }
 
+#mobile-bar {
+  display: none;
+}
+
 .header,
 .navigation,
 .contents,
@@ -1194,4 +1198,63 @@ li{
 }
 .late_ms{
   font-size: 0.8em;
+}
+
+
+/*
+ ** for responsive
+ */
+
+@media screen and (max-width:800px){
+  .container {
+    width: 100%;
+    min-width: auto;
+  }
+
+  #mobile-bar {
+    display: block;
+    position: absolute;
+    top:5px;
+    right:5px;
+    padding: 12px 10px;
+    background-color: #7c6551;
+    z-index: 100;
+  }
+
+  #mobile-bar a {
+    font-size: 80%;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #navigation {
+    display: none;
+  }
+
+  .home .navigation {
+    height: 21px;
+  }
+  
+  .home .navigation .container {
+    height: 21px;
+  }
+
+  .home .navigation img.cactus {
+    display: none;
+  }
+
+  .home .contents .container .panel:first-child {
+    width: 100%;
+  }
+
+  .home .contents .conversion {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:480px){
+  .home .contents .news, .home .contents .cut, .home .contents .plan, .home .contents .calendar, .home .contents .privilege, .home .contents .movie {
+    width: 90%;
+    padding: 0 5%;
+  }
 }
