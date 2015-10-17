@@ -48,3 +48,9 @@
 .build-menu-close #build-menu {
 	-webkit-transition: -webkit-transform 250ms, opacity 250ms, visibility 0ms 250ms;
 }
+
+#build-menu a {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px dotted #7c6551;
+}

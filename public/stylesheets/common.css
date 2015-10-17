@@ -1216,12 +1216,13 @@ li{
     position: absolute;
     top:5px;
     right:5px;
-    padding: 12px 10px;
     background-color: #7c6551;
     z-index: 100;
   }
 
   #mobile-bar a {
+    display: block;
+    padding: 15px 10px;
     font-size: 80%;
     color: #fff;
     cursor: pointer;
