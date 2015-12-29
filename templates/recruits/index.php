@@ -6,7 +6,7 @@ $settings = (object) array(
   , 'scripts' => array('')
   , 'stylesheets' => array('')
   , 'h2' => '求人募集'
-  , 'point' => 'あなたもUnripeで働きませんか？ご連絡をお待ちしています。'
+  , 'point' => '美容を通してお客様と自分たちが幸せでいられるUnripeで<br>一緒に自然体で働ける職場を作りませんか？'
 );
 ?>
 
@@ -27,15 +27,58 @@ $ (function(){
 	});
 });
 </script>
+
+<style>
+.recruits .event table{
+  width:100%;
+  border-collapse:collapse;
+  margin:0 0 30px 0;
+  border: none;
+}
+.recruits .event th{
+  color:#7c6551;
+  background-color:rgba(79,27,4,0.27);
+}
+.recruits .event td{
+  text-align:right;
+  font-size:90%;
+  border: none;
+}
+.recruits .event td.title{
+  text-align:left;
+  font-weight:bold;
+  //color:#ff6347;
+}
+.recruits .event td.point{
+  text-align:left;
+  padding:0 5px 8px;
+  border: none;
+  padding: 0 0 10px 0;
+}
+.event td.point p{
+  padding:15px 0 0;
+}
+.recruits .event td.point img{
+  width:250px;
+  float: left;
+}
+.recruits .event th,td{
+  padding:8px 5px;
+}
+.recruits .event .mn th,.mn td{
+  border:none;
+}
+
+</style>
+
 <div class="recruits ">
       <h3><span></span>【求人募集】</h3>
-      <p>美容を通してお客様と自分達が幸せでいられるUnripeで一緒に働きませんか？</p>
-      <p>見学受付・・・本人より電話にて予約<br>TEL:045-628-9738<br>神奈川県　横浜市　神奈川区　松本町１－２－３　カヤギヤビル２F</p>
+      <p>見学受付・・・本人より電話にて予約して下さい。<br>TEL:045-628-9738<br>神奈川県　横浜市　神奈川区　松本町１－２－３　カヤギヤビル２F</p>
       
 <div class="full_content">
    <div class="tabmenu active">求人</div>
    <div class="content">
-   <p>事業内容：美容業一般</p>
+   <p>【 事業内容：美容業一般 】</p>
 <table>
   <tr>
     <th colspan="2"><h3>雇用形態：正社員、パート、アルバイト</h3></th>
@@ -56,7 +99,7 @@ $ (function(){
   </tr>
   <tr>
     <td class="title">パート・アルバイト</td>
-    <td>時給：???円〜</td>
+    <td>アルバイトの時給：応相談(経験年数やランク等を考慮して決めさせて頂きます。)</td>
   </tr>
   <tr>
     <td class="title">フリーランス</td>
@@ -76,7 +119,7 @@ $ (function(){
   </tr>
   <tr>
     <td class="title">休日</td>
-    <td>隔週2日(完全週休2日)、パートタイム(時間相談可)、趣味／早上がり制度(週に1度／時間相談可)</td>
+    <td>隔週2日(完全週休2日は応相談)、パートタイム(時間相談可)、趣味／早上がり制度(週に1度／時間相談可)</td>
   </tr>
   <tr>
     <td class="title">福利厚生</td>
@@ -159,30 +202,32 @@ $ (function(){
 
    <div class="tabmenu">EVENT</div>
    <div class="content">
-   <div class="panel m-detail">
-      <h3><span></span>ヘアショー</h3>
-      <p><img src="/public/images/recruits/hair_show.jpg" alt="ヘアショー"/><br>横浜の５サロンが出演したヘアショー、
-「and ｈａｉｒ…」に参加しました。
-      </p>
-  </div><!--
-
- --><div class="panel m-detail">
-      <h3><span></span>社員旅行</h3>
-      <p><img src="/public/images/recruits/holiday.jpg" alt="社員旅行" /><br>年に1度、社員旅行として海外へ行っています。
-        </p>
-  </div><!--
-
- --><div class="panel m-detail">
-      <h3><span></span>忘年会</h3>
-      <p><img src="/public/images/recruits/bounenkai.jpg" alt="忘年会" /><br>食事やお酒を飲んで、一年を振り返ります。毎年違うお店に行けるのも楽しみです。
-        </p>
-  </div><!--
-
- --><div class="panel m-detail">
-      <h3><span></span>バーベキュー</h3>
-      <p><img src="/public/images/recruits/bbq.jpg" alt="バーベキュー" /><br>バーベキューなどをしたりとイベントも催しています。みんなリラックスしてアットホームな雰囲気です。
-        </p>
-  </div>
+<div class="event">
+<table>
+  <tr>
+    <th colspan="2"><h3>外部活動 Creative</h3></th>
+  </tr>
+  <tr>
+    <td class="point" colspan="2"><p>ヘアショー、セミナー、撮影会などはサロンワークとは違った楽しさや緊張感があり、美容師としての成長を試すことが出来ます。<br><img src="/public/images/recruits/c01.jpg"><img src="/public/images/recruits/c02.jpg"><img src="/public/images/recruits/c03.jpg"><img src="/public/images/recruits/c04.jpg"></p></td>
+  </tr>
+  <tr>
+    <th colspan="2"><h3>社員旅行</h3></th>
+  </tr>
+  <tr class="mn">
+  </tr>
+  <tr>
+    <td class="point" colspan="2"><p>毎年恒例で海外に社員旅行に行きます。バリ、プーケット、マレーシアetc。一生懸命に遊ぶ、これも大切です。<br><img src="/public/images/recruits/t01.jpg"><img src="/public/images/recruits/t02.jpg"><img src="/public/images/recruits/t03.jpg"><img src="/public/images/recruits/t04.jpg"></p></td>
+  </tr>
+  <tr>
+    <th colspan="2"><h3>社内イベント 早上がり制度</h3></th>
+  </tr>
+  <tr class="mn">
+  </tr>
+  <tr>
+    <td class="point" colspan="2"><p>忘年会やBBQの社内イベントはもちろん、週1回の早上がり制度で自分の趣味と仕事の両立も出来ます。<br><img src="/public/images/recruits/i01.jpg"><img src="/public/images/recruits/i02.jpg"><img src="/public/images/recruits/i03.jpg"><img src="/public/images/recruits/i04.jpg"></p></td>
+  </tr>
+</table> 
+</div>
    </div> 
 
 </div>
