@@ -59,7 +59,7 @@ $ (function(){
   padding:15px 0 0;
 }
 .recruits .event td.point img{
-  width:250px;
+  width:230px;
   float: left;
 }
 .recruits .event th,td{
